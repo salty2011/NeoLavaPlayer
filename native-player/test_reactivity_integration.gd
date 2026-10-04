@@ -337,7 +337,12 @@ func test_real_path(_scratch: String) -> void:
 	r.live_frames = live_frames
 	check(swapped_at > 0.0, "hot-swapped to pre-analysed after %.2f s" % swapped_at)
 	check(rx.hub.is_blending() or rx.analysis != null, "swap cross-fades")
+	# The blend runs on frame time, which lags wall time on slow machines (CI):
+	# wait for it, with a generous deadline, instead of a fixed timer.
+	var deadline := Time.get_ticks_msec() + int((ReactivityService.SWAP_BLEND + 0.5) * 1000.0) + 15000
 	await create_timer(ReactivityService.SWAP_BLEND + 0.5).timeout
+	while (rx.hub.is_blending() or rx.live != null) and Time.get_ticks_msec() < deadline:
+		await process_frame
 	check(not rx.hub.is_blending() and rx.live == null, "live analyzer released after the cross-fade")
 	var pos: float = audio.playback_time()
 	r.position_after_swap = pos
