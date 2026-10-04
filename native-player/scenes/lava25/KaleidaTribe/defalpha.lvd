@@ -1,0 +1,47 @@
+DefType	DefAlpha
+MaxInstance	3
+NumPresets	4
+###############################################################################
+Preset	0
+DoAmp	1.000000
+DoColor	1.000000
+DecayMin	0.750000
+DecayMax	0.750000
+AlphaMin	0.200000
+AlphaMax	0.800000
+AlphaVelocityMin	0.100000
+AlphaVelocityMax	0.400000
+AlphaVelocityDirection	-1.000000
+###############################################################################
+Preset	1
+DoAmp	1.000000
+DoColor	1.000000
+DecayMin	0.750000
+DecayMax	0.750000
+AlphaMin	0.200000
+AlphaMax	0.600000
+AlphaVelocityMin	0.050000
+AlphaVelocityMax	0.200000
+AlphaVelocityDirection	-1.000000
+###############################################################################
+Preset	2
+DoAmp	1.000000
+DoColor	1.000000
+DecayMin	0.750000
+DecayMax	0.750000
+AlphaMin	0.200000
+AlphaMax	0.700000
+AlphaVelocityMin	0.100000
+AlphaVelocityMax	0.400000
+AlphaVelocityDirection	1.000000
+###############################################################################
+Preset	3
+DoAmp	1.000000
+DoColor	1.000000
+DecayMin	0.750000
+DecayMax	0.750000
+AlphaMin	0.600000
+AlphaMax	0.900000
+AlphaVelocityMin	0.100000
+AlphaVelocityMax	0.400000
+AlphaVelocityDirection	1.000000

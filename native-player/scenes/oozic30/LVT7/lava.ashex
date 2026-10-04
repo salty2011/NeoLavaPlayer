@@ -1,0 +1,131 @@
+2
+25.000000
+0.750000
+1.000000
+2
+49
+2
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+River Rave
+0.400000
+700
+1
+255 101 0 255
+0.300000
+Arial
+
+Landscape
+1
+0
+0.000000 -30.150000 0.000000
+0.000000 -90.000000 0.000000
+0.550000 3.000000 1.000000
+1.200000
+tririver.bmp
+255 128 100 255
+255 255 255 255
+38
+3
+land.lvo
+1
+0
+1
+1
+deftextranslate.lvd
+textranslate
+0
+0
+0
+0
+1
+defSuperBump.lvd
+bump1
+1
+2
+0
+2
+1
+defSuperBump.lvd
+bump2
+0
+Background
+1
+0
+0.000000 -3.500000 10.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 3.000000
+1.000000
+bluesky.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+sky.lvo
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+0
+1
+0
+1
+1
+deftextranslate.lvd
+textranslate
+1
+SceneDetail ReadOnly Set	0
+TextDeform Parent Background
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Culling Landscape	Back
+Culling Background	Back
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 2.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	1.154607
+Camera RadiusMin Set	1.000000
+Camera RadiusMax Set	3.900000
+Camera RadiusMaxD Set	0.500000
+Camera Theta Set	0.000000
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	0.100000
+Camera ThetaMaxD Set	0.000000
+Camera Phi Set	90.000000
+Camera PhiMin Set	90.000000
+Camera PhiMax Set	90.000000
+Camera PhiMaxD Set	0.000000
+Camera Direction0 Set	0.156444
+Camera Direction1 Set	0.442900
+Camera Direction2 Set	-0.882817
+Camera MaxMove Set	10.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	0.100000
+Camera FarClip Set	200.000000
+EffectPresetCategoryInfo Terrain 4 0
+EffectPreset terrain1.lvm Canyon
+EffectPreset terrain2.lvm Spikes
+EffectPreset terrain3.lvm Peaks
+EffectPreset terrain4.lvm SmoothHills
+EffectPresetCategoryInfo Twist 3 0
+EffectPreset twist1.lvm Twisty
+EffectPreset twist2.lvm SuperTwisty
+EffectPreset twist3.lvm Straight
+EffectPresetCategoryInfo Reverse 2 0
+EffectPreset reverse1.lvm Forward
+EffectPreset reverse2.lvm Backward

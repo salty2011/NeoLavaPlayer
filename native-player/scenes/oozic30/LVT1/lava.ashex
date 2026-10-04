@@ -1,0 +1,217 @@
+2
+26.000000
+0.810000
+1.000000
+2
+49
+4
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Solar Swirl
+0.400000
+700
+1
+255 101 0 255
+0.200000
+Arial
+
+Background
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+starfield2.jpg
+128 255 255 255
+255 255 255 255
+50
+2
+stars.lvo
+2
+0
+2
+1
+deftexscroll.lvd
+texscroll
+1
+2
+0
+2
+1
+deftexwave.lvd
+texwave
+0
+Sun
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.600000
+sun2.bmp
+255 255 0 255
+255 255 255 255
+32
+6
+sun.lvo
+0
+0
+0
+1
+defripple.lvd
+ripple
+0
+0
+0
+0
+1
+defcenter.lvd
+center
+0
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defrotate.lvd
+rotate
+0
+0
+0
+0
+1
+deftexcos.lvd
+texcos
+0
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+Earth
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.500000
+earth.jpg
+145 255 255 255
+255 255 255 255
+50
+3
+earth.lvo
+1
+0
+1
+1
+defbump.lvd
+bump
+0
+1
+0
+1
+1
+deforbit.lvd
+orbit
+1
+1
+0
+1
+1
+defrotate.lvd
+rotate
+1
+Moon
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.250000
+moon.jpg
+201 201 201 255
+255 255 255 255
+50
+4
+moon.lvo
+2
+0
+2
+1
+defcos.lvd
+cos
+0
+1
+0
+1
+1
+deforbit.lvd
+orbit1
+1
+2
+0
+2
+1
+deforbit.lvd
+orbit2
+2
+2
+0
+2
+1
+defrotate.lvd
+rotate
+2
+SceneDetail ReadOnly Set	0
+TextDeform Parent Sun
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Culling Background	Back
+Culling Sun	Back
+Culling Earth	Back
+Culling Moon	Back
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 0.100000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	5.637871
+Camera RadiusMin Set	4.000000
+Camera RadiusMax Set	8.000000
+Camera RadiusMaxD Set	2.500000
+Camera Theta Set	341.675385
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	100.581306
+Camera PhiMin Set	60.000000
+Camera PhiMax Set	120.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	-0.748654
+Camera Direction1 Set	-0.551157
+Camera Direction2 Set	0.368433
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	200.000000

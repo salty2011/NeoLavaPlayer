@@ -1,0 +1,67 @@
+Version	3
+LfxType	Edge
+PresetFriendlyName	Edge
+NumPresets	8
+###############################################################################
+Preset	0
+PresetName	Thin_Radial_Edges
+OffsetMode	1.000000
+OffsetY	2.000000
+GridX	32.000000
+GridY	4.000000
+###############################################################################
+Preset	1
+PresetName	Thick_Radial_Edges
+OffsetMode	1.000000
+OffsetX	0.000000
+OffsetY	4.000000
+GridX	32.000000
+GridY	4.000000
+###############################################################################
+Preset	2
+PresetName	South_Edges
+OffsetMode	0.000000
+OffsetX	0.000000
+OffsetY	-4.000000
+GridX	32.000000
+GridY	4.000000
+###############################################################################
+Preset	3
+PresetName	SouthEast_Edges
+OffsetMode	0.000000
+OffsetX	4.000000
+OffsetY	-4.000000
+GridX	32.000000
+GridY	4.000000
+###############################################################################
+Preset	4
+PresetName	East_Edges
+OffsetMode	0.000000
+OffsetX	4.000000
+OffsetY	0.000000
+GridX	32.000000
+GridY	4.000000
+###############################################################################
+Preset	5
+PresetName	NorthEast_Edges
+OffsetMode	0.000000
+OffsetX	4.000000
+OffsetY	4.000000
+GridX	32.000000
+GridY	4.000000
+###############################################################################
+Preset	6
+PresetName	Thin_SouthWest_Edges
+OffsetMode	0.000000
+OffsetX	-2.000000
+OffsetY	-2.000000
+GridX	32.000000
+GridY	4.000000
+###############################################################################
+Preset	7
+PresetName	Thick_SouthWest_Edges
+OffsetMode	0.000000
+OffsetX	-8.000000
+OffsetY	-8.000000
+GridX	32.000000
+GridY	4.000000

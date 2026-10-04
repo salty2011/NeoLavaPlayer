@@ -1,0 +1,40 @@
+{
+ "lava25/LVT1": {
+  "starfield2.jpg": "native-player/modern_assets/recovered/lava25/LVT1/starfield2.jpg"
+ },
+ "lava25/LVT2": {
+  "bluesky.bmp": "native-player/modern_assets/recovered/lava25/LVT2/bluesky.jpg"
+ },
+ "lava25/LVT5": {
+  "blue-lightwater.bmp": "native-player/modern_assets/recovered/lava25/LVT5/blue-lightwater.jpg",
+  "blue-masiac.bmp": "native-player/modern_assets/recovered/lava25/LVT5/blue-masiac.jpg",
+  "green-pits.bmp": "native-player/modern_assets/recovered/lava25/LVT5/green-pits.jpg",
+  "pink-oil.bmp": "native-player/modern_assets/recovered/lava25/LVT5/pink-oil.jpg",
+  "purple-satin.bmp": "native-player/modern_assets/recovered/lava25/LVT5/purple-satin.jpg"
+ },
+ "lava25/LVT6": {
+  "brown-rock.bmp": "native-player/modern_assets/recovered/lava25/LVT6/brown-rock.jpg"
+ },
+ "lava25/LVT7": {
+  "bluesky.bmp": "native-player/modern_assets/recovered/lava25/LVT7/bluesky.jpg"
+ },
+ "oozic30/LVT1": {
+  "starfield2.jpg": "native-player/modern_assets/recovered/oozic30/LVT1/starfield2.jpg"
+ },
+ "oozic30/LVT2": {
+  "bluesky.bmp": "native-player/modern_assets/recovered/oozic30/LVT2/bluesky.jpg"
+ },
+ "oozic30/LVT5": {
+  "blue-lightwater.bmp": "native-player/modern_assets/recovered/oozic30/LVT5/blue-lightwater.jpg",
+  "blue-masiac.bmp": "native-player/modern_assets/recovered/oozic30/LVT5/blue-masiac.jpg",
+  "green-pits.bmp": "native-player/modern_assets/recovered/oozic30/LVT5/green-pits.jpg",
+  "pink-oil.bmp": "native-player/modern_assets/recovered/oozic30/LVT5/pink-oil.jpg",
+  "purple-satin.bmp": "native-player/modern_assets/recovered/oozic30/LVT5/purple-satin.jpg"
+ },
+ "oozic30/LVT6": {
+  "brown-rock.bmp": "native-player/modern_assets/recovered/oozic30/LVT6/brown-rock.jpg"
+ },
+ "oozic30/LVT7": {
+  "bluesky.bmp": "native-player/modern_assets/recovered/oozic30/LVT7/bluesky.jpg"
+ }
+}

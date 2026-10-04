@@ -1,0 +1,17 @@
+{
+	"name": "template: translucent veils",
+	"extends": "abstract_space",
+	"notes": "Scenes built from stacked translucent sheets or shells (DefAlpha layers). The surface goes through the transparent variant of the Modern shader (alpha from material x vertex colour), sheets are unlit so the layered colours read as light, and bloom carries the overlaps.",
+	"environment": {
+		"ambient_color": [0.5, 0.5, 0.8],
+		"ambient_energy": 0.6,
+		"glow_intensity": 0.45,
+		"glow_hdr_threshold": 1.1,
+		"volumetric_fog_density": 0.004,
+		"fog_density": 0.003
+	},
+	"materials": {
+		"default": {"unlit": true, "albedo_gain": 1.0, "emission_base": 0.1, "emission_music": 0.35, "shadows": false, "specular": 0.2}
+	},
+	"reactions": {"emission_pulse": 1.0, "emission_accent": 0.8, "glow_impact": 0.8}
+}

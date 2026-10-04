@@ -1,0 +1,309 @@
+2
+25.000000
+0.750000
+1.000000
+2
+49
+10
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Liquid Light
+1.000000
+700
+1
+255 153 0 255
+0.100000
+Arial
+
+Background
+1
+0
+0.000000 4.500000 0.000000
+0.000000 0.000000 0.000000
+1.000000 0.500000 1.000000
+0.300000
+background.bmp
+255 255 0 255
+255 255 255 255
+38
+3
+background.lvo
+0
+0
+0
+1
+deftextranslate.lvd
+textranslate
+0
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+CapTop
+1
+0
+0.000000 1.750000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+creativelogo.bmp
+128 128 255 255
+255 255 255 255
+38
+0
+captop.lvo
+CapSide
+1
+0
+0.000000 1.625000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+creativelogo.bmp
+128 128 255 255
+255 255 255 255
+38
+0
+capside.lvo
+CapBottom
+1
+0
+0.000000 1.500000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+creativelogo.bmp
+128 128 255 255
+255 255 255 255
+38
+0
+capbottom.lvo
+BaseTop
+1
+0
+0.000000 -1.500000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+creativelogo.bmp
+128 128 255 255
+255 255 255 255
+38
+0
+basetop.lvo
+BaseSide
+1
+0
+0.000000 -2.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+creativelogo.bmp
+128 128 255 255
+255 255 255 255
+38
+0
+baseside.lvo
+BaseBottom
+1
+0
+0.000000 -2.750000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+creativelogo.bmp
+128 128 255 255
+255 255 255 255
+38
+0
+basebottom.lvo
+Core
+3
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 3.000000 1.000000
+0.100000
+core.bmp
+0 255 255 255
+255 255 255 255
+38
+4
+corecylinder.lvo
+coresphere.lvo
+coretorus.lvo
+2
+0
+2
+1
+defsuperbump.lvd
+superbump
+0
+2
+0
+2
+1
+defcos.lvd
+cos
+0
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+2
+0
+2
+1
+defrotate.lvd
+rotate
+0
+Flame
+3
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 3.000000 1.000000
+0.075000
+flame.bmp
+128 255 0 100
+255 255 255 255
+38
+5
+flamecylinder.lvo
+flamesphere.lvo
+flametorus.lvo
+1
+0
+1
+1
+defsuperbump.lvd
+superbump
+0
+2
+0
+2
+1
+defcos.lvd
+cos
+1
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+1
+0
+1
+1
+defalpha.lvd
+alpha
+1
+1
+0
+1
+1
+defrotate.lvd
+rotate
+1
+Glass
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 3.000000 1.000000
+1.000000
+glass.bmp
+255 172 172 100
+255 255 255 255
+38
+3
+glasscylinder.lvo
+0
+0
+0
+1
+defsuperbump.lvd
+superbump
+0
+0
+0
+0
+1
+defalpha.lvd
+alpha
+2
+0
+0
+0
+1
+defrotate.lvd
+rotate
+2
+SceneDetail ReadOnly Set	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Culling Background	Back
+Culling CapTop	Back
+Culling CapSide	Back
+Culling CapBottom	Back
+Culling BaseTop	Back
+Culling BaseSide	Back
+Culling BaseBottom	Back
+Culling Core	Back
+Culling Flame	Back
+Culling Glass	Back
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 5.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	6.803324
+Camera RadiusMin Set	3.000000
+Camera RadiusMax Set	8.000000
+Camera RadiusMaxD Set	2.500000
+Camera Theta Set	143.753113
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	98.578865
+Camera PhiMin Set	30.000000
+Camera PhiMax Set	100.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	0.443852
+Camera Direction1 Set	-0.888210
+Camera Direction2 Set	-0.118655
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	200.000000
+EffectPresetCategoryInfo Transparent 4 0
+EffectPreset transparent.lvm transparent
+EffectPreset core.lvm core
+EffectPreset flame.lvm flame
+EffectPreset glass.lvm glass

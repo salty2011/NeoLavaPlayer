@@ -1,0 +1,168 @@
+2
+25.000000
+0.680000
+1.000000
+2
+113
+4
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+0
+LAVA! Diagnostics
+0.800000
+700
+1
+255 0 0 255
+0.100000
+Arial
+
+Mirror
+2
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.500000 1.000000 1.000000
+1.000000
+soniceye.jpg
+255 255 255 255
+255 255 255 255
+38
+4
+torus.lvo
+sphere.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+0
+0
+0
+1
+defrotate.lvd
+rot3
+3
+0
+0
+0
+1
+defrotate.lvd
+rot4
+4
+0
+0
+0
+1
+defrotate.lvd
+rot5
+5
+PyramidTop
+1
+0
+0.000000 22.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+circuit1.jpg
+255 255 255 255
+255 255 255 255
+38
+1
+pyramidtop.lvo
+1
+0
+1
+1
+defrotate.lvd
+rotate
+1
+PyramidBottom
+1
+0
+0.000000 -22.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+circuit1.jpg
+255 255 255 255
+255 255 255 255
+38
+1
+pyramidbot.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+2
+Background
+1
+0
+0.000000 0.000000 0.000000
+45.000000 0.000000 0.000000
+1.000000 2.000000 1.000000
+1.000000
+3Dwizard.jpg
+255 255 255 255
+255 255 255 255
+38
+2
+background.lvo
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defrotate.lvd
+rotate
+0
+Culling Mirror	None
+Culling PyramidTop	None
+Culling PyramidBottom	None
+Culling Background	None
+SceneDetail ReadOnly Set	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 4.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 2.000000 0.000000 1.000000
+Camera Radius Set	8.000000
+Camera RadiusMin Set	3.000000
+Camera RadiusMax Set	12.000000
+Camera RadiusMaxD Set	2.500000
+Camera Theta Set	0.000000
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	60.000000
+Camera PhiMin Set	45.000000
+Camera PhiMax Set	135.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	0.341136
+Camera Direction1 Set	-0.268666
+Camera Direction2 Set	-0.900802
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	200.000000

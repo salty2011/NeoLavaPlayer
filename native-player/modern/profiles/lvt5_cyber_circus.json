@@ -1,0 +1,216 @@
+{
+	"name": "LVT5 Cyber Circus",
+	"extends": "underwater",
+	"folders": [
+		"lava25/LVT5",
+		"oozic30/LVT5"
+	],
+	"notes": "Candy-coloured rings turning over an aqua caustic backdrop. Rings become glossy neon plastic with a beat-driven glow, the water backdrop stays self-lit, haze and bubbles give the pool its depth.",
+	"environment": {
+		"ambient_color": [
+			0.25,
+			0.6,
+			0.8
+		],
+		"ambient_energy": 0.55,
+		"glow_intensity": 0.5,
+		"glow_hdr_threshold": 1.15,
+		"volumetric_fog_density": 0.012,
+		"fog_density": 0.01
+	},
+	"lights": {
+		"key": {
+			"energy": 2.0,
+			"range": 80.0,
+			"volumetric": 0.6
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.5,
+				0.95
+			],
+			"energy": 0.8
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.05,
+				"emission_base": 0.08,
+				"emission_music": 0.25,
+				"drift": [
+					0.002,
+					0.001
+				]
+			},
+			"InnerRing": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.15,
+				"clearcoat": 0.45,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.6,
+				"albedo_gain": 1.2,
+				"saturation": 1.15,
+				"emission_base": 0.05,
+				"emission_music": 0.6,
+				"rim_strength": 0.2,
+				"rim_color": [
+					0.6,
+					0.95,
+					1.0
+				],
+				"normal_strength": 1.2
+			},
+			"Ring2": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.15,
+				"clearcoat": 0.45,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.6,
+				"albedo_gain": 1.2,
+				"saturation": 1.15,
+				"emission_base": 0.05,
+				"emission_music": 0.6,
+				"rim_strength": 0.2,
+				"rim_color": [
+					0.6,
+					0.95,
+					1.0
+				],
+				"normal_strength": 1.2
+			},
+			"ring3": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.15,
+				"clearcoat": 0.45,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.6,
+				"albedo_gain": 1.2,
+				"saturation": 1.15,
+				"emission_base": 0.05,
+				"emission_music": 0.6,
+				"rim_strength": 0.2,
+				"rim_color": [
+					0.6,
+					0.95,
+					1.0
+				],
+				"normal_strength": 1.2
+			},
+			"Ring4": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.15,
+				"clearcoat": 0.45,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.6,
+				"albedo_gain": 1.2,
+				"saturation": 1.15,
+				"emission_base": 0.05,
+				"emission_music": 0.6,
+				"rim_strength": 0.2,
+				"rim_color": [
+					0.6,
+					0.95,
+					1.0
+				],
+				"normal_strength": 1.2
+			},
+			"OuterRing": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.15,
+				"clearcoat": 0.45,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.6,
+				"albedo_gain": 1.2,
+				"saturation": 1.15,
+				"emission_base": 0.05,
+				"emission_music": 0.3,
+				"rim_strength": 0.2,
+				"rim_color": [
+					0.6,
+					0.95,
+					1.0
+				],
+				"normal_strength": 1.2
+			}
+		}
+	},
+	"atmosphere": {
+		"particles": [
+			{
+				"name": "bubbles",
+				"center": [
+					0.0,
+					0.0,
+					0.0
+				],
+				"extents": [
+					8.0,
+					4.0,
+					8.0
+				],
+				"amount": 90,
+				"lifetime": 9.0,
+				"size": 0.05,
+				"color": [
+					0.8,
+					1.0,
+					1.0
+				],
+				"energy": 1.8,
+				"velocity": [
+					0.0,
+					0.6,
+					0.0
+				],
+				"spread": 25.0,
+				"turbulence": 0.3,
+				"base": 0.5,
+				"sparkle": 0.5,
+				"pulse": 0.3
+			}
+		]
+	},
+	"effects": {
+		"particles": {
+			"emitters": [
+				"InnerRing",
+				"Ring2",
+				"ring3"
+			],
+			"colors": {
+				"InnerRing": [
+					0.3,
+					0.4,
+					1.0
+				],
+				"Ring2": [
+					0.3,
+					1.0,
+					0.4
+				],
+				"ring3": [
+					1.0,
+					0.3,
+					0.3
+				]
+			},
+			"radius": 0.9,
+			"amount": 70,
+			"burst": 90
+		},
+		"trails": {
+			"emitters": [
+				"InnerRing"
+			],
+			"amount": 10,
+			"lifetime": 0.5
+		},
+		"dof": {
+			"far_distance": 16.0,
+			"far_transition": 12.0,
+			"amount": 0.04
+		}
+	}
+}

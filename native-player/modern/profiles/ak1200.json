@@ -1,0 +1,83 @@
+{
+	"name": "AK1200",
+	"extends": "techno_club",
+	"folders": [
+		"oozic30/AK1200"
+	],
+	"notes": "A stage of giant logo walls with a glass pod. Walls, floor and ceiling stay self-lit (they were unlit in Classic) and glow; the pod is a glossy clearcoated ball with a green rim; green-tinted haze.",
+	"environment": {
+		"ambient_color": [
+			0.3,
+			0.6,
+			0.4
+		],
+		"ambient_energy": 0.3,
+		"fog_color": [
+			0.1,
+			0.3,
+			0.2
+		],
+		"volumetric_fog_albedo": [
+			0.5,
+			1.0,
+			0.7
+		],
+		"glow_intensity": 0.55,
+		"glow_hdr_threshold": 0.9,
+		"volumetric_fog_density": 0.006,
+		"fog_density": 0.004,
+		"adjust_contrast": 1.05
+	},
+	"lights": {
+		"key": {
+			"energy": 1.5,
+			"range": 60.0
+		},
+		"rim": {
+			"color": [
+				0.4,
+				1.0,
+				0.7
+			],
+			"energy": 0.6
+		}
+	},
+	"materials": {
+		"default": {
+			"unlit": true,
+			"albedo_gain": 1.7,
+			"emission_base": 0.1,
+			"emission_music": 0.35
+		},
+		"objects": {
+			"Background": {
+				"unlit": true,
+				"albedo_gain": 1.8,
+				"emission_base": 0.1,
+				"emission_music": 0.3,
+				"drift": [
+					0.002,
+					0.0
+				]
+			},
+			"Pod": {
+				"unlit": false,
+				"roughness_scale": 0.3,
+				"roughness_bias": 0.02,
+				"clearcoat": 0.9,
+				"clearcoat_gloss": 0.95,
+				"specular": 0.9,
+				"albedo_gain": 1.2,
+				"rim_strength": 0.8,
+				"rim_color": [
+					0.5,
+					1.0,
+					0.7
+				],
+				"emission_base": 0.08,
+				"emission_music": 0.6,
+				"metallic": 0.2
+			}
+		}
+	}
+}

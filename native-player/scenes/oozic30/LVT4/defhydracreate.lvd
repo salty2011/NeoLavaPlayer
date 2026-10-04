@@ -1,0 +1,184 @@
+DefType				DefHydraCreate
+MaxInstance			3
+
+NumPresets			6		; 6 predefined presets
+
+################################################
+Preset				0
+VerticesX			9
+VerticesY			24
+Rotation			0.0
+BranchRotation			45.0
+TranslationX			0.0
+TranslationY			0.0
+TranslationZ			-0.7
+SpawnStart			4
+SpawnFrequency			2
+SzThresh			0.01
+ScaleFactor			0.9
+TreeSize			0.25
+MaxAmplitude			10.25
+ColorMin0			0.8
+ColorMin1			0.5
+ColorMin2			0.1
+Level				0
+Depth				0
+MaxDepth			3
+MaxLevel			12
+DoTexture			1
+TexRepeatX			1.0
+TexRepeatY			1.0
+TexRepeatXScale			1.0
+TexRepeatYScale			1.0
+NormalDirection			-1.0
+
+
+################################################
+Preset				1
+VerticesX			9
+VerticesY			24
+Rotation			0.0
+BranchRotation			0.0
+TranslationX			0.0
+TranslationY			0.0
+TranslationZ			-0.7
+SpawnStart			4
+SpawnFrequency			2
+SzThresh			0.01
+ScaleFactor			0.9
+TreeSize			0.25
+MaxAmplitude			10.25
+ColorMin0			0.8
+ColorMin1			0.5
+ColorMin2			0.1
+Level				0
+Depth				0
+MaxDepth			3
+MaxLevel			7
+DoTexture			1
+TexRepeatX			1.0
+TexRepeatY			1.0
+TexRepeatXScale			1.0
+TexRepeatYScale			1.0
+NormalDirection			-1.0
+
+
+################################################
+Preset				2
+VerticesX				9
+VerticesY				24
+Rotation				0.0
+BranchRotation			0.0
+TranslationX			0.0
+TranslationY			0.0
+TranslationZ			-0.7
+SpawnStart			4
+SpawnFrequency			4
+SzThresh				0.002
+ScaleFactor			0.9
+TreeSize				0.25
+MaxAmplitude			10.25
+ColorMin0				0.8
+ColorMin1				0.5
+ColorMin2				0.1
+Level				0
+Depth				0
+MaxDepth				3
+MaxLevel				11
+DoTexture			1
+TexRepeatX			1.0
+TexRepeatY			1.0
+TexRepeatXScale			1.0
+TexRepeatYScale			1.0
+NormalDirection			-1.0
+
+
+################################################
+Preset				3
+VerticesX				9
+VerticesY				24
+Rotation				0.0
+BranchRotation			80.0
+TranslationX			0.0
+TranslationY			0.0
+TranslationZ			-0.7
+SpawnStart			4
+SpawnFrequency			3
+SzThresh				0.0075
+ScaleFactor			0.9
+TreeSize				0.25
+MaxAmplitude			10.25
+ColorMin0				0.8
+ColorMin1				0.5
+ColorMin2				0.1
+Level				0
+Depth				0
+MaxDepth				3
+MaxLevel				15
+DoTexture			1
+TexRepeatX			1.0
+TexRepeatY			1.0
+TexRepeatXScale			1.0
+TexRepeatYScale			1.0
+NormalDirection			-1.0
+
+
+################################################
+Preset				4
+VerticesX				9
+VerticesY				24
+Rotation				0.0
+BranchRotation			3.0
+TranslationX			0.0
+TranslationY			0.0
+TranslationZ			-0.7
+SpawnStart			4
+SpawnFrequency			1
+SzThresh				0.01
+ScaleFactor			0.9
+TreeSize				0.25
+MaxAmplitude			10.25
+ColorMin0				0.8
+ColorMin1				0.5
+ColorMin2				0.1
+Level				0
+Depth				0
+MaxDepth				1
+MaxLevel				21
+DoTexture			1
+TexRepeatX			1.0
+TexRepeatY			1.0
+TexRepeatXScale			1.0
+TexRepeatYScale			1.0
+NormalDirection			-1.0
+
+
+################################################
+Preset				5
+VerticesX				9
+VerticesY				24
+Rotation				0.0
+BranchRotation			90.0
+TranslationX			0.0
+TranslationY			0.0
+TranslationZ			-0.7
+SpawnStart			4
+SpawnFrequency			2
+SzThresh				0.005
+ScaleFactor			0.9
+TreeSize				0.25
+MaxAmplitude			10.25
+ColorMin0				0.8
+ColorMin1				0.5
+ColorMin2				0.1
+Level				0
+Depth				0
+MaxDepth				1
+MaxLevel				5
+DoTexture			1
+TexRepeatX			1.0
+TexRepeatY			1.0
+TexRepeatXScale			1.0
+TexRepeatYScale			1.0
+NormalDirection			-1.0
+

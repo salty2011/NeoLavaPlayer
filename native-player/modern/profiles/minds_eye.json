@@ -1,0 +1,92 @@
+{
+	"name": "Mind's Eye",
+	"extends": "abstract_space",
+	"folders": [
+		"oozic30/Mind's Eye"
+	],
+	"notes": "The Oozic logo floating in a violet lens-flare void. The backdrop is self-lit and drifting; the logo plane keeps its red/white colours and emits by its own brightness so it glows against the dark; soft drifting motes like lens glints.",
+	"environment": {
+		"ambient_color": [
+			0.4,
+			0.3,
+			0.7
+		],
+		"ambient_energy": 0.35,
+		"glow_intensity": 0.55,
+		"glow_hdr_threshold": 1.0,
+		"fog_color": [
+			0.25,
+			0.15,
+			0.5
+		]
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.5,
+				"saturation": 1.2,
+				"emission_base": 0.1,
+				"emission_music": 0.3,
+				"drift": [
+					0.002,
+					0.001
+				]
+			},
+			"Mirror": {
+				"emissive_luma": 1.2,
+				"emissive_luma_curve": 1.3,
+				"albedo_gain": 1.3,
+				"roughness_scale": 0.7,
+				"specular": 0.08,
+				"clearcoat": 0.0,
+				"emission_music": 0.6,
+				"rim_strength": 0.5,
+				"rim_color": [
+					1.0,
+					0.4,
+					0.5
+				]
+			}
+		}
+	},
+	"atmosphere": {
+		"particles": [
+			{
+				"name": "glints",
+				"center": [
+					0.0,
+					0.0,
+					0.0
+				],
+				"extents": [
+					4.0,
+					3.0,
+					4.0
+				],
+				"amount": 70,
+				"lifetime": 8.0,
+				"size": 0.05,
+				"color": [
+					0.8,
+					0.6,
+					1.0
+				],
+				"energy": 2.4,
+				"velocity": [
+					0.0,
+					0.1,
+					0.0
+				],
+				"spread": 90.0,
+				"turbulence": 0.25,
+				"base": 0.4,
+				"sparkle": 0.6
+			}
+		]
+	},
+	"lights": {
+		"key": {
+			"specular": 0.2
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+ "label": "reconstruction",
+ "WARNING": "RECONSTRUCTION - NOT an original Creative asset. The original waterflowers.bmp was never recovered.",
+ "replaces_missing_original": "waterflowers.bmp",
+ "scene": "LVT2 (Dancing Well)",
+ "used_by_object": "Tub (tub.lvo, parametric CYLINDER R=1.77 h=0.62, TexRep 4x1, ripple)",
+ "size": [
+  256,
+  256
+ ],
+ "tileable": true,
+ "method": "tools/texture_pipeline/reconstruct_lvt2.py: numpy/scipy procedural (FFT periodic fbm noise, wrap-around flower stamping, 4x supersample, median+blur painterly softening, saturation push). Seed 2202, deterministic.",
+ "description": "Blue-teal caustic water with floating lily pads carrying multicoloured blossoms.",
+ "style_reference": "Creative LAVA 25 scene textures (saturated, soft, 256x256, seamless)"
+}

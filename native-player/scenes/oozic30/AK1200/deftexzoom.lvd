@@ -1,0 +1,35 @@
+DefType	DefTexZoom
+MaxInstance	1
+NumPresets	2
+###############################################################################
+Preset	0
+AmpScale	1.000000
+DecayMin	1.000000
+DecayMax	1.000000
+RepXMin	20.000000
+RepXMax	30.000000
+RepYMin	20.000000
+RepYMax	30.000000
+RepXVMin	0.060000
+RepXVMax	0.060000
+RepYVMin	0.060000
+RepYVMax	0.060000
+CentVMin	0.000000
+CentVMax	0.000000
+DoRestore	0.000000
+###############################################################################
+Preset	1
+AmpScale	1.000000
+DecayMin	1.000000
+DecayMax	1.000000
+RepXMin	3.000000
+RepXMax	3.000000
+RepYMin	0.500000
+RepYMax	2.000000
+RepXVMin	0.001000
+RepXVMax	0.001000
+RepYVMin	1.000000
+RepYVMax	1.000000
+CentVMin	90.000000
+CentVMax	180.000000
+DoRestore	0.000000

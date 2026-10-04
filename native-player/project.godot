@@ -1,0 +1,22 @@
+config_version=5
+[application]
+config/name="Oozic Recovery Player"
+run/main_scene="res://main.tscn"
+config/icon="res://icon.png"
+[autoload]
+
+PlayerBus="*res://player_bus.gd"
+ReactivityService="*res://analysis/reactivity_service.gd"
+
+[display]
+window/size/viewport_width=1200
+window/size/viewport_height=760
+window/size/window_width_override=1200
+window/size/window_height_override=760
+window/stretch/mode="canvas_items"
+window/subwindows/embed_subwindows=false
+window/per_pixel_transparency/allowed=true
+[rendering]
+renderer/rendering_method="forward_plus"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/vram_compression/import_etc2_astc=true

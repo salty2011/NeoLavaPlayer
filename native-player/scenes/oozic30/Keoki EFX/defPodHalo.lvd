@@ -1,0 +1,30 @@
+DefType	DefHalo
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+SizeX 3.0
+SizeY 3.0
+CenterX 0.0
+CenterY 0.0
+CenterZ 0.0
+CenterOffset -2.5
+ScaleXMin 1.0
+ScaleXMax 1.0
+ScaleYMin 1.0
+ScaleYMax 1.0
+ScaleVelocity 0.1
+AlphaMin 1.0
+AlphaMax 1.0
+AlphaVelocity 0.1
+HLScaleXMin 0.85
+HLScaleXMax 1.3
+HLScaleYMin 0.85
+HLScaleYMax 1.3
+HLScaleVelocity 4.0
+HLAlphaMin 1.0
+HLAlphaMax 1.0
+HLAlphaVelocity 0.0
+PickScaleX 5.0
+PickScaleY 0.5
+

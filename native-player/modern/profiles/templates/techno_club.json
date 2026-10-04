@@ -1,0 +1,28 @@
+{
+	"name": "template: techno club",
+	"extends": "abstract_space",
+	"notes": "Dark rooms with neon: strong bloom on emissive screens, glossy floors (SSR), magenta/cyan haze that the key lights, punchy contrast. Luminous textures (screens, signs, windows) emit by their own brightness.",
+	"environment": {
+		"ambient_color": [0.3, 0.3, 0.55],
+		"ambient_energy": 0.35,
+		"adjust_contrast": 1.12,
+		"adjust_saturation": 1.15,
+		"glow_intensity": 0.5,
+		"glow_hdr_threshold": 0.9,
+		"fog_color": [0.25, 0.12, 0.4],
+		"fog_density": 0.01,
+		"volumetric_fog_density": 0.012,
+		"volumetric_fog_albedo": [0.8, 0.5, 1.0],
+		"volumetric_fog_emission": [0.01, 0.0, 0.03],
+		"volumetric_fog_anisotropy": 0.55
+	},
+	"lights": {
+		"key": {"energy": 1.8, "range": 120.0, "volumetric": 0.8, "specular": 1.0},
+		"fill": {"color": [0.4, 0.5, 1.0], "energy": 0.3},
+		"rim": {"color": [0.2, 0.9, 1.0], "energy": 0.55}
+	},
+	"materials": {
+		"default": {"roughness_scale": 0.85, "specular": 0.6, "clearcoat": 0.1, "saturation": 1.1, "emissive_luma": 0.0}
+	},
+	"reactions": {"key_energy_pulse": 0.45, "key_energy_swell": 0.5, "glow_impact": 0.9, "fog_anticipation": 0.9, "emission_pulse": 1.2}
+}

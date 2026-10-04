@@ -1,0 +1,13 @@
+DefType	DefTexScroll
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+DecayMin	1.500000
+DecayMax	1.500000
+TextureLowX	2.000000
+TextureHighX	2.000000
+TextureLowY	1.000000
+TextureHighY	1.000000
+VMin	0.000000
+VMax	0.250000

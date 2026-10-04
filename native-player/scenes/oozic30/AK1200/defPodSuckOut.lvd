@@ -1,0 +1,11 @@
+DefType	DefSuckOut
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+SuckPointX	0.0
+SuckPointY	5.0
+SuckPointZ	0.0
+CameraSpace	0
+
+

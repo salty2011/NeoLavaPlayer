@@ -1,0 +1,542 @@
+2
+25.000000
+0.850000
+2.000000
+2
+33
+19
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+150.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Music Metropolis
+2.000000
+700
+1
+255 18 10 87
+0.100000
+Arial
+
+Background
+1
+0
+0.000000 -10.500000 0.000000
+0.000000 90.000000 0.000000
+30.000000 50.000000 40.000000
+0.000000
+roads.bmp
+255 255 255 255
+255 255 255 255
+38
+1
+base.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+statue
+2
+0
+0.000000 -10.000000 0.000000
+0.000000 0.000000 0.000000
+1.600000 1.750000 1.600000
+0.000000
+statue.bmp
+255 255 255 255
+255 255 255 255
+38
+5
+libertyA.lvo
+libertyB.lvo
+0
+0
+0
+1
+defrotate.lvd
+rotate
+4
+0
+0
+0
+1
+deforbit.lvd
+orbit
+4
+0
+0
+0
+1
+defrotate.lvd
+rotate
+5
+1
+0
+1
+1
+defpools.lvd
+pools
+0
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+buildingA
+1
+0
+5.500000 -10.000000 4.000000
+25.000000 0.000000 0.000000
+1.200000 2.000000 2.000000
+0.000000
+building_A.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+buildingA.lvo
+1
+0
+1
+1
+defshear.lvd
+shear
+1
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+buildingB
+1
+0
+-5.500000 -10.000000 4.000000
+50.000000 0.000000 0.000000
+0.800000 1.400000 0.800000
+0.000000
+building_B.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+buildingB.lvo
+2
+0
+2
+1
+defshear.lvd
+shear
+2
+1
+0
+1
+1
+defpools.lvd
+pools
+0
+buildingC
+1
+0
+5.000000 -10.000000 -6.000000
+45.000000 0.000000 0.000000
+1.000000 1.500000 1.000000
+0.000000
+building_C.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+buildingC.lvo
+0
+0
+0
+1
+defshear.lvd
+shear
+0
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+buildingC2
+1
+0
+-11.000000 -10.000000 12.000000
+15.000000 0.000000 0.000000
+1.000000 1.500000 1.000000
+0.000000
+building_C.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+buildingC.lvo
+2
+0
+2
+1
+defshear.lvd
+shear
+4
+2
+0
+2
+1
+defpools.lvd
+pools
+0
+buildingD
+1
+0
+-4.500000 -10.000000 -5.000000
+30.000000 0.000000 0.000000
+1.000000 1.600000 1.000000
+1.000000
+building_D.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+buildingD.lvo
+1
+0
+1
+1
+defshear.lvd
+shear
+5
+1
+0
+1
+1
+defpools.lvd
+pools
+0
+buildingD2
+1
+0
+12.000000 -10.000000 12.000000
+30.000000 0.000000 0.000000
+1.000000 1.600000 1.000000
+1.000000
+building_D.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+buildingD.lvo
+0
+0
+0
+1
+defshear.lvd
+shear
+6
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+car1
+1
+0
+0.000000 3.400000 3.000000
+90.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+cars.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+car.lvo
+0
+0
+0
+1
+deforbit.lvd
+orbit
+0
+2
+0
+2
+1
+defrotate.lvd
+rotate
+3
+car2
+1
+0
+0.000000 1.400000 3.000000
+90.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+cars.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+car.lvo
+0
+0
+0
+1
+deforbit.lvd
+orbit
+1
+2
+0
+2
+1
+defrotate.lvd
+rotate
+3
+car3
+1
+0
+0.000000 2.400000 5.000000
+-90.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+cars.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+car.lvo
+0
+0
+0
+1
+deforbit.lvd
+orbit
+2
+2
+0
+2
+1
+defrotate.lvd
+rotate
+3
+car4
+1
+0
+0.000000 1.400000 5.000000
+-90.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+cars.bmp
+255 255 255 255
+255 255 255 255
+38
+2
+car.lvo
+0
+0
+0
+1
+deforbit.lvd
+orbit
+3
+2
+0
+2
+1
+defrotate.lvd
+rotate
+3
+Big_Billboard1
+1
+0
+10.000000 -10.000000 -10.000000
+-45.000000 0.000000 0.000000
+4.000000 4.000000 3.000000
+1.000000
+billboard.bmp
+255 255 255 255
+255 255 255 255
+60
+1
+billboard_frame.lvo
+0
+0
+0
+1
+defshear.lvd
+shear
+7
+Big_Billboard1p
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+sign1.jpg
+255 255 255 255
+255 255 255 255
+60
+0
+billboard_plane.lvo
+Big_Billboard2
+1
+0
+-10.000000 -10.000000 -10.000000
+45.000000 0.000000 0.000000
+4.000000 4.000000 3.000000
+1.000000
+billboard.bmp
+255 255 255 255
+255 255 255 255
+60
+1
+billboard_frame.lvo
+2
+0
+2
+1
+defshear.lvd
+shear
+8
+Big_Billboard2p
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+sign2.jpg
+255 255 255 255
+255 255 255 255
+60
+0
+billboard_plane.lvo
+cone1
+1
+0
+9.400000 16.000000 0.000000
+0.000000 90.000000 -43.000000
+2.000000 3.500000 2.000000
+1.000000
+light.bmp
+255 255 255 80
+255 255 255 255
+38
+1
+light.lvo
+0
+0
+0
+1
+defrotate.lvd
+rotate
+0
+cone2
+1
+0
+-10.000000 -10.000000 0.000000
+0.000000 -90.000000 -45.000000
+2.000000 1.000000 2.000003
+1.000000
+light.bmp
+255 255 255 80
+255 255 255 255
+38
+1
+light.lvo
+0
+0
+0
+1
+defrotate.lvd
+rotate
+1
+cone3
+1
+0
+10.000000 -10.000000 0.000000
+0.000000 90.000000 45.000000
+2.000000 1.000000 2.000000
+1.000000
+light.bmp
+255 255 255 80
+255 255 255 255
+38
+1
+light.lvo
+0
+0
+0
+1
+defrotate.lvd
+rotate
+2
+Culling Background	Back
+Culling statue	Back
+Culling buildingA	Back
+Culling buildingB	Back
+Culling buildingC	Back
+Culling buildingC2	Back
+Culling buildingD	Back
+Culling buildingD2	Back
+Culling car1	None
+Culling car2	None
+Culling car3	None
+Culling car4	None
+Culling Big_Billboard1	Back
+Culling Big_Billboard1p	None
+Culling Big_Billboard2	Back
+Culling Big_Billboard2p	None
+Culling cone1	Back
+Culling cone2	Back
+Culling cone3	Back
+SceneDetail ReadOnly Set	0
+TextDeform	Num	2
+TextDeform Load	DefMsgRot.lvd	0
+TextDeform Load	DefMsgalpha.lvd	0
+ParentChildLink Big_Billboard1 Big_Billboard1p
+ParentChildLink Big_Billboard2 Big_Billboard2p
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 2.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 2.000000 0.000000 1.000000
+Camera Radius Set	27.737751
+Camera RadiusMin Set	25.000000
+Camera RadiusMax Set	35.000000
+Camera RadiusMaxD Set	2.500000
+Camera Theta Set	211.757721
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	32.124287
+Camera PhiMin Set	10.000000
+Camera PhiMax Set	95.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	-0.183091
+Camera Direction1 Set	-0.983088
+Camera Direction2 Set	0.004075
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	200.000000

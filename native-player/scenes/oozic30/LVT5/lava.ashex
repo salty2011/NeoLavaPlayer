@@ -1,0 +1,350 @@
+2
+25.000000
+0.750000
+1.000000
+2
+49
+6
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Cyber Circus
+1.000000
+700
+1
+114 255 0 255
+0.100000
+Arial
+
+InnerRing
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.150000
+purple-satin.bmp
+0 0 255 255
+255 255 255 255
+38
+6
+ring1.lvo
+2
+0
+2
+1
+defcos.lvd
+cos
+1
+2
+0
+2
+1
+defrotate.lvd
+rotate
+0
+2
+0
+2
+1
+defrotate.lvd
+rotate
+1
+2
+0
+2
+1
+defrotate.lvd
+rotate
+2
+2
+0
+2
+1
+defscale.lvd
+scale
+1
+2
+0
+2
+1
+deftexscroll.lvd
+texscroll
+1
+Ring2
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.400000
+green-pits.bmp
+0 255 0 255
+255 255 255 255
+38
+6
+ring2.lvo
+1
+0
+1
+1
+defcos.lvd
+cos
+2
+1
+0
+1
+1
+defrotate.lvd
+rotate
+3
+1
+0
+1
+1
+defrotate.lvd
+rotate
+4
+1
+0
+1
+1
+defrotate.lvd
+rotate
+5
+1
+0
+1
+1
+defscale.lvd
+scale
+1
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+1
+ring3
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.500000
+blue-masiac.bmp
+255 0 0 255
+255 255 255 255
+38
+6
+ring3.lvo
+0
+0
+0
+1
+defcos.lvd
+cos
+3
+0
+0
+0
+1
+defrotate.lvd
+rotate
+6
+0
+0
+0
+1
+defrotate.lvd
+rotate
+7
+0
+0
+0
+1
+defrotate.lvd
+rotate
+8
+0
+0
+0
+1
+defscale.lvd
+scale
+1
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+1
+Ring4
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+3.000000
+pink-oil.bmp
+255 255 0 255
+255 255 255 255
+38
+5
+ring4.lvo
+2
+0
+2
+1
+defcos.lvd
+cos
+3
+2
+0
+2
+1
+defrotate.lvd
+rotate
+9
+2
+0
+2
+1
+defrotate.lvd
+rotate
+10
+2
+0
+2
+1
+defrotate.lvd
+rotate
+11
+2
+0
+2
+1
+defscale.lvd
+scale
+2
+OuterRing
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+7.000000
+purple-pore.bmp
+0 255 255 255
+255 255 255 255
+38
+5
+ring5.lvo
+0
+0
+0
+1
+defcos.lvd
+cos
+3
+0
+0
+0
+1
+defrotate.lvd
+rotate
+12
+0
+0
+0
+1
+defrotate.lvd
+rotate
+13
+0
+0
+0
+1
+defrotate.lvd
+rotate
+14
+0
+0
+0
+1
+defscale.lvd
+scale
+2
+Background
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+blue-lightwater.bmp
+128 255 255 255
+255 255 255 255
+38
+2
+background.lvo
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+2
+0
+0
+0
+1
+deftexwave.lvd
+wave
+1
+SceneDetail ReadOnly Set	0
+TextDeform Parent ring3
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Culling InnerRing	Back
+Culling Ring2	Back
+Culling ring3	Back
+Culling Ring4	Back
+Culling OuterRing	Back
+Culling Background	Back
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 2.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	9.163894
+Camera RadiusMin Set	4.000000
+Camera RadiusMax Set	69.000000
+Camera RadiusMaxD Set	2.500000
+Camera Theta Set	124.663193
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	100.431465
+Camera PhiMin Set	60.000000
+Camera PhiMax Set	120.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	-0.752689
+Camera Direction1 Set	-0.024184
+Camera Direction2 Set	-0.657932
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	0.100000
+Camera FarClip Set	200.000000

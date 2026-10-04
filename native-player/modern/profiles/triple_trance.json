@@ -1,0 +1,786 @@
+{
+	"name": "Triple Trance",
+	"folders": [
+		"lava25/Triple Trance"
+	],
+	"version": 1,
+	"notes": "Lava-25 look for Triple Trance: glossy heads on tapered stems, bright marbled platform, blue/purple ooze surround. Values are scene data; modern_layer.gd interprets them.",
+	"environment": {
+		"background": [
+			0.0,
+			0.0,
+			0.0
+		],
+		"ambient_color": [
+			0.42,
+			0.38,
+			0.85
+		],
+		"ambient_energy": 0.38,
+		"tonemap": "filmic",
+		"exposure": 1.0,
+		"white": 6.0,
+		"adjust_brightness": 1.0,
+		"adjust_contrast": 1.04,
+		"adjust_saturation": 1.12,
+		"glow_intensity": 0.35,
+		"glow_strength": 0.95,
+		"glow_bloom": 0.0,
+		"glow_hdr_threshold": 1.6,
+		"glow_levels": [
+			0.0,
+			0.4,
+			0.8,
+			1.0,
+			0.6,
+			0.3,
+			0.0
+		],
+		"fog_color": [
+			0.3,
+			0.22,
+			0.75
+		],
+		"fog_density": 0.006,
+		"fog_sky_affect": 0.0,
+		"volumetric_fog_density": 0.009,
+		"volumetric_fog_albedo": [
+			0.55,
+			0.45,
+			1.0
+		],
+		"volumetric_fog_emission": [
+			0.03,
+			0.015,
+			0.09
+		],
+		"volumetric_fog_anisotropy": 0.45,
+		"volumetric_fog_length": 48.0,
+		"ssao_radius": 0.6,
+		"ssao_intensity": 1.6,
+		"ssil_intensity": 0.8,
+		"ssr_max_steps": 64,
+		"sdfgi_cascades": 4,
+		"sdfgi_min_cell": 0.15,
+		"sdfgi_energy": 0.8
+	},
+	"lights": {
+		"key": {
+			"from_scene_light": 0,
+			"energy": 1.4,
+			"range": 60.0,
+			"attenuation": 0.0,
+			"size": 0.35,
+			"shadow": true,
+			"volumetric": 0.4,
+			"specular": 0.35
+		},
+		"fill": {
+			"color": [
+				0.45,
+				0.55,
+				1.0
+			],
+			"energy": 0.35,
+			"direction": [
+				-0.6,
+				-0.35,
+				0.7
+			]
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.35,
+				0.9
+			],
+			"energy": 0.6,
+			"camera_relative": [
+				0.0,
+				0.25,
+				-1.0
+			]
+		}
+	},
+	"materials": {
+		"default": {
+			"roughness_scale": 0.8,
+			"roughness_bias": 0.0,
+			"normal_strength": 1.0,
+			"specular": 0.5,
+			"clearcoat": 0.0,
+			"albedo_gain": 1.0,
+			"saturation": 1.05,
+			"emission_base": 0.0,
+			"emission_music": 0.0,
+			"rim_strength": 0.0,
+			"shadows": true,
+			"clearcoat_gloss": 0.6
+		},
+		"objects": {
+			"Mushroom": {
+				"group": "head",
+				"roughness_scale": 0.6,
+				"clearcoat": 0.6,
+				"clearcoat_gloss": 0.72,
+				"normal_strength": 1.2,
+				"emission_base": 0.03,
+				"emission_music": 0.35,
+				"rim_strength": 0.12,
+				"rim_color": [
+					0.35,
+					0.55,
+					1.0
+				],
+				"albedo_gain": 1.2,
+				"roughness_bias": 0.08
+			},
+			"SignBoard": {
+				"group": "head",
+				"roughness_scale": 0.6,
+				"clearcoat": 0.6,
+				"clearcoat_gloss": 0.72,
+				"normal_strength": 1.0,
+				"emission_base": 0.03,
+				"emission_music": 0.35,
+				"rim_strength": 0.2,
+				"rim_color": [
+					1.0,
+					0.4,
+					1.0
+				],
+				"albedo_gain": 1.3,
+				"roughness_bias": 0.08
+			},
+			"Sphere": {
+				"group": "head",
+				"roughness_scale": 0.6,
+				"clearcoat": 0.6,
+				"clearcoat_gloss": 0.72,
+				"normal_strength": 1.4,
+				"emission_base": 0.03,
+				"emission_music": 0.35,
+				"rim_strength": 0.2,
+				"rim_color": [
+					1.0,
+					0.35,
+					0.6
+				],
+				"ao": 0.4,
+				"albedo_gain": 1.5,
+				"roughness_bias": 0.08
+			},
+			"Cone1": {
+				"group": "stem",
+				"roughness_scale": 0.55,
+				"clearcoat": 0.6,
+				"emission_music": 0.2,
+				"clearcoat_gloss": 0.6
+			},
+			"Cone2": {
+				"group": "stem",
+				"roughness_scale": 0.55,
+				"clearcoat": 0.6,
+				"emission_music": 0.2,
+				"clearcoat_gloss": 0.6
+			},
+			"Cone3": {
+				"group": "stem",
+				"roughness_scale": 0.55,
+				"clearcoat": 0.6,
+				"emission_music": 0.2,
+				"clearcoat_gloss": 0.6
+			},
+			"PlatformTop": {
+				"group": "platform",
+				"roughness_scale": 0.8,
+				"roughness_bias": 0.22,
+				"clearcoat": 0.25,
+				"clearcoat_gloss": 0.6,
+				"albedo_gain": 2.4,
+				"normal_strength": 0.8,
+				"emission_base": 0.22,
+				"saturation": 0.75,
+				"specular": 0.4,
+				"shadows": false
+			},
+			"PlatformSide": {
+				"group": "platform",
+				"roughness_scale": 0.5,
+				"clearcoat": 0.5,
+				"albedo_gain": 1.8,
+				"normal_strength": 0.8,
+				"saturation": 0.75,
+				"clearcoat_gloss": 0.6,
+				"roughness_bias": 0.25,
+				"specular": 0.35,
+				"shadows": false,
+				"emission_base": 0.12
+			},
+			"PlatformBottom": {
+				"group": "platform",
+				"roughness_scale": 0.6,
+				"albedo_gain": 1.5,
+				"saturation": 0.75,
+				"roughness_bias": 0.3,
+				"specular": 0.3,
+				"shadows": false
+			},
+			"BackGround": {
+				"group": "background",
+				"roughness_scale": 0.7,
+				"normal_strength": 1.6,
+				"albedo_gain": 1.3,
+				"saturation": 1.15,
+				"emission_base": 0.45,
+				"emission_music": 0.25,
+				"shadows": false,
+				"gi_static": true,
+				"drift": [
+					0.004,
+					0.0015
+				],
+				"roughness_bias": 0.35,
+				"specular": 0.15
+			}
+		}
+	},
+	"reactions": {
+		"key_energy_swell": 0.6,
+		"key_energy_pulse": 0.35,
+		"key_hue_accent": 0.06,
+		"fog_calm": 0.35,
+		"fog_anticipation": 0.5,
+		"emission_pulse": 1.0,
+		"emission_accent": 0.6,
+		"glow_impact": 0.6,
+		"exposure_impact": 0.12,
+		"background_drift_swell": 3.0,
+		"rim_swell": 0.6,
+		"background_drift_calm": 0.4
+	},
+	"effects": {
+		"particles": {
+			"emitters": [
+				"Mushroom",
+				"SignBoard",
+				"Sphere"
+			],
+			"colors": {
+				"Mushroom": [
+					0.35,
+					0.55,
+					1.0
+				],
+				"SignBoard": [
+					1.0,
+					0.35,
+					1.0
+				],
+				"Sphere": [
+					1.0,
+					0.3,
+					0.45
+				]
+			},
+			"radius": 0.7,
+			"amount": 96,
+			"burst": 90
+		},
+		"trails": {
+			"emitters": [
+				"Mushroom",
+				"SignBoard",
+				"Sphere"
+			],
+			"amount": 64,
+			"lifetime": 0.7
+		},
+		"dof": {
+			"far_distance": 14.0,
+			"far_transition": 10.0,
+			"amount": 0.06,
+			"closeup_amount": 0.09
+		},
+		"post": {
+			"chromatic": 0.003,
+			"motion_blur": 0.012
+		}
+	},
+	"director": {
+		"notes": "Virtual director (Phase 4d): shot library, editing grammar and comfort caps. Interpreted by modern/director/virtual_director.gd; see docs/DIRECTOR_AND_ANIMATION.md.",
+		"seed": 1997,
+		"center": [
+			0.0,
+			-0.2,
+			0.0
+		],
+		"subjects": [
+			"Mushroom",
+			"SignBoard",
+			"Sphere"
+		],
+		"min_shot_bars": 2,
+		"min_shot_seconds": 4.0,
+		"min_turn_deg": 35,
+		"push_in": 0.26,
+		"impact_fov": 3.5,
+		"boost_pace": 0.35,
+		"glide_omega": 1.8,
+		"glide_seconds": 4.0,
+		"no_grid_timeout": 24.0,
+		"comfort": {
+			"max_speed": 3.5,
+			"max_accel": 4.0,
+			"max_angular_speed_deg": 50,
+			"max_angular_accel_deg": 90,
+			"max_fov_speed": 15
+		},
+		"guard": {
+			"clearance": 1.15,
+			"spheres": [
+				"Mushroom",
+				"SignBoard",
+				"Sphere"
+			],
+			"boxes": [
+				"PlatformTop",
+				"PlatformSide",
+				"PlatformBottom"
+			],
+			"max_radius": 10.0,
+			"min_y": -3.0,
+			"max_y": 8.0
+		},
+		"locked": {
+			"distance": 7.5,
+			"elevation": 18,
+			"azimuth": 20,
+			"fov": 45
+		},
+		"shots": {
+			"original": {
+				"type": "original"
+			},
+			"wide": {
+				"type": "orbit",
+				"target": "@center",
+				"distance": [
+					7.0,
+					8.0
+				],
+				"elevation": [
+					14,
+					26
+				],
+				"az_speed": [
+					2.0,
+					4.0
+				],
+				"fov": 50
+			},
+			"orbit": {
+				"type": "orbit",
+				"target": "@center",
+				"distance": [
+					5.0,
+					6.0
+				],
+				"elevation": [
+					10,
+					22
+				],
+				"az_speed": [
+					8.0,
+					13.0
+				],
+				"fov": 45
+			},
+			"dolly_in": {
+				"type": "dolly",
+				"target": "@center",
+				"from": [
+					7.5,
+					8.5
+				],
+				"to": [
+					4.4,
+					5.0
+				],
+				"elevation": [
+					8,
+					18
+				],
+				"az_speed": [
+					1.0,
+					3.0
+				],
+				"travel_bars": 8,
+				"fov": 44
+			},
+			"dolly_out": {
+				"type": "dolly",
+				"target": "@center",
+				"from": [
+					4.4,
+					5.0
+				],
+				"to": [
+					7.0,
+					8.0
+				],
+				"elevation": [
+					10,
+					20
+				],
+				"az_speed": [
+					1.0,
+					3.0
+				],
+				"travel_bars": 8,
+				"fov": 46
+			},
+			"crane_up": {
+				"type": "crane",
+				"target": "@center",
+				"distance": [
+					5.8,
+					6.8
+				],
+				"from": [
+					3,
+					8
+				],
+				"to": [
+					36,
+					44
+				],
+				"az_speed": [
+					3.0,
+					6.0
+				],
+				"travel_bars": 8,
+				"fov": 46
+			},
+			"crane_down": {
+				"type": "crane",
+				"target": "@center",
+				"distance": [
+					5.8,
+					6.8
+				],
+				"from": [
+					38,
+					44
+				],
+				"to": [
+					6,
+					12
+				],
+				"az_speed": [
+					3.0,
+					6.0
+				],
+				"travel_bars": 8,
+				"fov": 46
+			},
+			"handheld": {
+				"type": "handheld",
+				"target": "@center",
+				"distance": [
+					4.6,
+					5.4
+				],
+				"elevation": [
+					8,
+					16
+				],
+				"az_speed": [
+					0.0,
+					2.0
+				],
+				"noise": 0.06,
+				"noise_aim": 0.035,
+				"noise_freq": 0.55,
+				"fov": 44
+			},
+			"close_mushroom": {
+				"type": "closeup",
+				"target": "Mushroom",
+				"distance": [
+					3.0,
+					3.4
+				],
+				"elevation": [
+					6,
+					16
+				],
+				"az_offset": [
+					-35,
+					35
+				],
+				"az_speed": [
+					1.5,
+					3.0
+				],
+				"fov": 40,
+				"look_offset": 0.05,
+				"push_scale": 0.5
+			},
+			"close_signboard": {
+				"type": "closeup",
+				"target": "SignBoard",
+				"distance": [
+					3.0,
+					3.4
+				],
+				"elevation": [
+					6,
+					16
+				],
+				"az_offset": [
+					-35,
+					35
+				],
+				"az_speed": [
+					1.5,
+					3.0
+				],
+				"fov": 40,
+				"look_offset": 0.05,
+				"push_scale": 0.5
+			},
+			"close_sphere": {
+				"type": "closeup",
+				"target": "Sphere",
+				"distance": [
+					3.0,
+					3.4
+				],
+				"elevation": [
+					6,
+					16
+				],
+				"az_offset": [
+					-35,
+					35
+				],
+				"az_speed": [
+					1.5,
+					3.0
+				],
+				"fov": 40,
+				"look_offset": 0.05,
+				"push_scale": 0.5
+			}
+		},
+		"grammar": {
+			"steady": {
+				"min_bars": 4,
+				"max_bars": 8,
+				"phrase8": 1.0,
+				"phrase4": 0.5,
+				"downbeat": 0.0,
+				"glide": 0.3,
+				"pace": 1.0,
+				"omega": 2.2,
+				"shots": {
+					"original": 3,
+					"orbit": 2,
+					"wide": 2,
+					"close_*": 3,
+					"handheld": 1,
+					"dolly_in": 1,
+					"dolly_out": 1,
+					"crane_up": 1,
+					"crane_down": 1
+				}
+			},
+			"quiet": {
+				"min_bars": 8,
+				"max_bars": 16,
+				"phrase8": 1.0,
+				"phrase4": 0.0,
+				"glide": 0.6,
+				"pace": 0.6,
+				"omega": 1.5,
+				"start_shots": {
+					"wide": 2,
+					"original": 1
+				},
+				"shots": {
+					"wide": 3,
+					"original": 3,
+					"crane_up": 2,
+					"orbit": 1,
+					"close_*": 1
+				}
+			},
+			"build": {
+				"min_bars": 4,
+				"max_bars": 8,
+				"phrase8": 1.0,
+				"phrase4": 0.7,
+				"glide": 0.2,
+				"pace": 0.9,
+				"omega": 2.0,
+				"shots": {
+					"dolly_in": 3,
+					"close_*": 2,
+					"original": 2,
+					"orbit": 1,
+					"crane_down": 1
+				}
+			},
+			"drop": {
+				"min_bars": 2,
+				"max_bars": 8,
+				"phrase8": 1.0,
+				"phrase4": 1.0,
+				"downbeat": 0.25,
+				"glide": 0.0,
+				"pace": 1.25,
+				"omega": 3.0,
+				"boost_bars": 8,
+				"drop_shots": {
+					"orbit": 3,
+					"handheld": 3,
+					"close_*": 3
+				},
+				"shots": {
+					"orbit": 3,
+					"handheld": 3,
+					"close_*": 3,
+					"dolly_out": 1,
+					"original": 1,
+					"crane_up": 1
+				}
+			},
+			"breakdown": {
+				"min_bars": 8,
+				"max_bars": 16,
+				"phrase8": 1.0,
+				"phrase4": 0.0,
+				"glide": 0.7,
+				"enter_glide": 1.0,
+				"pace": 0.5,
+				"omega": 1.4,
+				"enter_shots": {
+					"wide": 1
+				},
+				"shots": {
+					"wide": 4,
+					"crane_up": 2,
+					"original": 2
+				}
+			}
+		},
+		"glide_max_turn_deg": 90
+	},
+	"animation": {
+		"notes": "Character animation (Phase 4d), layered on the recovered motion. Interpreted by modern/animation/character_animator.gd.",
+		"seed": 2001,
+		"characters": [
+			{
+				"head": "Mushroom",
+				"stem": "Cone1"
+			},
+			{
+				"head": "SignBoard",
+				"stem": "Cone2"
+			},
+			{
+				"head": "Sphere",
+				"stem": "Cone3"
+			}
+		],
+		"ramp_beats": 0.5,
+		"select_bars": 2,
+		"moves": {
+			"bob": {
+				"amp": 0.05
+			},
+			"hop": {
+				"amp": 0.07
+			},
+			"sway": {
+				"amp": 0.075
+			},
+			"twist": {
+				"amp_deg": 7.0
+			},
+			"lean_in": {
+				"amp": 0.08
+			}
+		},
+		"sections": {
+			"steady": {
+				"moves": {
+					"bob": 2,
+					"sway": 2,
+					"twist": 1
+				},
+				"amp": 0.8
+			},
+			"quiet": {
+				"moves": {
+					"sway": 2,
+					"bob": 1,
+					"rest": 1
+				},
+				"amp": 0.3
+			},
+			"build": {
+				"moves": {
+					"bob": 3,
+					"lean_in": 2,
+					"sway": 1
+				},
+				"amp": 0.5,
+				"build_gain": 0.8
+			},
+			"drop": {
+				"moves": {
+					"hop": 3,
+					"bob": 2,
+					"twist": 2,
+					"sway": 1
+				},
+				"amp": 1.4
+			},
+			"breakdown": {
+				"moves": {
+					"rest": 3,
+					"sway": 1
+				},
+				"amp": 0.35
+			}
+		},
+		"secondary": {
+			"follow": 0.6,
+			"frequency": 2.6,
+			"damping": 0.35,
+			"jiggle": 0.25
+		},
+		"squash": {
+			"amp": 0.07,
+			"decay": 0.16,
+			"period": 0.36
+		},
+		"idle": {
+			"amp": 0.015,
+			"twist_deg": 2.0,
+			"frequency": 0.22
+		},
+		"environment": {
+			"platform": [
+				"PlatformTop",
+				"PlatformSide",
+				"PlatformBottom"
+			],
+			"float": 0.035,
+			"tilt_deg": 0.8,
+			"frequency": 0.07
+		}
+	}
+}

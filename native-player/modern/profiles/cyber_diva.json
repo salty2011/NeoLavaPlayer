@@ -1,0 +1,661 @@
+{
+	"name": "Cyber Diva",
+	"extends": "techno_club",
+	"folders": [
+		"lava25/Cyber Diva (Hi-res)"
+	],
+	"notes": "A temple-club with a six-armed robot diva. Floors become glossy (SSR), LED screens and the light ball glow by their own brightness, the diva is brushed metal with a cyan rim, the chrome 'Gam' pieces pulse with the beat, glass and the face panes are real translucent surfaces; magenta/cyan haze in the key light.",
+	"environment": {
+		"ambient_energy": 0.3,
+		"volumetric_fog_density": 0.003,
+		"fog_density": 0.003,
+		"glow_hdr_threshold": 1.6,
+		"ssr_max_steps": 64,
+		"glow_intensity": 0.35
+	},
+	"lights": {
+		"key": {
+			"energy": 1.1,
+			"range": 220.0,
+			"attenuation": 0.2,
+			"size": 0.4,
+			"volumetric": 0.3,
+			"shadow": false
+		},
+		"rim": {
+			"color": [
+				0.3,
+				0.9,
+				1.0
+			],
+			"energy": 0.0
+		},
+		"fill": {
+			"color": [
+				1.0,
+				0.5,
+				0.9
+			],
+			"energy": 0.15
+		}
+	},
+	"materials": {
+		"default": {
+			"albedo_gain": 3.2,
+			"saturation": 1.05,
+			"roughness_scale": 0.8,
+			"specular": 0.5,
+			"emission_base": 0.02
+		},
+		"objects": {
+			"Floor1": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.8,
+				"albedo_gain": 2.8,
+				"normal_strength": 1.2
+			},
+			"Floor2": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.8,
+				"albedo_gain": 2.8,
+				"normal_strength": 1.2
+			},
+			"TriFloor": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.8,
+				"albedo_gain": 2.8,
+				"normal_strength": 1.2
+			},
+			"StageRing": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.8,
+				"albedo_gain": 2.8,
+				"normal_strength": 1.2
+			},
+			"Stage": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.8,
+				"albedo_gain": 2.8,
+				"normal_strength": 1.2
+			},
+			"Pit": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.8,
+				"albedo_gain": 2.8,
+				"normal_strength": 1.2
+			},
+			"PitSide": {
+				"roughness_scale": 0.55,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.8,
+				"specular": 0.8,
+				"albedo_gain": 2.8,
+				"normal_strength": 1.2
+			},
+			"Inscreen": {
+				"emissive_luma": 0.7,
+				"emissive_luma_curve": 1.5,
+				"albedo_gain": 2.6,
+				"emission_base": 0.08,
+				"emission_music": 0.6
+			},
+			"Screenframes": {
+				"emissive_luma": 0.7,
+				"emissive_luma_curve": 1.5,
+				"albedo_gain": 2.6,
+				"emission_base": 0.08,
+				"emission_music": 0.6
+			},
+			"LightBall": {
+				"emissive_luma": 0.7,
+				"emissive_luma_curve": 1.5,
+				"albedo_gain": 1.8,
+				"emission_base": 0.1,
+				"emission_music": 0.6,
+				"unlit": true
+			},
+			"TentTop": {
+				"emissive_luma": 0.7,
+				"emissive_luma_curve": 1.5,
+				"albedo_gain": 2.6,
+				"emission_base": 0.08,
+				"emission_music": 0.6
+			},
+			"Lenses": {
+				"emissive_luma": 0.7,
+				"emissive_luma_curve": 1.5,
+				"albedo_gain": 2.6,
+				"emission_base": 0.08,
+				"emission_music": 0.6
+			},
+			"Shiva1": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva2": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva3": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva4": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva5": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva6": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva7": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva8": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva9": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva10": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva11": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva12": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Shiva13": {
+				"metallic": 0.2,
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.4,
+				"clearcoat_gloss": 0.85,
+				"specular": 0.8,
+				"albedo_gain": 3.4,
+				"rim_strength": 0.06,
+				"rim_color": [
+					0.3,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.08,
+				"normal_strength": 1.3,
+				"emission_base": 0.02
+			},
+			"Gam1": {
+				"metallic": 0.6,
+				"roughness_scale": 0.25,
+				"roughness_bias": 0.0,
+				"specular": 1.0,
+				"clearcoat": 0.6,
+				"albedo_gain": 2.5,
+				"emission_base": 0.12,
+				"emission_music": 0.9,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				]
+			},
+			"Gam2": {
+				"metallic": 0.6,
+				"roughness_scale": 0.25,
+				"roughness_bias": 0.0,
+				"specular": 1.0,
+				"clearcoat": 0.6,
+				"albedo_gain": 2.5,
+				"emission_base": 0.12,
+				"emission_music": 0.9,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				]
+			},
+			"Gam3": {
+				"metallic": 0.6,
+				"roughness_scale": 0.25,
+				"roughness_bias": 0.0,
+				"specular": 1.0,
+				"clearcoat": 0.6,
+				"albedo_gain": 2.5,
+				"emission_base": 0.12,
+				"emission_music": 0.9,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				]
+			},
+			"Gam4": {
+				"metallic": 0.6,
+				"roughness_scale": 0.25,
+				"roughness_bias": 0.0,
+				"specular": 1.0,
+				"clearcoat": 0.6,
+				"albedo_gain": 2.5,
+				"emission_base": 0.12,
+				"emission_music": 0.9,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				]
+			},
+			"Gam5": {
+				"metallic": 0.6,
+				"roughness_scale": 0.25,
+				"roughness_bias": 0.0,
+				"specular": 1.0,
+				"clearcoat": 0.6,
+				"albedo_gain": 2.5,
+				"emission_base": 0.12,
+				"emission_music": 0.9,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				]
+			},
+			"Gam6": {
+				"metallic": 0.6,
+				"roughness_scale": 0.25,
+				"roughness_bias": 0.0,
+				"specular": 1.0,
+				"clearcoat": 0.6,
+				"albedo_gain": 2.5,
+				"emission_base": 0.12,
+				"emission_music": 0.9,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				]
+			},
+			"Glass": {
+				"alpha_gain": 1.0,
+				"roughness_scale": 0.05,
+				"specular": 1.0,
+				"clearcoat": 1.0,
+				"clearcoat_gloss": 1.0,
+				"albedo_gain": 1.5,
+				"rim_strength": 1.0,
+				"rim_color": [
+					0.7,
+					0.9,
+					1.0
+				],
+				"shadows": false,
+				"priority": 3
+			},
+			"FacePair1": {
+				"alpha_gain": 1.2,
+				"albedo_gain": 2.6,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"unlit": false,
+				"shadows": false,
+				"priority": 2
+			},
+			"FacePair2": {
+				"alpha_gain": 1.2,
+				"albedo_gain": 2.6,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"unlit": false,
+				"shadows": false,
+				"priority": 2
+			},
+			"FacePair3": {
+				"alpha_gain": 1.2,
+				"albedo_gain": 2.6,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"unlit": false,
+				"shadows": false,
+				"priority": 2
+			},
+			"FacePair4": {
+				"alpha_gain": 1.2,
+				"albedo_gain": 2.6,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"unlit": false,
+				"shadows": false,
+				"priority": 2
+			},
+			"FacePair5": {
+				"alpha_gain": 1.2,
+				"albedo_gain": 2.6,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"unlit": false,
+				"shadows": false,
+				"priority": 2
+			},
+			"FacePair6": {
+				"alpha_gain": 1.2,
+				"albedo_gain": 2.6,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"unlit": false,
+				"shadows": false,
+				"priority": 2
+			},
+			"Pillars": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"Panel": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"Fabric": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"MarbleCeiling1": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"MarbleCeilingP": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"TriCeiling": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"HexLids": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"Tubing": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"LoopTube": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"StageEdge": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"TableBases": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"TableTops": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"Wires": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"VariousPanels": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"InsideTube": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"ProjectorBody": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			},
+			"LightHousing": {
+				"albedo_gain": 3.2,
+				"roughness_scale": 0.7,
+				"normal_strength": 1.3,
+				"specular": 0.6
+			}
+		}
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 40.0,
+			"far_transition": 30.0,
+			"amount": 0.03
+		}
+	}
+}

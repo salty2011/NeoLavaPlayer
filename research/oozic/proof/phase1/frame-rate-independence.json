@@ -1,0 +1,111 @@
+{
+	"Hydroid": {
+		"per_frame_mode": {
+			"music_camera_distance_30_vs_144": 3.46670246124268,
+			"steady_input_camera_difference_30_vs_144": 0.0,
+			"steady_input_max_angle_difference_30_vs_144": 0.301591907821575
+		},
+		"sequences": {
+			"fps_144": {
+				"frames": 1731,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"fps_25": {
+				"frames": 301,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"fps_30": {
+				"frames": 361,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"fps_60": {
+				"frames": 722,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"hitching_60": {
+				"frames": 647,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"slow_10.5_catchup": {
+				"frames": 127,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"uncapped_jitter_90_300": {
+				"frames": 2106,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			}
+		},
+		"simulated_seconds": 12.0166666666667,
+		"simulation_rate": 60.0,
+		"ticks": 721
+	},
+	"Triple Trance": {
+		"per_frame_mode": {
+			"music_camera_distance_30_vs_144": 4.64400768280029,
+			"steady_input_camera_difference_30_vs_144": 0.211410239338875,
+			"steady_input_max_angle_difference_30_vs_144": 0.0
+		},
+		"sequences": {
+			"fps_144": {
+				"frames": 1731,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"fps_25": {
+				"frames": 301,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"fps_30": {
+				"frames": 361,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"fps_60": {
+				"frames": 722,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"hitching_60": {
+				"frames": 647,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"slow_10.5_catchup": {
+				"frames": 127,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			},
+			"uncapped_jitter_90_300": {
+				"frames": 2106,
+				"max_difference_vs_60_hz_render": 0.0,
+				"ticks": 721
+			}
+		},
+		"simulated_seconds": 12.0166666666667,
+		"simulation_rate": 60.0,
+		"ticks": 721
+	},
+	"audio_analysis": {
+		"dropout_ticks_at_144": 2,
+		"dropout_ticks_at_30": 0,
+		"mean_abs_difference_vs_60_at_144": 0.00494214128005037,
+		"mean_abs_difference_vs_60_at_30": 0.0261058244592511,
+		"previous_update_windowless_frames_at_144": "202 of 576"
+	},
+	"camera_counter": {
+		"counter_at_144": 59.9999999999999,
+		"counter_at_30": 60.0,
+		"counter_at_60": 60.0,
+		"exact_original_counter_at_144": 144.0
+	},
+	"failures": [],
+	"passed": true
+}

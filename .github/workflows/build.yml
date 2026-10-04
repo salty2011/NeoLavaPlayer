@@ -1,0 +1,90 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GODOT_VERSION: "4.7.1"
+
+jobs:
+  macos:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache Godot
+        id: godot-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/godot
+          key: godot-${{ env.GODOT_VERSION }}-macos
+
+      - name: Download Godot and export templates
+        if: steps.godot-cache.outputs.cache-hit != 'true'
+        run: |
+          base="https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-stable"
+          mkdir -p ~/godot
+          curl -fsSL -o ~/godot/godot.zip "$base/Godot_v${GODOT_VERSION}-stable_macos.universal.zip"
+          curl -fsSL -o ~/godot/templates.tpz "$base/Godot_v${GODOT_VERSION}-stable_export_templates.tpz"
+          unzip -q ~/godot/godot.zip -d ~/godot
+          unzip -q ~/godot/templates.tpz -d ~/godot/tpl
+          rm ~/godot/godot.zip ~/godot/templates.tpz
+
+      - name: Install export templates
+        run: |
+          dest="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "$dest"
+          cp -R ~/godot/tpl/templates/. "$dest/"
+          echo "GODOT=$HOME/godot/Godot.app/Contents/MacOS/Godot" >> "$GITHUB_ENV"
+
+      - name: Import project
+        run: |
+          "$GODOT" --headless --path native-player --import || true
+
+      - name: Run tests
+        working-directory: native-player
+        run: |
+          fail=0
+          for t in test_*.gd; do
+            case "$t" in test_legacy_lighting.gd|test_windows_live.gd) continue ;; esac
+            if out=$(timeout 300 "$GODOT" --headless --audio-driver Dummy --path . --script "res://$t" 2>&1) \
+              && ! echo "$out" | grep -qE 'SCRIPT ERROR|Assertion failed|"passed": ?false|[1-9][0-9]* failed'; then
+              echo "ok   $t"
+            else
+              echo "FAIL $t"; echo "$out" | tail -20; fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Build DMG
+        id: dmg
+        run: |
+          version="main-$(date -u +%Y%m%d)-${GITHUB_SHA::7}"
+          dmg=$(sh scripts/build_dmg.sh "$version" | tail -1)
+          echo "path=$dmg" >> "$GITHUB_OUTPUT"
+          echo "name=$(basename "$dmg")" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.dmg.outputs.name }}
+          path: ${{ steps.dmg.outputs.path }}
+          retention-days: 30
+
+      - name: Publish "latest" pre-release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp "${{ steps.dmg.outputs.path }}" dist/NeoLavaPlayer-latest.dmg
+          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create latest dist/NeoLavaPlayer-latest.dmg \
+            --prerelease --target "$GITHUB_SHA" \
+            --title "Latest build (main)" \
+            --notes "Built automatically from ${GITHUB_SHA::7}. Unsigned: right-click the app and choose Open the first time, or allow it in System Settings > Privacy & Security."

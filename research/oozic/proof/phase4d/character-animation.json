@@ -1,0 +1,52 @@
+{
+	"continuity": {
+		"max_accel": 23.671142578125,
+		"max_speed": 0.860429249703884,
+		"max_step_on_switch": 0.00350578012876213,
+		"max_twist_rate": 1.34238335877609
+	},
+	"fps_difference": 0.00385429547168314,
+	"pass": true,
+	"peaks": {
+		"144.0": {
+			"by_move": {
+				"bob": 80,
+				"hop": 96,
+				"lean_in": 12,
+				"sway": 56,
+				"twist": 64
+			},
+			"count": 308,
+			"off_beat": 0,
+			"tolerance_ms": 16.9444444444444,
+			"worst_ms": 3.47222222259802
+		},
+		"60.0": {
+			"by_move": {
+				"bob": 80,
+				"hop": 96,
+				"lean_in": 12,
+				"sway": 56,
+				"twist": 64
+			},
+			"count": 308,
+			"off_beat": 0,
+			"tolerance_ms": 26.6666666666667,
+			"worst_ms": 8.33333333365616
+		}
+	},
+	"section_level": {
+		"breakdown": 0.00437338986828561,
+		"build": 0.0166079024722463,
+		"drop": 0.0215481023403683,
+		"quiet": 0.0134927238226158
+	},
+	"squash": {
+		"max_det_error": 0.000000596046447753906,
+		"max_squash": 0.102984125943279
+	},
+	"stems": {
+		"max_base_drift": 0.000000562309082852153,
+		"max_top_gap": 0.0156982913613319
+	}
+}

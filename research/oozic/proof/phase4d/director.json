@@ -1,0 +1,123 @@
+{
+	"caps": {
+		"max_accel": 4.0,
+		"max_angular_accel_deg": 90.0,
+		"max_angular_speed_deg": 50.0,
+		"max_fov_speed": 15.0,
+		"max_speed": 3.5
+	},
+	"comfort": {
+		"144.0": {
+			"max_accel": 3.63000898361206,
+			"max_angular_deg": 24.7948186825178,
+			"max_fov_speed": 2.89324951171875,
+			"max_roll": 0.0,
+			"max_speed": 2.62447580695152
+		},
+		"30.0": {
+			"max_accel": 3.22714291512966,
+			"max_angular_deg": 24.8187452620672,
+			"max_fov_speed": 2.76123046875,
+			"max_roll": 0.0,
+			"max_speed": 2.62647092342377
+		},
+		"60.0": {
+			"max_accel": 3.65857131779194,
+			"max_angular_deg": 24.8042609921585,
+			"max_fov_speed": 2.81936645507812,
+			"max_roll": 0.0,
+			"max_speed": 2.62528985738754
+		}
+	},
+	"cuts": [
+		{
+			"bar": 0,
+			"bar_time": 0.0,
+			"kind": "start",
+			"reason": "start",
+			"section": "quiet",
+			"shot": "wide",
+			"time": 0.0
+		},
+		{
+			"bar": 8,
+			"bar_time": 15.0,
+			"kind": "cut",
+			"reason": "section",
+			"section": "build",
+			"shot": "original",
+			"time": 15.0000000000003
+		},
+		{
+			"bar": 12,
+			"bar_time": 22.5,
+			"kind": "cut",
+			"reason": "phrase4",
+			"section": "build",
+			"shot": "close_sphere",
+			"time": 22.5
+		},
+		{
+			"bar": 16,
+			"bar_time": 30.0,
+			"kind": "cut",
+			"reason": "drop",
+			"section": "drop",
+			"shot": "orbit",
+			"time": 30.0166666666662
+		},
+		{
+			"bar": 19,
+			"bar_time": 35.625,
+			"kind": "cut",
+			"reason": "downbeat",
+			"section": "drop",
+			"shot": "close_mushroom",
+			"time": 35.6333333333326
+		},
+		{
+			"bar": 23,
+			"bar_time": 43.125,
+			"kind": "cut",
+			"reason": "downbeat",
+			"section": "drop",
+			"shot": "crane_up",
+			"time": 43.1333333333322
+		},
+		{
+			"bar": 28,
+			"bar_time": 52.5,
+			"kind": "cut",
+			"reason": "phrase4",
+			"section": "drop",
+			"shot": "orbit",
+			"time": 52.516666666665
+		},
+		{
+			"bar": 32,
+			"bar_time": 60.0,
+			"kind": "glide",
+			"reason": "section",
+			"section": "breakdown",
+			"shot": "wide",
+			"time": 60.0166666666645
+		}
+	],
+	"determinism": {
+		"identical_60": true,
+		"max_pose_difference": {
+			"144.0": 0.026277270168066,
+			"144.0_at": 52.666666666665,
+			"30.0": 0.0402864962816238,
+			"30.0_at": 52.666666666665
+		}
+	},
+	"pass": true,
+	"push": {
+		"build_end": 0.251360731398107,
+		"build_start": 0.00991492619086088,
+		"distance_end": 2.66794562339783,
+		"distance_start": 2.9876172542572
+	},
+	"shortest_shot_s": 5.625
+}

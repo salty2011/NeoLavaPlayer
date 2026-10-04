@@ -1,0 +1,22 @@
+Version	3
+TfxType	Iris
+PresetFriendlyName	Aperture
+NumPresets	3
+###############################################################################
+Preset	0
+PresetName	Iris_8
+GridSize	8.000000
+Duration	3.500000
+RotationDir	2.000000
+###############################################################################
+Preset	1
+PresetName	Iris_12
+GridSize	12.000000
+Duration	3.500000
+RotationDir	2.000000
+###############################################################################
+Preset	2
+PresetName	Iris_80
+GridSize	80.000000
+Duration	3.500000
+RotationDir	2.000000

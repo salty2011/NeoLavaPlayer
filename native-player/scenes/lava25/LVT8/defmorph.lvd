@@ -1,0 +1,10 @@
+DefType	DefMorph
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+AmpScale	1.000000
+DecayMin	1.500000
+DecayMax	1.500000
+MorphMin	0.050000
+MorphMax	0.500000

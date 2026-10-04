@@ -1,0 +1,42 @@
+DefType	DefTexScroll
+MaxInstance	1
+NumPresets	3
+###############################################################################
+Preset	0
+AmpScale	1.000000
+DecayMin	2.000000
+DecayMax	2.000000
+TextureLowX	2.000000
+TextureHighX	2.000000
+TextureLowY	0.250000
+TextureHighY	2.000000
+VMin	0.000000
+VMax	1.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000
+###############################################################################
+Preset	1
+AmpScale	1.000000
+DecayMin	2.000000
+DecayMax	2.000000
+TextureLowX	6.000000
+TextureHighX	6.000000
+TextureLowY	0.250000
+TextureHighY	2.000000
+VMin	0.000000
+VMax	1.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000
+###############################################################################
+Preset	2
+AmpScale	1.000000
+DecayMin	2.000000
+DecayMax	2.000000
+TextureLowX	7.000000
+TextureHighX	7.000000
+TextureLowY	3.000000
+TextureHighY	15.000000
+VMin	0.000000
+VMax	0.300000
+CreationLevel	0.000000
+Interruptlevel	0.000000

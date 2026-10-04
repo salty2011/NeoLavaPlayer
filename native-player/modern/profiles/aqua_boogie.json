@@ -1,0 +1,160 @@
+{
+	"name": "Aqua Boogie",
+	"extends": "underwater",
+	"folders": [
+		"lava25/Aqua Boogie"
+	],
+	"notes": "Stingrays gliding through a blue vortex. The vortex backdrop stays self-lit; the rays get a wet clearcoat, a cyan rim and a beat glow; caustic-style light shafts through teal haze, bubbles, trails behind the rays.",
+	"environment": {
+		"volumetric_fog_density": 0.012,
+		"fog_density": 0.012,
+		"glow_hdr_threshold": 1.1,
+		"ambient_energy": 0.28
+	},
+	"lights": {
+		"key": {
+			"energy": 1.1,
+			"volumetric": 1.0,
+			"range": 60.0,
+			"shadow": false
+		},
+		"fill": {
+			"energy": 0.18
+		},
+		"rim": {
+			"energy": 0.4
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.35,
+				"saturation": 1.2,
+				"emission_base": 0.1,
+				"emission_music": 0.35
+			},
+			"stingray1": {
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.3,
+				"clearcoat_gloss": 0.8,
+				"normal_strength": 1.5,
+				"specular": 0.7,
+				"albedo_gain": 0.8,
+				"saturation": 1.1,
+				"rim_strength": 0.15,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				],
+				"emission_base": 0.03,
+				"emission_music": 0.3
+			},
+			"stingray2": {
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.3,
+				"clearcoat_gloss": 0.8,
+				"normal_strength": 1.5,
+				"specular": 0.7,
+				"albedo_gain": 0.8,
+				"saturation": 1.1,
+				"rim_strength": 0.15,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				],
+				"emission_base": 0.03,
+				"emission_music": 0.3
+			},
+			"stingray3": {
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.3,
+				"clearcoat_gloss": 0.8,
+				"normal_strength": 1.5,
+				"specular": 0.7,
+				"albedo_gain": 0.8,
+				"saturation": 1.1,
+				"rim_strength": 0.15,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				],
+				"emission_base": 0.03,
+				"emission_music": 0.3
+			},
+			"stingray4": {
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.3,
+				"clearcoat_gloss": 0.8,
+				"normal_strength": 1.5,
+				"specular": 0.7,
+				"albedo_gain": 0.8,
+				"saturation": 1.1,
+				"rim_strength": 0.15,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				],
+				"emission_base": 0.03,
+				"emission_music": 0.3
+			}
+		}
+	},
+	"effects": {
+		"particles": {
+			"emitters": [
+				"stingray1",
+				"stingray2",
+				"stingray3",
+				"stingray4"
+			],
+			"colors": {
+				"stingray1": [
+					0.5,
+					0.9,
+					1.0
+				],
+				"stingray2": [
+					0.5,
+					0.9,
+					1.0
+				],
+				"stingray3": [
+					1.0,
+					0.9,
+					0.5
+				],
+				"stingray4": [
+					0.5,
+					0.9,
+					1.0
+				]
+			},
+			"radius": 1.2,
+			"amount": 50,
+			"burst": 60
+		},
+		"trails": {
+			"emitters": [
+				"stingray1",
+				"stingray2",
+				"stingray3",
+				"stingray4"
+			],
+			"amount": 40,
+			"lifetime": 0.9
+		},
+		"dof": {
+			"far_distance": 18.0,
+			"far_transition": 12.0,
+			"amount": 0.04
+		}
+	}
+}

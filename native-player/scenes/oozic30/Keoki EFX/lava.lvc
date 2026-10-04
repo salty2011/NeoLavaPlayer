@@ -1,0 +1,178 @@
+Version	3
+FramesPerSecond	25.000000
+Brightness	0.720000
+Responsivness	1.000000
+Tmap	1
+Wframe	0
+Strobe	0
+Clights	0
+DynCol	0
+Lights	1
+Pause	0
+Flat	0
+TRot	0
+EnvMap	0
+NumObjects	5
+LFX	test_suite.lfx
+TFX	test_suite.tfx
+Nbands	3
+B0Min	0.000000
+B0Max	300.000000
+B1Min	1000.000000
+B1Max	2000.000000
+B2Min	4000.000000
+B2Max	6000.000000
+MsgOn	0
+MsgIni	Text.ini
+OName	Background
+NumMorphs	1
+OPos	0.000000 0.000000 0.000000
+OAng	0.000000 0.000000 0.000000
+OSize	1.000000 3.000000 1.000000
+DefScale	1.000000
+TName	listen.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 255
+Gloss	38
+Culling	Back
+NumDefs	2
+LvoFile	background.lvo
+DefName	texscroll
+DefBand	2
+DefLvd	deftexscroll.lvd
+DefPreset	0
+DefName	rotate
+DefBand	0
+DefLvd	defrotate.lvd
+DefPreset	0
+OName	Shell1
+NumMorphs	1
+OPos	0.000000 0.000000 0.000000
+OAng	45.000000 0.000000 0.000000
+OSize	1.000000 3.000000 1.000000
+DefScale	1.000000
+TName	link.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 255
+Gloss	38
+NumDefs	3
+LvoFile	shell1.lvo
+DefName	texscroll
+DefBand	2
+DefLvd	deftexscroll.lvd
+DefPreset	0
+DefName	rotate
+DefBand	0
+DefLvd	defrotate.lvd
+DefPreset	0
+DefName	alpha
+DefBand	2
+DefLvd	defalpha.lvd
+DefPreset	1
+OName	Shell2
+NumMorphs	1
+OPos	0.000000 0.000000 0.000000
+OAng	90.000000 0.000000 0.000000
+OSize	1.000000 3.000000 1.000000
+DefScale	1.000000
+TName	look.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 255
+Gloss	38
+NumDefs	3
+LvoFile	shell2.lvo
+DefName	texscroll
+DefBand	2
+DefLvd	deftexscroll.lvd
+DefPreset	0
+DefName	rotate
+DefBand	0
+DefLvd	defrotate.lvd
+DefPreset	0
+DefName	alpha
+DefBand	2
+DefLvd	defalpha.lvd
+DefPreset	0
+OName	Mirror
+NumMorphs	4
+OPos	0.000000 0.000000 0.000000
+OAng	0.000000 0.000000 0.000000
+OSize	1.000000 1.000000 1.000000
+DefScale	1.000000
+TName	flyout.jpg
+T2Name	keokiblack.jpg
+T2ScaleTransRotate	1.000000 1.000000 0.000000 0.000000 0.000000
+TColor	255 255 255 255
+SpecCol	255 255 255 255
+Gloss	38
+Culling	None
+NumDefs	2
+LvoFile	sheet.lvo
+LvoFile	sheet.lvo
+LvoFile	sphere.lvo
+LvoFile	cylinder.lvo
+Olink	1
+ObjSite	Config3.pod
+DefName	superbump
+DefBand	0
+DefLvd	defsuperbump.lvd
+DefPreset	0
+DefName	morph
+DefBand	2
+DefLvd	defmorph.lvd
+DefPreset	0
+OName	Ray1
+NumMorphs	1
+OPos	0.000000 0.000000 0.000000
+OAng	0.000000 -45.000000 0.000000
+OSize	1.000000 1.000000 1.000000
+DefScale	1.000000
+TName	moonshineclover.jpg
+TColor	255 255 255 255
+SpecCol	0 0 0 0
+Gloss	38
+NumDefs	3
+LvoFile	sheet2.lvo
+DefName	rotate
+DefBand	2
+DefLvd	defrotate.lvd
+DefPreset	1
+DefName	elastic
+DefBand	2
+DefLvd	defelastic.lvd
+DefPreset	0
+DefName	pools
+DefBand	2
+DefLvd	defpools.lvd
+DefPreset	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 1.000000 0.250000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 2.000000 0.000000 1.000000
+Camera Radius Set	11.539357
+Camera RadiusMin Set	3.000000
+Camera RadiusMax Set	13.000000
+Camera RadiusMaxD Set	1.500000
+Camera Theta Set	20.766813
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	30.000000
+Camera Phi Set	56.553005
+Camera PhiMin Set	45.000000
+Camera PhiMax Set	135.000000
+Camera PhiMaxD Set	30.000000
+Camera Direction0 Set	-0.339281
+Camera Direction1 Set	-0.662193
+Camera Direction2 Set	-0.668123
+Camera MaxMove Set	10.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	0.100000
+Camera FarClip Set	500.000000
+Camera LookAt Set	0.000000 0.000000 0.000000

@@ -1,0 +1,62 @@
+{
+	"name": "Wizard",
+	"extends": "techno_club",
+	"folders": [
+		"lava25/Wizard",
+		"oozic30/Wizard"
+	],
+	"notes": "The LAVA 3D Wizard: circuit-board pyramids spinning round a chrome sonic-eye. Circuit traces emit by their own brightness, the sphere is polished chrome that reflects the room (SSR), the splash backdrop is self-lit.",
+	"environment": {
+		"ambient_energy": 0.35,
+		"glow_hdr_threshold": 0.95
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.1,
+				"emission_base": 0.05,
+				"emission_music": 0.2
+			},
+			"PyramidTop": {
+				"emissive_luma": 1.0,
+				"emissive_luma_curve": 1.4,
+				"albedo_gain": 1.5,
+				"roughness_scale": 0.45,
+				"specular": 0.8,
+				"clearcoat": 0.4,
+				"emission_music": 0.7,
+				"normal_strength": 1.2
+			},
+			"PyramidBottom": {
+				"emissive_luma": 1.0,
+				"emissive_luma_curve": 1.4,
+				"albedo_gain": 1.5,
+				"roughness_scale": 0.45,
+				"specular": 0.8,
+				"clearcoat": 0.4,
+				"emission_music": 0.7,
+				"normal_strength": 1.2
+			},
+			"Mirror": {
+				"metallic": 0.7,
+				"roughness_scale": 0.15,
+				"roughness_bias": 0.02,
+				"specular": 1.0,
+				"clearcoat": 0.3,
+				"albedo_gain": 1.2,
+				"rim_strength": 0.6,
+				"rim_color": [
+					0.4,
+					0.9,
+					1.0
+				],
+				"emission_music": 0.4
+			}
+		}
+	},
+	"lights": {
+		"key": {
+			"specular": 0.5
+		}
+	}
+}

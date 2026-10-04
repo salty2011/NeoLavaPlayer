@@ -1,0 +1,202 @@
+DefType	DefFlyOut
+MaxInstance	1
+NumPresets	3
+
+###############################################################################
+; Complicated opening deformation using all the bells and whistles
+Preset 0
+
+ScrollBrowser		5.0
+
+OpeningDuration		1.0
+OpeningScaleX		0.001
+OpeningScaleY		0.001
+OpeningAlpha		1.0	
+OpeningBoingAmp		0.0
+OpeningBoingCycles	0.0	
+OpeningScrewAmp		0.0
+OpeningScrewCycles	0.0
+OpeningXRotations	0.0	
+OpeningYRotations	4.0
+OpeningZRotations	0.0
+
+OpeningPauseDuration	0.75
+OpeningPauseScaleX	1.0
+OpeningPauseScaleY	1.0
+OpeningPauseAlpha	1.0
+OpeningPauseBoingAmp	0.25
+OpeningPauseBoingCycles	3.0
+OpeningPauseScrewAmp	0.0
+OpeningPauseScrewCycles	0.0
+OpeningPauseXRotations	0.0
+OpeningPauseYRotations	0.0
+OpeningPauseZRotations	0.0
+
+FlyOutDuration		0.75
+FlyOutScaleX		1.0
+FlyOutScaleY		1.0
+FlyOutAlpha		1.0
+FlyOutBoingAmp		0.0
+FlyOutBoingCycles	0.0
+FlyOutScrewAmp		1.0
+FlyOutScrewCycles	1.0
+FlyOutXRotations	1.0
+FlyOutYRotations	0.0
+FlyOutZRotations	0.0
+
+FlyOutPauseDuration	0.75
+FlyOutPauseScaleX	1.0
+FlyOutPauseScaleY	1.0
+FlyOutPauseAlpha	1.0
+FlyOutPauseBoingAmp	0.25
+FlyOutPauseBoingCycles	3.0
+FlyOutPauseScrewAmp	0.0
+FlyOutPauseScrewCycles	0.0
+FlyOutPauseXRotations	0.0
+FlyOutPauseYRotations	0.0
+FlyOutPauseZRotations	0.0
+
+OnScreenDuration	0.75
+OnScreenScaleX		1.0
+OnScreenScaleY		1.0
+OnScreenAlpha		1.0
+OnScreenBoingAmp	0.0
+OnScreenBoingCycles	0.0
+OnScreenScrewAmp	0.0	
+OnScreenScrewCycles	0.0
+OnScreenXRotations	0.0
+OnScreenYRotations	0.0
+OnScreenZRotations	0.0
+
+###############################################################################
+; Less flashy opening sequence
+Preset 1
+
+ScrollBrowser		5.0
+
+OpeningDuration		1.0
+OpeningScaleX		0.001
+OpeningScaleY		0.001
+OpeningAlpha		1.0	
+OpeningBoingAmp		0.0
+OpeningBoingCycles	0.0	
+OpeningScrewAmp		0.0
+OpeningScrewCycles	0.0
+OpeningXRotations	0.0	
+OpeningYRotations	0.0
+OpeningZRotations	0.0
+
+OpeningPauseDuration	0.5
+OpeningPauseScaleX	1.0
+OpeningPauseScaleY	1.0
+OpeningPauseAlpha	1.0
+OpeningPauseBoingAmp	0.25
+OpeningPauseBoingCycles	1.0
+OpeningPauseScrewAmp	0.0
+OpeningPauseScrewCycles	0.0
+OpeningPauseXRotations	0.0
+OpeningPauseYRotations	0.0
+OpeningPauseZRotations	0.0
+
+FlyOutDuration		0.75
+FlyOutScaleX		1.0
+FlyOutScaleY		1.0
+FlyOutAlpha		1.0
+FlyOutBoingAmp		0.0
+FlyOutBoingCycles	0.0
+FlyOutScrewAmp		0.0
+FlyOutScrewCycles	0.0
+FlyOutXRotations	1.0
+FlyOutYRotations	0.0
+FlyOutZRotations	0.0
+
+FlyOutPauseDuration	0.5
+FlyOutPauseScaleX	1.0
+FlyOutPauseScaleY	1.0
+FlyOutPauseAlpha	1.0
+FlyOutPauseBoingAmp	0.2
+FlyOutPauseBoingCycles	1.0
+FlyOutPauseScrewAmp	0.0
+FlyOutPauseScrewCycles	0.0
+FlyOutPauseXRotations	0.0
+FlyOutPauseYRotations	0.0
+FlyOutPauseZRotations	0.0
+
+OnScreenDuration	0.75
+OnScreenScaleX		1.0
+OnScreenScaleY		1.0
+OnScreenAlpha		1.0
+OnScreenBoingAmp	0.0
+OnScreenBoingCycles	0.0
+OnScreenScrewAmp	0.0	
+OnScreenScrewCycles	0.0
+OnScreenXRotations	0.0
+OnScreenYRotations	0.0
+OnScreenZRotations	0.0
+
+###############################################################################
+; Very sedated opening sequence
+Preset 2
+
+ScrollBrowser		5.0
+
+OpeningDuration		0.75
+OpeningScaleX		0.1
+OpeningScaleY		0.1
+OpeningAlpha		0.0	
+OpeningBoingAmp		0.0
+OpeningBoingCycles	0.0	
+OpeningScrewAmp		0.0
+OpeningScrewCycles	0.0
+OpeningXRotations	0.0	
+OpeningYRotations	0.0
+OpeningZRotations	0.0
+
+OpeningPauseDuration	0.75
+OpeningPauseScaleX	1.0
+OpeningPauseScaleY	1.0
+OpeningPauseAlpha	1.0
+OpeningPauseBoingAmp	0.0
+OpeningPauseBoingCycles	0.0
+OpeningPauseScrewAmp	0.0
+OpeningPauseScrewCycles	0.0
+OpeningPauseXRotations	0.0
+OpeningPauseYRotations	0.0
+OpeningPauseZRotations	0.0
+
+FlyOutDuration		0.0
+FlyOutScaleX		1.0
+FlyOutScaleY		1.0
+FlyOutAlpha		0.0
+FlyOutBoingAmp		0.0
+FlyOutBoingCycles	0.0
+FlyOutScrewAmp		1.0
+FlyOutScrewCycles	0.0
+FlyOutXRotations	0.0
+FlyOutYRotations	0.0
+FlyOutZRotations	0.0
+
+FlyOutPauseDuration	0.75
+FlyOutPauseScaleX	1.0
+FlyOutPauseScaleY	1.0
+FlyOutPauseAlpha	0.0
+FlyOutPauseBoingAmp	0.0
+FlyOutPauseBoingCycles	0.0
+FlyOutPauseScrewAmp	0.0
+FlyOutPauseScrewCycles	0.0
+FlyOutPauseXRotations	0.0
+FlyOutPauseYRotations	0.0
+FlyOutPauseZRotations	0.0
+
+OnScreenDuration	0.75
+OnScreenScaleX		1.0
+OnScreenScaleY		1.0
+OnScreenAlpha		1.0
+OnScreenBoingAmp	0.0
+OnScreenBoingCycles	0.0
+OnScreenScrewAmp	0.0	
+OnScreenScrewCycles	0.0
+OnScreenXRotations	0.0
+OnScreenYRotations	0.0
+OnScreenZRotations	0.0
+

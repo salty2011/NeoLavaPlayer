@@ -1,0 +1,1419 @@
+2
+25.000000
+1.000000
+1.000000
+2
+33
+59
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+0
+CyberDiva's Lair 
+1.000000
+700
+1
+70 70 70 255
+0.200000
+Arial 
+
+Background
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+floralE.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+background.lvo
+Inscreen
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+screen.jpg
+255 255 255 255
+255 255 255 255
+90
+2
+inscreen.lvo
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+deftextranslate.lvd
+textranslate
+0
+StageRing
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+bsand.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+stagering.lvo
+LightBall
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+white2.jpg
+255 255 255 255
+255 255 255 255
+90
+0
+lightball.lvo
+TentTop
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+azteci.jpg
+125 125 125 255
+255 255 255 255
+90
+1
+bigtop.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+EyeFresco
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+eye.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+eyewall.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+Floor1
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+hix.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+floor1.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+Floor2
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+crow.jpg
+72 72 72 255
+255 255 255 255
+90
+1
+floor2.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+VariousPanels
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+scarab.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+debandpanels.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+InsideTube
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+scarab.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+innertube.lvo
+Fabric
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+greendrape.jpg
+141 141 141 255
+255 255 255 255
+90
+0
+fabric.lvo
+Lenses
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+lens2.jpg
+177 177 177 255
+255 255 255 255
+90
+0
+lenses.lvo
+Panel
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+panelt.jpg
+133 133 133 255
+255 255 255 255
+90
+0
+lonepanel.lvo
+MarbleCeiling1
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+smarbmet.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+marbcel1.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+MarbleCeilingPanel
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+smarbmetalg.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+marbcelpan.lvo
+ScarabFresco
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+scarab.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+scarabwall.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+HexLids
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+tube.jpg
+138 138 138 255
+255 255 255 255
+90
+0
+hexlids.lvo
+Tubing
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+tube.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+sqedge.lvo
+Pit
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+pit.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+pit.lvo
+PitSide
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+starpoint.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+pitside.lvo
+ProjectorBody
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+or.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+projbody.lvo
+LightHousing
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+rusted_metal.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+prong6.lvo
+Screenframes
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+cscree.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+screenframes.lvo
+Stage
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+floralE.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+stage.lvo
+SwanFresco
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+swan.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+swanwall.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+LoopTube
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+redtube.jpg
+183 183 183 255
+255 255 255 255
+90
+0
+looptube.lvo
+StageEdge
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+tube.jpg
+127 127 127 255
+255 255 255 255
+90
+0
+stageedge.lvo
+TableBases
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+chrmos.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+tablestands.lvo
+TableTops
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+floralsa.jpg
+125 125 125 255
+255 255 255 255
+90
+1
+tabtop.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+TriFloor
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+starpoint.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+trifloor.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+Wires
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+tubge.jpg
+60 60 60 255
+255 255 255 255
+90
+0
+wire1.lvo
+TriCeiling
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+trit.jpg
+60 60 60 255
+255 255 255 255
+90
+1
+triceiling.lvo
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+Pillars
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+pillar.jpg
+100 100 100 255
+255 255 255 255
+90
+0
+pillars.lvo
+Shiva1
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+hinge.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva1a.lvo
+shiva1b.lvo
+shiva1c.lvo
+shiva1d.lvo
+shiva1e.lvo
+shiva1f.lvo
+shiva1g.lvo
+shiva1h.lvo
+shiva1i.lvo
+shiva1j.lvo
+shiva1k.lvo
+shiva1l.lvo
+shiva1m.lvo
+shiva1n.lvo
+shiva1o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva2
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+knob.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva2a.lvo
+shiva2b.lvo
+shiva2c.lvo
+shiva2d.lvo
+shiva2e.lvo
+shiva2f.lvo
+shiva2g.lvo
+shiva2h.lvo
+shiva2i.lvo
+shiva2j.lvo
+shiva2k.lvo
+shiva2l.lvo
+shiva2m.lvo
+shiva2n.lvo
+shiva2o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva3
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+carbonfiber.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva3a.lvo
+shiva3b.lvo
+shiva3c.lvo
+shiva3d.lvo
+shiva3e.lvo
+shiva3f.lvo
+shiva3g.lvo
+shiva3h.lvo
+shiva3i.lvo
+shiva3j.lvo
+shiva3k.lvo
+shiva3l.lvo
+shiva3m.lvo
+shiva3n.lvo
+shiva3o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva4
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+black.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva4a.lvo
+shiva4b.lvo
+shiva4c.lvo
+shiva4d.lvo
+shiva4e.lvo
+shiva4f.lvo
+shiva4g.lvo
+shiva4h.lvo
+shiva4i.lvo
+shiva4j.lvo
+shiva4k.lvo
+shiva4l.lvo
+shiva4m.lvo
+shiva4n.lvo
+shiva4o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva5
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+circuit2.jpg
+255 255 255 255
+255 255 255 255
+90
+1
+shiva5a.lvo
+shiva5b.lvo
+shiva5c.lvo
+shiva5d.lvo
+shiva5e.lvo
+shiva5f.lvo
+shiva5g.lvo
+shiva5h.lvo
+shiva5i.lvo
+shiva5j.lvo
+shiva5k.lvo
+shiva5l.lvo
+shiva5m.lvo
+shiva5n.lvo
+shiva5o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva6
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+hand.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva6a.lvo
+shiva6b.lvo
+shiva6c.lvo
+shiva6d.lvo
+shiva6e.lvo
+shiva6f.lvo
+shiva6g.lvo
+shiva6h.lvo
+shiva6i.lvo
+shiva6j.lvo
+shiva6k.lvo
+shiva6l.lvo
+shiva6m.lvo
+shiva6n.lvo
+shiva6o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva7
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+laminate.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva7a.lvo
+shiva7b.lvo
+shiva7c.lvo
+shiva7d.lvo
+shiva7e.lvo
+shiva7f.lvo
+shiva7g.lvo
+shiva7h.lvo
+shiva7i.lvo
+shiva7j.lvo
+shiva7k.lvo
+shiva7l.lvo
+shiva7m.lvo
+shiva7n.lvo
+shiva7o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva8
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+divalips.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva8a.lvo
+shiva8b.lvo
+shiva8c.lvo
+shiva8d.lvo
+shiva8e.lvo
+shiva8f.lvo
+shiva8g.lvo
+shiva8h.lvo
+shiva8i.lvo
+shiva8j.lvo
+shiva8k.lvo
+shiva8l.lvo
+shiva8m.lvo
+shiva8n.lvo
+shiva8o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva9
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+panel.jpg
+115 115 115 255
+255 255 255 255
+90
+2
+shiva9a.lvo
+shiva9b.lvo
+shiva9c.lvo
+shiva9d.lvo
+shiva9e.lvo
+shiva9f.lvo
+shiva9g.lvo
+shiva9h.lvo
+shiva9i.lvo
+shiva9j.lvo
+shiva9k.lvo
+shiva9l.lvo
+shiva9m.lvo
+shiva9n.lvo
+shiva9o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+0
+0
+0
+1
+defpools.lvd
+pools
+1
+Shiva10
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+snaketile.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva10a.lvo
+shiva10b.lvo
+shiva10c.lvo
+shiva10d.lvo
+shiva10e.lvo
+shiva10f.lvo
+shiva10g.lvo
+shiva10h.lvo
+shiva10i.lvo
+shiva10j.lvo
+shiva10k.lvo
+shiva10l.lvo
+shiva10m.lvo
+shiva10n.lvo
+shiva10o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva11
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+mtlaminate.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva11a.lvo
+shiva11b.lvo
+shiva11c.lvo
+shiva11d.lvo
+shiva11e.lvo
+shiva11f.lvo
+shiva11g.lvo
+shiva11h.lvo
+shiva11i.lvo
+shiva11j.lvo
+shiva11k.lvo
+shiva11l.lvo
+shiva11m.lvo
+shiva11n.lvo
+shiva11o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva12
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+steelring.jpg
+115 115 115 255
+255 255 255 255
+90
+1
+shiva12a.lvo
+shiva12b.lvo
+shiva12c.lvo
+shiva12d.lvo
+shiva12e.lvo
+shiva12f.lvo
+shiva12g.lvo
+shiva12h.lvo
+shiva12i.lvo
+shiva12j.lvo
+shiva12k.lvo
+shiva12l.lvo
+shiva12m.lvo
+shiva12n.lvo
+shiva12o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+Shiva13
+15
+0
+0.000000 -16.250000 0.000000
+180.000000 0.000000 0.000000
+0.025000 0.025000 0.025000
+1.000000
+doublepanel.jpg
+115 115 115 255
+255 255 255 255
+90
+2
+shiva13a.lvo
+shiva13b.lvo
+shiva13c.lvo
+shiva13d.lvo
+shiva13e.lvo
+shiva13f.lvo
+shiva13g.lvo
+shiva13h.lvo
+shiva13i.lvo
+shiva13j.lvo
+shiva13k.lvo
+shiva13l.lvo
+shiva13m.lvo
+shiva13n.lvo
+shiva13o.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+0
+0
+0
+0
+1
+defpools.lvd
+pools
+1
+Gam1
+6
+0
+0.000000 -1.000000 0.000000
+0.000000 0.000000 0.000000
+0.049000 0.049000 0.049000
+1.000000
+chroom.jpg
+0 128 255 255
+255 255 255 255
+90
+1
+gami1.lvo
+gami2.lvo
+gami3.lvo
+gami4.lvo
+gami5.lvo
+gami6.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+3
+Gam2
+6
+0
+0.000000 -1.000000 0.000000
+59.000000 0.000000 0.000000
+0.049000 0.049000 0.049000
+1.000000
+chroom.jpg
+0 255 128 255
+255 255 255 255
+90
+1
+gami1.lvo
+gami2.lvo
+gami3.lvo
+gami4.lvo
+gami5.lvo
+gami6.lvo
+2
+0
+2
+1
+defmorph.lvd
+morph
+3
+Gam3
+6
+0
+0.000000 -1.000000 0.000000
+119.000000 0.000000 0.000000
+0.049000 0.049000 0.049000
+1.000000
+chroom.jpg
+0 128 255 255
+255 255 255 255
+90
+1
+gami1.lvo
+gami2.lvo
+gami3.lvo
+gami4.lvo
+gami5.lvo
+gami6.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+3
+Gam4
+6
+0
+0.000000 -1.000000 0.000000
+181.000000 0.000000 0.000000
+0.049000 0.049000 0.049000
+1.000000
+chroom.jpg
+0 255 128 255
+255 255 255 255
+90
+1
+gami1.lvo
+gami2.lvo
+gami3.lvo
+gami4.lvo
+gami5.lvo
+gami6.lvo
+2
+0
+2
+1
+defmorph.lvd
+morph
+3
+Gam5
+6
+0
+0.000000 -1.000000 0.000000
+243.000000 0.000000 0.000000
+0.049000 0.049000 0.049000
+1.000000
+chroom.jpg
+0 128 255 255
+255 255 255 255
+90
+1
+gami1.lvo
+gami2.lvo
+gami3.lvo
+gami4.lvo
+gami5.lvo
+gami6.lvo
+0
+0
+0
+1
+defmorph.lvd
+morph
+3
+Gam6
+6
+0
+0.000000 -1.000000 0.000000
+303.000000 0.000000 0.000000
+0.049000 0.049000 0.049000
+1.000000
+chroom.jpg
+0 255 128 255
+255 255 255 255
+90
+1
+gami1.lvo
+gami2.lvo
+gami3.lvo
+gami4.lvo
+gami5.lvo
+gami6.lvo
+2
+0
+2
+1
+defmorph.lvd
+morph
+3
+Glass
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+white.jpg
+255 255 255 30
+255 255 255 255
+90
+0
+glass.lvo
+FacePair1
+1
+0
+0.000000 10.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+face1.jpg
+200 200 200 100
+255 255 255 255
+38
+2
+face1.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+0
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+FacePair2
+1
+0
+0.000000 10.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+face2.jpg
+200 200 200 100
+255 255 255 255
+38
+2
+face2.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+1
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+FacePair3
+1
+0
+0.000000 10.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+face3.jpg
+200 200 200 100
+255 255 255 255
+38
+2
+face3.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+2
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+FacePair4
+1
+0
+0.000000 10.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+face4.jpg
+200 200 200 100
+255 255 255 255
+38
+2
+face4.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+0
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+FacePair5
+1
+0
+0.000000 10.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+face5.jpg
+200 200 200 100
+255 255 255 255
+38
+2
+face5.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+1
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+FacePair6
+1
+0
+0.000000 10.000000 0.000000
+0.000000 0.000000 0.000000
+0.050000 0.050000 0.050000
+1.000000
+face6.jpg
+200 200 200 100
+255 255 255 255
+38
+2
+face6.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+2
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+Culling Background	Back
+Culling Inscreen	Back
+Culling StageRing	Back
+Culling LightBall	Back
+Culling TentTop	Back
+Culling EyeFresco	Back
+Culling Floor1	Back
+Culling Floor2	Back
+Culling VariousPanels	Back
+Culling InsideTube	Back
+Culling Fabric	Back
+Culling Lenses	Back
+Culling Panel	Back
+Culling MarbleCeiling1	Back
+Culling MarbleCeilingPanel	Back
+Culling ScarabFresco	Back
+Culling HexLids	Back
+Culling Tubing	Back
+Culling Pit	Back
+Culling PitSide	Back
+Culling ProjectorBody	Back
+Culling LightHousing	Back
+Culling Screenframes	Back
+Culling Stage	Back
+Culling SwanFresco	Back
+Culling LoopTube	Back
+Culling StageEdge	Back
+Culling TableBases	Back
+Culling TableTops	Back
+Culling TriFloor	Back
+Culling Wires	Back
+Culling TriCeiling	Back
+Culling Pillars	Back
+Culling Shiva1	Back
+Culling Shiva2	Back
+Culling Shiva3	Back
+Culling Shiva4	Back
+Culling Shiva5	Back
+Culling Shiva6	Back
+Culling Shiva7	Back
+Culling Shiva8	Back
+Culling Shiva9	Back
+Culling Shiva10	Back
+Culling Shiva11	Back
+Culling Shiva12	Back
+Culling Shiva13	Back
+Culling Gam1	Back
+Culling Gam2	Back
+Culling Gam3	Back
+Culling Gam4	Back
+Culling Gam5	Back
+Culling Gam6	Back
+Culling Glass	Back
+Culling FacePair1	Back
+Culling FacePair2	Back
+Culling FacePair3	Back
+Culling FacePair4	Back
+Culling FacePair5	Back
+Culling FacePair6	Back
+SceneDetail ReadOnly Set	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 5.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	20.000000
+Camera RadiusMin Set	4.000000
+Camera RadiusMax Set	40.000000
+Camera RadiusMaxD Set	5.000000
+Camera Theta Set	180.000000
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	60.000000
+Camera Phi Set	0.000000
+Camera PhiMin Set	50.000000
+Camera PhiMax Set	120.000000
+Camera PhiMaxD Set	10.000000
+Camera Direction0 Set	-0.209198
+Camera Direction1 Set	-0.703055
+Camera Direction2 Set	0.679669
+Camera MaxMove Set	10.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	200.000000
+EffectPresetCategoryInfo DanceSpeed 3 0
+EffectPreset dance1.lvm dance1
+EffectPreset dance2.lvm dance2
+EffectPreset dance3.lvm dance3

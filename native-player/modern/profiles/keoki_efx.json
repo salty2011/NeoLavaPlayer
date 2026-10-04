@@ -1,0 +1,62 @@
+{
+	"name": "Keoki EFX",
+	"extends": "veils",
+	"folders": [
+		"oozic30/Keoki EFX"
+	],
+	"notes": "The monochrome sibling of Polyesterday: a grey photo-sphere, two alpha shells, a bumping mirror. Palette kept monochrome (no tint); contrast and bloom up; alpha shells scaled for linear-light blending.",
+	"environment": {
+		"adjust_saturation": 0.95,
+		"adjust_contrast": 1.1,
+		"ambient_color": [
+			0.7,
+			0.7,
+			0.75
+		],
+		"glow_hdr_threshold": 1.5
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.15,
+				"emission_base": 0.05
+			},
+			"Shell1": {
+				"alpha_gain": 0.85,
+				"priority": 1
+			},
+			"Shell2": {
+				"alpha_gain": 0.85,
+				"priority": 2
+			},
+			"Ray1": {
+				"unlit": true,
+				"emission_base": 0.0,
+				"emission_music": 0.15,
+				"albedo_gain": 1.0
+			},
+			"Mirror": {
+				"unlit": false,
+				"metallic": 0.0,
+				"roughness_scale": 0.7,
+				"specular": 0.08,
+				"clearcoat": 0.0,
+				"albedo_gain": 1.3,
+				"emission_base": 0.08,
+				"emission_music": 0.4
+			}
+		}
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 40.0,
+			"far_transition": 30.0,
+			"amount": 0.015
+		}
+	},
+	"lights": {
+		"key": {
+			"specular": 0.2
+		}
+	}
+}

@@ -1,0 +1,13 @@
+Version	3
+ObjectType	ORB
+Category	SlideShow
+BannerCount	4
+Texture	orb0.jpg
+Texture	orb1.jpg
+Texture	orb2.jpg
+Texture	orb3.jpg
+TextureAlpha	1.000000
+Duration	0.000000
+FadeDuration	5.000000
+PickDuration	0.000000
+PickCycles	0

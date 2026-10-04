@@ -1,0 +1,348 @@
+2
+25.000000
+0.750000
+1.000000
+2
+49
+10
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Triple Trance
+1.000000
+700
+1
+255 0 255 255
+0.200000
+Arial
+
+Mushroom
+2
+0
+0.000000 0.000000 1.250000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.325000
+blue-lightlines.bmp
+0 0 255 255
+255 255 255 255
+38
+4
+mushroomtorus.lvo
+mushroomcylinder.lvo
+0
+0
+0
+1
+defripple.lvd
+ripple
+0
+0
+0
+0
+1
+defcenter.lvd
+center
+0
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defshape.lvd
+shape
+0
+SignBoard
+2
+0
+-1.082500 0.000000 -0.625000
+60.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.325000
+violet-stripes.bmp
+255 0 255 255
+255 255 255 255
+38
+4
+signboardsheet.lvo
+signboardcylinder.lvo
+1
+0
+1
+1
+defshape.lvd
+shape
+1
+1
+0
+1
+1
+defbump.lvd
+bump
+0
+1
+0
+1
+1
+defcenter.lvd
+center
+1
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+1
+Sphere
+2
+0
+1.082500 0.000000 -0.625000
+150.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.325000
+purple-pore.bmp
+255 0 0 255
+255 255 255 255
+38
+4
+spheresphere.lvo
+spheredisk.lvo
+2
+0
+2
+1
+defcos.lvd
+cos
+0
+2
+0
+2
+1
+defcenter.lvd
+center
+2
+2
+0
+2
+1
+deftexscroll.lvd
+texscroll
+2
+2
+0
+2
+1
+defshape.lvd
+shape
+2
+PlatformTop
+1
+0
+0.000000 -1.000000 0.000000
+60.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+0.500000
+blue-oil.bmp
+128 128 192 255
+255 255 255 255
+38
+3
+platformtop.lvo
+1
+0
+1
+1
+defpools.lvd
+pools
+0
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+3
+1
+0
+1
+1
+deftexcos.lvd
+texcos
+0
+PlatformSide
+1
+0
+0.000000 -1.250000 0.000000
+60.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+blue-oil.bmp
+128 128 192 255
+255 255 255 255
+38
+0
+platformside.lvo
+PlatformBottom
+1
+0
+0.000000 -1.500000 0.000000
+60.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+blue-oil.bmp
+128 128 192 255
+255 255 255 255
+38
+0
+platformbottom.lvo
+Cone1
+1
+0
+0.000000 -0.500000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+blue-lightlines.bmp
+0 0 255 255
+255 255 255 255
+38
+1
+cone.lvo
+0
+0
+0
+1
+defshear.lvd
+shear
+0
+Cone2
+1
+0
+0.000000 -0.500000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+violet-stripes.bmp
+255 0 255 255
+255 255 255 255
+38
+1
+cone.lvo
+1
+0
+1
+1
+defshear.lvd
+shear
+0
+Cone3
+1
+0
+0.000000 -0.500000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+purple-pore.bmp
+255 0 0 255
+255 255 255 255
+38
+1
+cone.lvo
+2
+0
+2
+1
+defshear.lvd
+shear
+0
+BackGround
+1
+0
+0.000000 0.000000 -30.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+3.000000
+purple-ooze.bmp
+0 64 128 255
+255 255 255 255
+38
+3
+background.lvo
+1
+0
+1
+1
+defpools.lvd
+pools
+1
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+4
+2
+0
+2
+1
+deftexwave.lvd
+texwave
+0
+SceneDetail ReadOnly Set	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+ParentChildLink Mushroom Cone1
+ParentChildLink SignBoard Cone2
+ParentChildLink Sphere Cone3
+Culling Mushroom	None
+Culling SignBoard	None
+Culling Sphere	None
+Culling PlatformTop	Back
+Culling PlatformSide	Back
+Culling PlatformBottom	Back
+Culling Cone1	Back
+Culling Cone2	Back
+Culling Cone3	Back
+Culling BackGround	Back
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 2.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	4.768449
+Camera RadiusMin Set	3.500000
+Camera RadiusMax Set	8.000000
+Camera RadiusMaxD Set	2.500000
+Camera Theta Set	319.431274
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	114.375572
+Camera PhiMin Set	10.000000
+Camera PhiMax Set	120.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	-0.209198
+Camera Direction1 Set	-0.703055
+Camera Direction2 Set	0.679669
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	200.000000

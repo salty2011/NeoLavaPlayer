@@ -1,0 +1,83 @@
+Script Version 3
+
+0:0:00.0 LFX : DisableAll
+;0:0:00.0 TFX : Abort
+0:0:00.0 Camera : SetHardCutOn
+
+0:0:10.0 TFX : run peel        Stretchy_Peel
+0:0:10.0|1 Camera : GotoRandomPosition
+0:0:10.0|1 LFX : DisableAll
+0:0:10.0|1 LFX : EnableLens static    Medium_Grain    
+0:0:10.0|1 LFX : EnableLens oldfilm   Very_Old_Film
+0:0:10.0|1 LFX : EnableLens filter1   Flicker
+
+; here we have a water-ripple effect and some words that pop up on the screen.
+; the words should appear intact (i.e. NOT WARPED) at this point.
+
+0:0:15.0 TFX : run explode     Shatter
+0:0:15.0|1 Camera : GotoRandomPosition
+0:0:15.0|1 LFX : DisableAll
+0:0:15.0|1 LFX : EnableLens warpcirc  Radial_Ripple
+0:0:15.0 LFX : EnableLens sprite    null	
+0:0:18.0 LFX : EnableLens sprite    look
+0:0:19.0 LFX : EnableLens sprite    listen
+0:0:20.0 LFX : EnableLens sprite    link
+
+; here we run the same test again, with a water-ripple effect, 
+; and some words that pop up on the screen.  However, this time,
+; the words should appear WARPED, rippling underneath the effect
+; just like the background.
+
+0:0:23.0 LFX : DisableAll
+0:0:23.0 LFX : EnableLens sprite    null	
+0:0:23.0 LFX : EnableLens warpcirc  Radial_Ripple
+0:0:23.0 LFX : EnableLens sprite    look
+0:0:24.0 LFX : EnableLens sprite    listen
+0:0:25.0 LFX : EnableLens sprite    link
+
+0:0:30.0 TFX : run peel        4_way_Peel
+0:0:30.0|1 Camera : GotoRandomPosition
+0:0:30.0|1 LFX : DisableAll
+0:0:30.0|1 LFX : EnableLens filter1   negative
+
+0:0:35.0 TFX : run paintbrush  Oil_Spill
+0:0:35.0|1 Camera : GotoRandomPosition
+0:0:35.0|1 LFX : DisableAll
+0:0:35.0|1 LFX : EnableLens filter1   Bright_Beats
+
+0:0:40.0 TFX : run iris        Iris_8
+0:0:40.0|1 Camera : GotoRandomPosition
+0:0:40.0|1 LFX : DisableAll
+0:0:40.0|1 LFX : EnableLens feedback  Seefeldt4
+
+; 17. Composite #2
+; another composite effect.  The red and green are filtered out a bit,
+; making the scene mostly blue; some blue is added, making the scene
+; even more blue; and finally, a subtle warp is done to make the 
+; geometry bend around as if the viewer were underwater.
+
+0:0:45.0 TFX : run alphaburn   Massive_Crumples
+0:0:45.0|1 Camera : GotoRandomPosition
+0:0:45.0|1 LFX : DisableAll
+0:0:45.0|1 LFX : EnableLens filter1   Blue_Lens
+0:0:45.0|1 LFX : EnableLens filter2   Add_Blue     
+0:0:45.0|1 LFX : EnableLens warprect  Underwater
+
+0:0:50.0 TFX : run explode     High_spin_shatter
+0:0:50.0|1 Camera : GotoRandomPosition
+0:0:50.0|1 LFX : DisableAll
+0:0:50.0|1 LFX : EnableLens warprect  DefTexZoom-1
+
+0:0:55.0|1 LFX : DisableAll
+0:0:55.0|1 LFX : EnableLens warprect  DefTexZoom-2
+
+0:0:60.0|1 LFX : DisableAll
+0:0:60.0|1 LFX : EnableLens warprect  DefTexZoom-3
+
+0:0:65.0   TFX : run explode     Breaking_Window
+0:0:65.0|1 Camera : GotoRandomPosition
+0:0:65.0|1 LFX : DisableAll
+;0:0:65.0|1 LFX : EnableLens filter1   Saturation
+0:0:65.0|1 LFX : EnableLens static    Horz_Scanlines
+;0:0:65.0|1 LFX : EnableLens static    Large_Grain
+0:0:65.0|1 LFX : EnableLens feedback  Seefeldt2

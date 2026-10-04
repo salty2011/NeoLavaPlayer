@@ -1,0 +1,434 @@
+{
+	"name": "LVT8 Liquid Light",
+	"extends": "abstract_space",
+	"folders": [
+		"lava25/LVT8",
+		"oozic30/LVT8"
+	],
+	"notes": "A lava lamp. None of the lamp textures shipped, so the room is a flowing procedural plasma (yellow with cyan flow), the base and cap are anodised lavender metal, the glass and liquid are real translucent surfaces (transparent Modern variant) and the wax core glows and pulses with the beat.",
+	"environment": {
+		"ambient_color": [
+			0.6,
+			0.55,
+			0.9
+		],
+		"ambient_energy": 0.5,
+		"glow_intensity": 0.55,
+		"glow_hdr_threshold": 1.1,
+		"adjust_saturation": 1.12,
+		"fog_color": [
+			0.9,
+			0.7,
+			0.4
+		],
+		"fog_density": 0.003,
+		"volumetric_fog_density": 0.004,
+		"volumetric_fog_albedo": [
+			1.0,
+			0.85,
+			0.55
+		],
+		"volumetric_fog_anisotropy": 0.6
+	},
+	"lights": {
+		"key": {
+			"energy": 1.8,
+			"volumetric": 0.7,
+			"specular": 1.0
+		},
+		"fill": {
+			"color": [
+				0.5,
+				0.9,
+				1.0
+			],
+			"energy": 0.45
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.55,
+				0.9
+			],
+			"energy": 0.7
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 1.0,
+				"albedo_gain": 1.2,
+				"emission_base": 0.1,
+				"drift": [
+					0.0,
+					0.0
+				],
+				"procedural": {
+					"mode": "plasma",
+					"a": [
+						1.0,
+						0.85,
+						0.1
+					],
+					"b": [
+						1.0,
+						0.55,
+						0.2
+					],
+					"c": [
+						0.25,
+						1.0,
+						0.85
+					],
+					"scale": 4.0,
+					"speed": 0.05
+				}
+			},
+			"CapTop": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"metallic": 0.55,
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"specular": 0.8,
+				"clearcoat": 0.5,
+				"clearcoat_gloss": 0.85,
+				"albedo_gain": 1.9,
+				"emission_base": 0.0,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.8,
+					0.7,
+					1.0
+				],
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.8,
+						0.8,
+						1.0
+					],
+					"b": [
+						1.0,
+						1.0,
+						1.0
+					],
+					"scale": 1.0
+				}
+			},
+			"Core": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"roughness_scale": 0.3,
+				"roughness_bias": 0.0,
+				"clearcoat": 1.0,
+				"clearcoat_gloss": 0.95,
+				"specular": 0.8,
+				"albedo_gain": 1.3,
+				"emission_base": 0.35,
+				"emission_music": 1.1,
+				"rim_strength": 0.9,
+				"rim_color": [
+					0.5,
+					1.0,
+					1.0
+				],
+				"procedural": {
+					"mode": "plasma",
+					"a": [
+						0.0,
+						0.9,
+						1.0
+					],
+					"b": [
+						0.3,
+						1.0,
+						0.7
+					],
+					"c": [
+						0.9,
+						1.0,
+						0.8
+					],
+					"scale": 3.0,
+					"speed": 0.08
+				}
+			},
+			"Flame": {
+				"unlit": true,
+				"alpha_gain": 0.9,
+				"emission_base": 0.35,
+				"emission_music": 0.7,
+				"albedo_gain": 1.3,
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.2,
+				"priority": 1,
+				"procedural": {
+					"mode": "plasma",
+					"a": [
+						0.7,
+						1.0,
+						0.1
+					],
+					"b": [
+						1.0,
+						0.95,
+						0.3
+					],
+					"c": [
+						0.4,
+						1.0,
+						0.6
+					],
+					"scale": 2.5,
+					"speed": 0.09
+				}
+			},
+			"Glass": {
+				"alpha_gain": 0.8,
+				"roughness_scale": 0.05,
+				"roughness_bias": 0.0,
+				"specular": 1.0,
+				"clearcoat": 1.0,
+				"clearcoat_gloss": 1.0,
+				"albedo_gain": 1.0,
+				"rim_strength": 1.4,
+				"rim_color": [
+					1.0,
+					0.85,
+					1.0
+				],
+				"rim_power": 2.2,
+				"priority": 2,
+				"shadows": false,
+				"tint_to": [
+					1.0,
+					0.7,
+					0.8
+				],
+				"tint_amount": 0.5,
+				"procedural": {
+					"mode": "plasma",
+					"a": [
+						1.0,
+						0.7,
+						0.8
+					],
+					"b": [
+						0.9,
+						0.8,
+						1.0
+					],
+					"c": [
+						1.0,
+						1.0,
+						1.0
+					],
+					"scale": 2.0,
+					"speed": 0.03
+				}
+			},
+			"CapSide": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"metallic": 0.55,
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"specular": 0.8,
+				"clearcoat": 0.5,
+				"clearcoat_gloss": 0.85,
+				"albedo_gain": 1.9,
+				"emission_base": 0.0,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.8,
+					0.7,
+					1.0
+				],
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.8,
+						0.8,
+						1.0
+					],
+					"b": [
+						1.0,
+						1.0,
+						1.0
+					],
+					"scale": 1.0
+				}
+			},
+			"CapBottom": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"metallic": 0.55,
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"specular": 0.8,
+				"clearcoat": 0.5,
+				"clearcoat_gloss": 0.85,
+				"albedo_gain": 1.9,
+				"emission_base": 0.0,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.8,
+					0.7,
+					1.0
+				],
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.8,
+						0.8,
+						1.0
+					],
+					"b": [
+						1.0,
+						1.0,
+						1.0
+					],
+					"scale": 1.0
+				}
+			},
+			"BaseTop": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"metallic": 0.55,
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"specular": 0.8,
+				"clearcoat": 0.5,
+				"clearcoat_gloss": 0.85,
+				"albedo_gain": 1.9,
+				"emission_base": 0.0,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.8,
+					0.7,
+					1.0
+				],
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.8,
+						0.8,
+						1.0
+					],
+					"b": [
+						1.0,
+						1.0,
+						1.0
+					],
+					"scale": 1.0
+				}
+			},
+			"BaseSide": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"metallic": 0.55,
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"specular": 0.8,
+				"clearcoat": 0.5,
+				"clearcoat_gloss": 0.85,
+				"albedo_gain": 1.9,
+				"emission_base": 0.0,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.8,
+					0.7,
+					1.0
+				],
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.8,
+						0.8,
+						1.0
+					],
+					"b": [
+						1.0,
+						1.0,
+						1.0
+					],
+					"scale": 1.0
+				}
+			},
+			"BaseBottom": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"metallic": 0.55,
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"specular": 0.8,
+				"clearcoat": 0.5,
+				"clearcoat_gloss": 0.85,
+				"albedo_gain": 1.9,
+				"emission_base": 0.0,
+				"rim_strength": 0.4,
+				"rim_color": [
+					0.8,
+					0.7,
+					1.0
+				],
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.8,
+						0.8,
+						1.0
+					],
+					"b": [
+						1.0,
+						1.0,
+						1.0
+					],
+					"scale": 1.0
+				}
+			}
+		}
+	},
+	"reactions": {
+		"emission_pulse": 1.3,
+		"glow_impact": 0.9
+	}
+}

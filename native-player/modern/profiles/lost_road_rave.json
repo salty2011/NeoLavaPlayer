@@ -1,0 +1,126 @@
+{
+	"name": "Lost Road Rave",
+	"extends": "abstract_space",
+	"folders": [
+		"lava25/Lost Road Rave"
+	],
+	"notes": "A glowing road into a nebula. The nebula is self-lit and slowly drifting; the road is wet asphalt (glossy, SSR) whose bright lane markings and sparks emit by their own brightness; magenta haze, floating embers, sparks that follow the music.",
+	"environment": {
+		"ambient_color": [
+			0.5,
+			0.3,
+			0.55
+		],
+		"ambient_energy": 0.35,
+		"adjust_saturation": 1.15,
+		"glow_hdr_threshold": 1.0,
+		"glow_intensity": 0.5,
+		"fog_color": [
+			0.45,
+			0.2,
+			0.4
+		],
+		"fog_density": 0.008,
+		"volumetric_fog_density": 0.008,
+		"volumetric_fog_albedo": [
+			1.0,
+			0.6,
+			0.8
+		],
+		"volumetric_fog_anisotropy": 0.6
+	},
+	"lights": {
+		"key": {
+			"energy": 1.2,
+			"specular": 1.0,
+			"volumetric": 0.5
+		},
+		"fill": {
+			"color": [
+				0.8,
+				0.4,
+				0.9
+			],
+			"energy": 0.3
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.6,
+				0.3
+			],
+			"energy": 0.5
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.3,
+				"saturation": 1.15,
+				"emission_base": 0.1,
+				"emission_music": 0.3,
+				"drift": [
+					0.0015,
+					0.0005
+				]
+			},
+			"Landscape": {
+				"roughness_scale": 0.45,
+				"roughness_bias": 0.05,
+				"specular": 0.7,
+				"clearcoat": 0.35,
+				"clearcoat_gloss": 0.85,
+				"albedo_gain": 1.5,
+				"emissive_luma": 1.0,
+				"emissive_luma_curve": 1.6,
+				"emission_music": 0.6,
+				"normal_strength": 0.8,
+				"shadows": false
+			}
+		}
+	},
+	"atmosphere": {
+		"particles": [
+			{
+				"name": "embers",
+				"center": [
+					0.0,
+					0.8,
+					0.0
+				],
+				"extents": [
+					5.0,
+					1.2,
+					3.0
+				],
+				"amount": 110,
+				"lifetime": 6.0,
+				"size": 0.03,
+				"color": [
+					1.0,
+					0.6,
+					0.3
+				],
+				"energy": 2.8,
+				"velocity": [
+					0.0,
+					0.35,
+					0.15
+				],
+				"spread": 50.0,
+				"turbulence": 0.4,
+				"base": 0.4,
+				"sparkle": 0.6,
+				"pulse": 0.4,
+				"impact": 0.6
+			}
+		]
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 12.0,
+			"far_transition": 10.0,
+			"amount": 0.03
+		}
+	}
+}

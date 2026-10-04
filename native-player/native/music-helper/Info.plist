@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Embedded into the binary's __TEXT,__info_plist section by build.sh.
+	     Gives the helper a stable code identity. TCC prompts are still
+	     attributed to the *responsible* (parent) app, whose own Info.plist
+	     must carry the usage-description keys; see docs/MUSIC_HELPER.md. -->
+	<key>CFBundleIdentifier</key>
+	<string>local.oozic.music-helper</string>
+	<key>CFBundleName</key>
+	<string>oozic-music-helper</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>OozicPlayer reads your Music library so you can play your own tracks in the visualiser.</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>OozicPlayer controls the Music app to play, pause and skip tracks.</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>OozicPlayer listens to the Music app's audio so the visualiser can react to it.</string>
+</dict>
+</plist>

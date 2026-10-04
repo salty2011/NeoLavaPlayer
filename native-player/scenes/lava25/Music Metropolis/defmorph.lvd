@@ -1,0 +1,34 @@
+DefType	DefMorph
+MaxInstance	3
+NumPresets	3
+###############################################################################
+Preset	0
+DoAmp	1.000000
+DoColor	1.000000
+AmpScale	1.000000
+DecayMin	0.500000
+DecayMax	1.000000
+MorphMin	0.000000
+MorphMax	5.000000
+###############################################################################
+Preset	1
+DoAmp	1.000000
+DoColor	1.000000
+AmpScale	1.000000
+DecayMin	1.500000
+DecayMax	1.500000
+MorphMin	0.050000
+MorphMax	0.500000
+CreationLevel	0.000000
+InteruptLevel	0.000000
+###############################################################################
+Preset	2
+DoAmp	1.000000
+DoColor	1.000000
+AmpScale	1.000000
+DecayMin	1.750000
+DecayMax	1.750000
+MorphMin	10.000000
+MorphMax	90.000000
+CreationLevel	0.000000
+InteruptLevel	0.000000

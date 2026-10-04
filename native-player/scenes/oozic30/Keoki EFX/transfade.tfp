@@ -1,0 +1,24 @@
+Version	3
+TfxType	Fade
+PresetFriendlyName	Basic
+NumPresets	4
+###############################################################################
+Preset	0
+PresetName	Short_Fade
+Duration	0.500000
+ResidualMode	0.000000
+###############################################################################
+Preset	1
+PresetName	Medium_Fade
+Duration	1.000000
+ResidualMode	0.000000
+###############################################################################
+Preset	2
+PresetName	Long_Fade
+Duration	1.500000
+ResidualMode	0.000000
+###############################################################################
+Preset	3
+PresetName	Residual_Fade
+Duration	3.500000
+ResidualMode	1.000000

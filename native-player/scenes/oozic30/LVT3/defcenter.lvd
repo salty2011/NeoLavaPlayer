@@ -1,0 +1,42 @@
+DefType	DefCenter
+MaxInstance	3
+NumPresets	3
+###############################################################################
+Preset	0
+DoAmp	1.000000
+DoColor	1.000000
+AmpScale	1.000000
+DecayMin	0.400000
+DecayMax	0.600000
+RMax	0.500000
+ZMax	0.500000
+Direction	1.000000
+DirectionMultiply	1.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000
+###############################################################################
+Preset	1
+DoAmp	1.000000
+DoColor	1.000000
+AmpScale	1.000000
+DecayMin	0.400000
+DecayMax	0.600000
+RMax	0.500000
+ZMax	0.500000
+Direction	1.000000
+DirectionMultiply	1.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000
+###############################################################################
+Preset	2
+DoAmp	1.000000
+DoColor	1.000000
+AmpScale	1.000000
+DecayMin	0.400000
+DecayMax	0.600000
+RMax	0.500000
+ZMax	0.500000
+Direction	1.000000
+DirectionMultiply	1.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000

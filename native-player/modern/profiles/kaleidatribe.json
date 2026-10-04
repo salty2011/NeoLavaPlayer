@@ -1,0 +1,95 @@
+{
+	"name": "KaleidaTribe",
+	"extends": "veils",
+	"folders": [
+		"lava25/KaleidaTribe"
+	],
+	"notes": "Nine rotating photo sheets that fade in and out (DefAlpha) over a blue space backdrop. Sheets use the transparent Modern variant so the photographs layer like stained glass; unlit, with bloom carrying the overlaps. Sheet alpha is scaled slightly because linear-light blending of stacked layers reads brighter than the original.",
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.2,
+				"emission_base": 0.1
+			},
+			"Sheet01": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 1
+			},
+			"Sheet02": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 2
+			},
+			"Sheet03": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 3
+			},
+			"Sheet04": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 4
+			},
+			"Sheet05": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 5
+			},
+			"Sheet06": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 6
+			},
+			"Sheet07": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 7
+			},
+			"Sheet08": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 8
+			},
+			"Sheet09": {
+				"alpha_gain": 0.9,
+				"emission_base": 0.12,
+				"emission_music": 0.5,
+				"albedo_gain": 1.15,
+				"saturation": 1.1,
+				"priority": 9
+			}
+		}
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 30.0,
+			"far_transition": 20.0,
+			"amount": 0.015
+		}
+	}
+}

@@ -1,0 +1,208 @@
+{
+	"name": "LVT6 Ancient Egypt",
+	"extends": "outdoor_sky",
+	"folders": [
+		"lava25/LVT6",
+		"oozic30/LVT6"
+	],
+	"notes": "Two spinning pyramids and a mirror in a golden desert sky. The eye-rock backdrop never shipped, so the sky sphere is replaced by the procedural sky in desert gold (sun low, warm haze, sparse cloud); pyramids are sandstone with normal relief and occlusion, the mirror is a polished dark metal that reflects the sky.",
+	"environment": {
+		"sky": {
+			"sky_top": [
+				0.1,
+				0.34,
+				0.7
+			],
+			"sky_horizon": [
+				1.0,
+				0.78,
+				0.45
+			],
+			"ground_color": [
+				0.75,
+				0.55,
+				0.28
+			],
+			"sun_dir": [
+				0.5,
+				0.28,
+				0.8
+			],
+			"sun_color": [
+				1.0,
+				0.8,
+				0.5
+			],
+			"sun_energy": 8.0,
+			"cloud_cover": 0.28,
+			"cloud_speed": [
+				0.002,
+				0.0
+			],
+			"haze": 0.35
+		},
+		"ambient_energy": 0.8,
+		"adjust_saturation": 1.08,
+		"fog_color": [
+			1.0,
+			0.75,
+			0.45
+		],
+		"fog_density": 0.003,
+		"fog_height_density": 0.0,
+		"glow_hdr_threshold": 1.1,
+		"glow_intensity": 0.4,
+		"volumetric_fog_density": 0.004,
+		"volumetric_fog_albedo": [
+			1.0,
+			0.85,
+			0.6
+		],
+		"volumetric_fog_anisotropy": 0.7
+	},
+	"lights": {
+		"key": {
+			"direction": [
+				-0.5,
+				-0.3,
+				-0.8
+			],
+			"energy": 2.6,
+			"shadow_distance": 60.0
+		},
+		"fill": {
+			"color": [
+				1.0,
+				0.7,
+				0.5
+			],
+			"energy": 0.2
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.85,
+				0.6
+			],
+			"energy": 0.4
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"hidden": true,
+				"shadows": false
+			},
+			"PyramidTop": {
+				"roughness_scale": 0.95,
+				"roughness_bias": 0.1,
+				"normal_strength": 1.8,
+				"ao": 1.0,
+				"albedo_gain": 1.8,
+				"saturation": 0.85,
+				"specular": 0.15
+			},
+			"PyramidBottom": {
+				"roughness_scale": 0.95,
+				"roughness_bias": 0.1,
+				"normal_strength": 1.8,
+				"ao": 1.0,
+				"albedo_gain": 1.8,
+				"saturation": 0.85,
+				"specular": 0.15
+			},
+			"TopSlab": {
+				"roughness_scale": 0.9,
+				"normal_strength": 1.5,
+				"ao": 1.0,
+				"albedo_gain": 1.9,
+				"specular": 0.2
+			},
+			"BottomSlab": {
+				"roughness_scale": 0.9,
+				"normal_strength": 1.5,
+				"ao": 1.0,
+				"albedo_gain": 1.9,
+				"specular": 0.2
+			},
+			"Mirror": {
+				"tint_to": [
+					0.12,
+					0.1,
+					0.08
+				],
+				"tint_amount": 0.8,
+				"metallic": 0.9,
+				"roughness_scale": 0.1,
+				"roughness_bias": 0.02,
+				"specular": 1.0,
+				"clearcoat": 0.6,
+				"clearcoat_gloss": 0.95,
+				"albedo_gain": 0.9,
+				"rim_strength": 0.6,
+				"rim_color": [
+					1.0,
+					0.85,
+					0.5
+				],
+				"shadows": false,
+				"glint_normal": 0.08,
+				"glint_scale": 9.0,
+				"glint_strength": 0.0,
+				"glint_color": [
+					1.0,
+					0.9,
+					0.6
+				],
+				"glint_threshold": 0.6
+			}
+		}
+	},
+	"atmosphere": {
+		"particles": [
+			{
+				"name": "dust",
+				"center": [
+					0.0,
+					0.0,
+					0.0
+				],
+				"extents": [
+					14.0,
+					6.0,
+					14.0
+				],
+				"amount": 120,
+				"lifetime": 10.0,
+				"size": 0.05,
+				"color": [
+					1.0,
+					0.85,
+					0.55
+				],
+				"energy": 1.6,
+				"velocity": [
+					0.35,
+					0.05,
+					0.1
+				],
+				"spread": 60.0,
+				"turbulence": 0.5,
+				"base": 0.5,
+				"sparkle": 0.4
+			}
+		],
+		"fog_volumes": []
+	},
+	"reactions": {
+		"fog_anticipation": 0.8,
+		"sun_swell": 0.2
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 30.0,
+			"far_transition": 20.0,
+			"amount": 0.025
+		}
+	}
+}

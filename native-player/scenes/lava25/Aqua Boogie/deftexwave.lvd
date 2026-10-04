@@ -1,0 +1,20 @@
+DefType	DefTexWave
+MaxInstance	3
+NumPresets	1
+###############################################################################
+Preset	0
+AmpScale	7.500000
+DecayMin	2.500000
+DecayMax	2.500000
+CosDepth	2.000000
+MMin	2.000000
+Mmax	2.000000
+MVMin	0.200000
+MVMax	1.800000
+MVDir	1.000000
+PhaseVDir	1.000000
+PhaseVMin	0.000000
+PhaseVMax	180.000000
+PhaseMin	0.000000
+PhaseMax	1440.000000
+Orientation	0.000000

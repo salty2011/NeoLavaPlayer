@@ -1,0 +1,30 @@
+DefType	DefShape
+MaxInstance	3
+NumPresets	3
+###############################################################################
+Preset	0
+DoTex	1.000000
+AmpScale	1.000000
+DecayMin	0.400000
+DecayMax	0.600000
+Amplitude	0.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000
+###############################################################################
+Preset	1
+DoTex	1.000000
+AmpScale	1.000000
+DecayMin	0.400000
+DecayMax	0.600000
+Amplitude	0.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000
+###############################################################################
+Preset	2
+DoTex	1.000000
+AmpScale	0.750000
+DecayMin	0.400000
+DecayMax	0.600000
+Amplitude	0.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000

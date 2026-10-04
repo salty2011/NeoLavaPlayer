@@ -1,0 +1,213 @@
+{
+	"name": "LVT1 Solar Swirl",
+	"extends": "abstract_space",
+	"folders": [
+		"lava25/LVT1",
+		"oozic30/LVT1"
+	],
+	"notes": "Sun, Earth and Moon over a starfield. The three textures never shipped, so Modern paints them procedurally (granulated sun, ocean/land/cloud Earth, cratered Moon). The key is the original light 0 inside the sun, so the planets are lit from it. Planets leave light trails as they orbit.",
+	"environment": {
+		"ambient_color": [
+			0.1,
+			0.13,
+			0.3
+		],
+		"ambient_energy": 0.22,
+		"fog_color": [
+			0.15,
+			0.12,
+			0.3
+		],
+		"fog_density": 0.0008,
+		"volumetric_fog_density": 0.002,
+		"volumetric_fog_albedo": [
+			0.8,
+			0.6,
+			0.5
+		],
+		"glow_intensity": 0.4,
+		"glow_hdr_threshold": 1.5,
+		"adjust_saturation": 1.1
+	},
+	"lights": {
+		"key": {
+			"energy": 2.6,
+			"attenuation": 0.0,
+			"size": 0.6,
+			"volumetric": 0.3,
+			"specular": 0.7
+		},
+		"fill": {
+			"color": [
+				0.3,
+				0.4,
+				0.9
+			],
+			"energy": 0.18
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.6,
+				0.3
+			],
+			"energy": 0.45
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.1,
+				"emission_base": 0.05,
+				"drift": [
+					0.0008,
+					0.0003
+				],
+				"hidden": false,
+				"emission_music": 0.2
+			},
+			"Sun": {
+				"unlit": true,
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 1.0,
+				"albedo_gain": 1.6,
+				"emission_base": 0.35,
+				"emission_music": 0.9,
+				"shadows": false,
+				"procedural": {
+					"mode": "sun",
+					"a": [
+						0.9,
+						0.25,
+						0.02
+					],
+					"b": [
+						1.0,
+						0.65,
+						0.08
+					],
+					"c": [
+						1.0,
+						0.97,
+						0.7
+					],
+					"scale": 2.2,
+					"speed": 0.12
+				}
+			},
+			"Earth": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.75,
+				"roughness_scale": 0.7,
+				"roughness_bias": 0.1,
+				"clearcoat": 0.2,
+				"clearcoat_gloss": 0.7,
+				"specular": 0.5,
+				"rim_strength": 0.9,
+				"rim_color": [
+					0.35,
+					0.65,
+					1.0
+				],
+				"rim_power": 3.0,
+				"emission_base": 0.02,
+				"procedural": {
+					"mode": "planet",
+					"a": [
+						0.05,
+						0.22,
+						0.6
+					],
+					"b": [
+						0.22,
+						0.5,
+						0.2
+					],
+					"c": [
+						0.95,
+						0.97,
+						1.0
+					],
+					"scale": 2.4,
+					"speed": 0.02
+				}
+			},
+			"Moon": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.8,
+				"roughness_scale": 1.0,
+				"roughness_bias": 0.2,
+				"specular": 0.15,
+				"albedo_gain": 1.2,
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.45,
+						0.45,
+						0.47
+					],
+					"b": [
+						0.82,
+						0.8,
+						0.76
+					],
+					"scale": 3.2
+				}
+			}
+		}
+	},
+	"reactions": {
+		"key_energy_swell": 0.4,
+		"key_energy_pulse": 0.25,
+		"glow_impact": 0.9,
+		"exposure_impact": 0.1
+	},
+	"effects": {
+		"particles": {
+			"emitters": [
+				"Earth",
+				"Moon"
+			],
+			"colors": {
+				"Earth": [
+					0.45,
+					0.7,
+					1.0
+				],
+				"Moon": [
+					0.9,
+					0.9,
+					1.0
+				]
+			},
+			"radius": 0.5,
+			"amount": 40,
+			"burst": 50
+		},
+		"trails": {
+			"emitters": [
+				"Earth",
+				"Moon"
+			],
+			"amount": 64,
+			"lifetime": 1.1
+		},
+		"dof": {
+			"far_distance": 20.0,
+			"far_transition": 14.0,
+			"amount": 0.03
+		}
+	}
+}

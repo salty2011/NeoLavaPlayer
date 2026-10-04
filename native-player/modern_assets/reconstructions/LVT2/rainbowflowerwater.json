@@ -1,0 +1,15 @@
+{
+ "label": "reconstruction",
+ "WARNING": "RECONSTRUCTION - NOT an original Creative asset. The original rainbowflowerwater.bmp was never recovered.",
+ "replaces_missing_original": "rainbowflowerwater.bmp",
+ "scene": "LVT2 (Dancing Well)",
+ "used_by_object": "Background (sky.lvo, inside-out SPHERE r=20) per missing-scene-search.md",
+ "size": [
+  256,
+  256
+ ],
+ "tileable": true,
+ "method": "tools/texture_pipeline/reconstruct_lvt2.py: numpy/scipy procedural (FFT periodic fbm noise, wrap-around flower stamping, 4x supersample, median+blur painterly softening, saturation push). Seed 3303, deterministic.",
+ "description": "Rainbow-banded rippling water field (ping-pong hue ramp so it tiles) scattered with flowers.",
+ "style_reference": "Creative LAVA 25 scene textures (saturated, soft, 256x256, seamless)"
+}

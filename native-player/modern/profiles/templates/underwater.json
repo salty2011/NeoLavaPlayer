@@ -1,0 +1,29 @@
+{
+	"name": "template: underwater",
+	"extends": "abstract_space",
+	"notes": "Deep-water scenes: teal ambient, dense volumetric haze that the key lights into shafts, cool rim, drifting bubbles. Backdrop stays the original texture (self-lit).",
+	"environment": {
+		"ambient_color": [0.2, 0.55, 0.7],
+		"ambient_energy": 0.5,
+		"adjust_saturation": 1.15,
+		"fog_color": [0.05, 0.25, 0.4],
+		"fog_density": 0.02,
+		"volumetric_fog_density": 0.03,
+		"volumetric_fog_albedo": [0.35, 0.8, 1.0],
+		"volumetric_fog_emission": [0.0, 0.03, 0.06],
+		"volumetric_fog_anisotropy": 0.65,
+		"glow_hdr_threshold": 1.2
+	},
+	"lights": {
+		"key": {"energy": 1.8, "volumetric": 1.0, "specular": 0.8},
+		"fill": {"color": [0.3, 0.7, 1.0], "energy": 0.4, "direction": [-0.4, -0.5, 0.7]},
+		"rim": {"color": [0.5, 0.95, 1.0], "energy": 0.7}
+	},
+	"reactions": {"fog_anticipation": 0.9, "key_energy_swell": 0.5},
+	"atmosphere": {
+		"particles": [
+			{"name": "bubbles", "center": [0.0, 0.0, 0.0], "extents": [6.0, 3.0, 6.0], "amount": 70, "lifetime": 9.0, "size": 0.04, "color": [0.7, 0.95, 1.0], "energy": 1.8,
+			 "velocity": [0.0, 0.5, 0.0], "spread": 25.0, "turbulence": 0.25, "base": 0.5, "sparkle": 0.5}
+		]
+	}
+}

@@ -1,0 +1,18 @@
+DefType	DefRotate
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+AmpScale	1.000000
+DecayMin	0.750000
+DecayMax	0.750000
+AngleVelocityMin	0.000000
+AngleVelocityMax	45.000000
+AngleVelocityDirection	1.000000
+AngleVDirectionMultiply	-1.000000
+Axis0	1.000000
+Axis1	0.000000
+Axis2	0.000000
+CreationLevel	0.000000
+Interruptlevel	0.000000
+ResetMat	0.000000

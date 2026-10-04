@@ -1,0 +1,191 @@
+{
+	"name": "LVT2 Dancing Well",
+	"extends": "outdoor_sky",
+	"folders": [
+		"lava25/LVT2",
+		"oozic30/LVT2"
+	],
+	"notes": "A well on a sunny meadow. Sky sphere replaced by the procedural sky; the three reconstructed textures keep their roles (flowers on the ground, wet stone on the tub). Water glints and a breeze across the flowers are shader-only.",
+	"lights": {
+		"key": {
+			"direction": [
+				-0.42,
+				-0.58,
+				-0.7
+			],
+			"energy": 2.5
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"hidden": true,
+				"shadows": false
+			},
+			"Ground": {
+				"roughness_scale": 1.0,
+				"roughness_bias": 0.1,
+				"specular": 0.2,
+				"saturation": 1.15,
+				"albedo_gain": 1.55,
+				"normal_strength": 1.1,
+				"emission_music": 0.35,
+				"wave_amp": 0.004,
+				"wave_freq": 30.0,
+				"wave_speed": 0.12,
+				"shadows": false,
+				"emission_base": 0.1
+			},
+			"Tub": {
+				"roughness_scale": 0.9,
+				"roughness_bias": 0.15,
+				"specular": 0.1,
+				"clearcoat": 0.0,
+				"clearcoat_gloss": 0.7,
+				"albedo_gain": 1.05,
+				"saturation": 0.6,
+				"normal_strength": 1.5,
+				"ao": 0.6,
+				"emission_base": 0.0
+			},
+			"WaterSurface": {
+				"tint_to": [
+					0.05,
+					0.36,
+					0.72
+				],
+				"tint_amount": 0.85,
+				"roughness_scale": 0.3,
+				"roughness_bias": 0.0,
+				"specular": 0.4,
+				"clearcoat": 0.3,
+				"clearcoat_gloss": 0.95,
+				"albedo_gain": 0.55,
+				"glint_normal": 0.4,
+				"glint_scale": 11.0,
+				"glint_speed": 0.35,
+				"glint_strength": 2.5,
+				"glint_threshold": 0.55,
+				"rim_strength": 0.25,
+				"rim_color": [
+					0.6,
+					0.8,
+					1.0
+				],
+				"emission_base": 0.1,
+				"emission_music": 0.4,
+				"shadows": false,
+				"saturation": 1.35
+			}
+		}
+	},
+	"atmosphere": {
+		"fog_volumes": [
+			{
+				"center": [
+					0.0,
+					0.15,
+					0.0
+				],
+				"size": [
+					26.0,
+					1.8,
+					26.0
+				],
+				"density": 0.05,
+				"albedo": [
+					0.95,
+					0.97,
+					1.0
+				],
+				"falloff": 1.2,
+				"edge": 0.4,
+				"anticipation": 1.5
+			}
+		],
+		"particles": [
+			{
+				"name": "pollen",
+				"center": [
+					0.0,
+					1.8,
+					0.0
+				],
+				"extents": [
+					9.0,
+					1.6,
+					9.0
+				],
+				"amount": 90,
+				"lifetime": 9.0,
+				"size": 0.034,
+				"color": [
+					1.0,
+					0.9,
+					0.6
+				],
+				"energy": 2.0,
+				"velocity": [
+					0.2,
+					0.12,
+					0.08
+				],
+				"spread": 80.0,
+				"turbulence": 0.35,
+				"gravity": [
+					0.0,
+					0.01,
+					0.0
+				],
+				"base": 0.55,
+				"sparkle": 0.45
+			},
+			{
+				"name": "spray",
+				"center": [
+					0.0,
+					0.35,
+					0.0
+				],
+				"extents": [
+					1.3,
+					0.03,
+					1.3
+				],
+				"amount": 60,
+				"lifetime": 1.3,
+				"size": 0.035,
+				"color": [
+					0.8,
+					0.93,
+					1.0
+				],
+				"energy": 3.0,
+				"velocity": [
+					0.0,
+					1.1,
+					0.0
+				],
+				"spread": 28.0,
+				"gravity": [
+					0.0,
+					-1.8,
+					0.0
+				],
+				"base": 0.05,
+				"pulse": 0.8,
+				"impact": 1.0
+			}
+		]
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 18.0,
+			"far_transition": 14.0,
+			"amount": 0.04
+		}
+	},
+	"environment": {
+		"ambient_energy": 0.65
+	}
+}

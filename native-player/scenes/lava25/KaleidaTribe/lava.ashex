@@ -1,0 +1,441 @@
+2
+25.000000
+1.000000
+0.800000
+2
+33
+10
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+K  A  L  E  I  D  A  T  R  I  B  E
+3.000000
+700
+1
+255 255 255 255
+0.100000
+Arial
+
+Background
+1
+0
+0.000000 0.000000 0.000000
+0.000000 140.000000 0.000000
+40.000000 30.000000 40.000000
+1.000000
+spaceD.jpg
+108 108 255 255
+255 255 255 255
+38
+2
+background.lvo
+0
+0
+0
+1
+deftextranslate.lvd
+textranslate
+1
+1
+0
+1
+1
+deftexwave.lvd
+texwave
+1
+Sheet09
+1
+0
+0.000000 -1.000000 0.000000
+5.000000 0.000000 5.000000
+3.000000 1.000000 3.000000
+1.000000
+logo.jpg
+255 255 255 255
+255 255 255 255
+38
+3
+sheet.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+1
+2
+0
+2
+1
+defalpha.lvd
+alpha
+0
+2
+0
+2
+1
+defripple.lvd
+ripple
+1
+Sheet08
+1
+0
+0.000000 -0.750000 0.000000
+3.000000 2.000000 5.000000
+3.000000 1.000000 3.000000
+1.000000
+billsat.jpg
+205 255 240 255
+255 255 255 255
+38
+4
+sheet.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+0
+2
+0
+2
+1
+deforbit.lvd
+orbit
+5
+2
+0
+2
+1
+defalpha.lvd
+alpha
+1
+2
+0
+2
+1
+defripple.lvd
+ripple
+2
+Sheet07
+1
+0
+0.000000 -0.500000 0.000000
+5.000000 3.000000 2.000000
+3.000000 1.000000 3.000000
+1.000000
+triple.jpg
+233 255 205 255
+255 255 255 255
+38
+4
+sheet.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+2
+2
+0
+2
+1
+deforbit.lvd
+orbit
+0
+2
+0
+2
+1
+defalpha.lvd
+alpha
+2
+2
+0
+2
+1
+defripple.lvd
+ripple
+2
+Sheet06
+1
+0
+0.000000 -0.250000 0.000000
+5.000000 0.000000 5.000000
+3.000000 1.000000 3.000000
+1.000000
+AlanSee.jpg
+250 255 205 255
+255 255 255 255
+38
+4
+sheet.lvo
+1
+0
+1
+1
+defrotate.lvd
+rotate
+1
+1
+0
+1
+1
+deforbit.lvd
+orbit
+4
+1
+0
+1
+1
+defalpha.lvd
+alpha
+1
+1
+0
+1
+1
+defripple.lvd
+ripple
+2
+Sheet05
+1
+0
+0.000000 0.000000 0.000000
+3.000000 5.000000 3.000000
+3.000000 1.000000 3.000000
+1.000000
+mike.jpg
+255 249 205 255
+255 255 255 255
+38
+3
+sheet.lvo
+1
+0
+1
+1
+defrotate.lvd
+rotate
+1
+1
+0
+1
+1
+defalpha.lvd
+alpha
+3
+1
+0
+1
+1
+defripple.lvd
+ripple
+1
+Sheet04
+1
+0
+0.000000 0.250000 0.000000
+1.000000 3.000000 0.000000
+3.000000 1.000000 3.000000
+1.000000
+Nigel.jpg
+255 229 205 255
+255 255 255 255
+38
+4
+sheet.lvo
+1
+0
+1
+1
+defrotate.lvd
+rotate
+1
+1
+0
+1
+1
+deforbit.lvd
+orbit
+1
+1
+0
+1
+1
+defalpha.lvd
+alpha
+2
+1
+0
+1
+1
+defripple.lvd
+ripple
+2
+Sheet03
+1
+0
+0.000000 0.500000 0.000000
+1.000000 0.000000 1.000000
+3.000000 1.000000 3.000000
+1.000000
+Rebecca.jpg
+255 212 205 255
+255 255 255 255
+38
+3
+sheet.lvo
+0
+0
+0
+1
+defrotate.lvd
+rotate
+1
+0
+0
+0
+1
+defalpha.lvd
+alpha
+0
+0
+0
+0
+1
+defripple.lvd
+ripple
+1
+Sheet02
+1
+0
+0.000000 0.750000 0.000000
+0.000000 1.000000 1.000000
+3.000000 1.000000 3.000000
+1.000000
+Alans.jpg
+237 205 255 255
+255 255 255 255
+38
+4
+sheet.lvo
+0
+0
+0
+1
+defrotate.lvd
+rotate
+1
+0
+0
+0
+1
+defalpha.lvd
+alpha
+2
+0
+0
+0
+1
+deforbit.lvd
+orbit
+2
+0
+0
+0
+1
+defripple.lvd
+ripple
+2
+Sheet01
+1
+0
+0.000000 1.000000 0.000000
+3.000000 3.000000 0.000000
+3.000000 1.000000 3.000000
+1.000000
+ZYN.jpg
+215 215 215 255
+255 255 255 255
+38
+4
+sheet.lvo
+0
+0
+0
+1
+defrotate.lvd
+rotate
+1
+0
+0
+0
+1
+deforbit.lvd
+orbit
+3
+0
+0
+0
+1
+defalpha.lvd
+alpha
+2
+0
+0
+0
+1
+defripple.lvd
+ripple
+2
+Culling Background	Back
+Culling Sheet09	None
+Culling Sheet08	None
+Culling Sheet07	None
+Culling Sheet06	None
+Culling Sheet05	None
+Culling Sheet04	None
+Culling Sheet03	None
+Culling Sheet02	None
+Culling Sheet01	None
+SceneDetail ReadOnly Set	0
+TextDeform	Num	2
+TextDeform Load	DefMsgRot.lvd	0
+TextDeform Load	DefMsgalpha.lvd	0
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 2.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	7.902472
+Camera RadiusMin Set	5.000000
+Camera RadiusMax Set	45.000000
+Camera RadiusMaxD Set	3.500000
+Camera Theta Set	190.343826
+Camera ThetaMin Set	150.000000
+Camera ThetaMax Set	210.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	39.397301
+Camera PhiMin Set	1.000000
+Camera PhiMax Set	105.000000
+Camera PhiMaxD Set	2.500000
+Camera Direction0 Set	-0.401412
+Camera Direction1 Set	-0.805791
+Camera Direction2 Set	-0.435395
+Camera MaxMove Set	10.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	300.000000

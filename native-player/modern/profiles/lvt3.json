@@ -1,0 +1,9 @@
+{
+	"name": "LVT3",
+	"extends": "triple_trance",
+	"folders": [
+		"lava25/LVT3",
+		"oozic30/LVT3"
+	],
+	"notes": "LVT3 is the Triple Trance scene under its template name (identical objects, effects and light): it inherits the whole Triple Trance Modern profile, including the director and animation blocks."
+}

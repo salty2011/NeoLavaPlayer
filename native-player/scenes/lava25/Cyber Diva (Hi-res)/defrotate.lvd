@@ -1,0 +1,39 @@
+DefType	DefRotate
+MaxInstance	1
+NumPresets	3
+###############################################################################
+Preset	0
+DecayMin	1.500000
+DecayMax	1.500000
+AngleVelocityMin	1.000000
+AngleVelocityMax	15.000000
+AngleVelocityDirection	0.000000
+AngleVelocityDirectionMultiply	1.000000
+Axis0	0.000000
+Axis1	1.000000
+Axis2	0.000000
+ResetMat	1.000000
+###############################################################################
+Preset	1
+DecayMin	1.250000
+DecayMax	1.250000
+AngleVelocityMin	2.000000
+AngleVelocityMax	20.000000
+AngleVelocityDirection	0.000000
+AngleVelocityDirectionMultiply	1.000000
+Axis0	0.000000
+Axis1	1.000000
+Axis2	0.000000
+ResetMat	1.000000
+###############################################################################
+Preset	2
+DecayMin	1.000000
+DecayMax	1.000000
+AngleVelocityMin	3.000000
+AngleVelocityMax	25.000000
+AngleVelocityDirection	0.000000
+AngleVelocityDirectionMultiply	1.000000
+Axis0	0.000000
+Axis1	1.000000
+Axis2	0.000000
+ResetMat	1.000000

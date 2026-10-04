@@ -1,0 +1,15 @@
+{
+ "label": "reconstruction",
+ "WARNING": "RECONSTRUCTION - NOT an original Creative asset. The original rainbowflowers.bmp was never recovered.",
+ "replaces_missing_original": "rainbowflowers.bmp",
+ "scene": "LVT2 (Dancing Well)",
+ "used_by_object": "Ground (ground.lvo, DISK r=11.375, y=-0.8, bump/texscroll/pools/texwave)",
+ "size": [
+  256,
+  256
+ ],
+ "tileable": true,
+ "method": "tools/texture_pipeline/reconstruct_lvt2.py: numpy/scipy procedural (FFT periodic fbm noise, wrap-around flower stamping, 4x supersample, median+blur painterly softening, saturation push). Seed 1101, deterministic.",
+ "description": "Saturated rainbow-flower meadow: periodic-noise grass with streaks, ~190 painterly flowers whose hue sweeps across u.",
+ "style_reference": "Creative LAVA 25 scene textures (saturated, soft, 256x256, seamless)"
+}

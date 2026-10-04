@@ -1,0 +1,18 @@
+DefType	DefTexCos
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+AmpScale	60.000000
+DecayMin	0.600000
+DecayMax	0.800000
+CosDepthMin	1.000000
+CosDepthMax	1.000000
+WMin	360.000000
+WMax	540.000000
+MMin	2.000000
+Mmax	4.000000
+Direction	0.000000
+DirectionMultiply	1.000000
+Orientation	0.000000
+OrientationMultiply	1.000000

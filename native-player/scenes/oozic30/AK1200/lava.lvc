@@ -1,0 +1,196 @@
+Version	3
+FramesPerSecond	25.000000
+Brightness	0.750000
+Responsivness	1.000000
+Tmap	1
+Wframe	0
+Strobe	0
+Clights	0
+DynCol	1
+Lights	1
+Pause	0
+Flat	0
+TRot	0
+EnvMap	0
+NumObjects	7
+Nbands	3
+B0Min	0.000000
+B0Max	300.000000
+B1Min	1000.000000
+B1Max	2000.000000
+B2Min	4000.000000
+B2Max	6000.000000
+MsgOn	0
+MsgIni	Text.ini
+OName	Blobs
+Visible	1
+NumMorphs	1
+OPos	0.000000 0.000000 0.000000
+OAng	0.000000 0.000000 0.000000
+OSize	8.000000 8.000000 8.000000
+DefScale	0.250000
+TName	AK1200reflected.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 255
+Gloss	38
+Culling	none
+NumDefs	0
+LvoFile	blob.lvo
+OName	Background
+Visible	1
+NumMorphs	1
+EnableLighting	0
+OPos	0.000000 0.000000 0.000000
+OAng	0.000000 -90.000000 0.000000
+OSize	2000.000000 2000.000000 750.000000
+DefScale	1.000000
+TName	neb06s.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 255
+Gloss	38
+Culling	None
+NumDefs	2
+LvoFile	sphere.lvo
+DefName	repeat
+DefBand	0
+DefLvd	deftexscroll.lvd
+DefPreset	1
+DefName	translate
+DefBand	0
+DefLvd	deftextranslate.lvd
+DefPreset	2
+OName	Floor
+Visible	1
+NumMorphs	1
+EnableLighting	0
+OPos	0.000000 -30.000000 0.000000
+OAng	0.000000 -90.000000 0.000000
+OSize	2000.000000 2000.000000 1.000000
+DefScale	1.000000
+TName	spaceD.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 0
+Gloss	38
+Culling	None
+NumDefs	1
+LvoFile	sheet.lvo
+DefName	zoom
+DefBand	2
+DefLvd	deftexzoom.lvd
+DefPreset	0
+OName	Ceiling
+Visible	1
+NumMorphs	1
+EnableLighting	0
+OPos	0.000000 30.000000 0.000000
+OAng	0.000000 90.000000 0.000000
+OSize	2000.000000 2000.000000 1.000000
+DefScale	1.000000
+TName	spaceD.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 0
+Gloss	38
+Culling	None
+NumDefs	1
+LvoFile	sheet.lvo
+DefName	zoom
+DefBand	2
+DefLvd	deftexzoom.lvd
+DefPreset	0
+OName	Wall1
+Visible	1
+NumMorphs	1
+EnableLighting	0
+OPos	15.000000 0.000000 0.000000
+OAng	-90.000000 0.000000 0.000000
+OSize	1000.000000 20.000000 1.000000
+DefScale	1.000000
+TName	moonshineface.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 0
+Gloss	38
+Culling	None
+NumDefs	2
+LvoFile	sheet.lvo
+DefName	repeat
+DefBand	0
+DefLvd	deftexscroll.lvd
+DefPreset	0
+DefName	translate
+DefBand	0
+DefLvd	deftextranslate.lvd
+DefPreset	0
+OName	Wall2
+Visible	1
+NumMorphs	1
+EnableLighting	0
+OPos	-15.000000 0.000000 0.000000
+OAng	90.000000 0.000000 0.000000
+OSize	1000.000000 20.000000 1.000000
+DefScale	1.000000
+TName	moonshineface.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 0
+Gloss	38
+Culling	None
+NumDefs	2
+LvoFile	sheet.lvo
+DefName	repeat
+DefBand	0
+DefLvd	deftexscroll.lvd
+DefPreset	0
+DefName	translate
+DefBand	0
+DefLvd	deftextranslate.lvd
+DefPreset	1
+OName	Pod
+Visible	1
+NumMorphs	1
+OPos	0.000000 0.000000 0.000000
+OAng	0.000000 0.000000 0.000000
+OSize	1.000000 1.000000 1.000000
+DefScale	0.250000
+TName	ak1200ball.jpg
+TColor	255 255 255 255
+SpecCol	255 255 255 255
+Gloss	38
+Culling	back
+NumDefs	1
+LvoFile	podsphere.lvo
+Olink	1
+ObjSite	Config.pod
+DefName	orbit
+DefBand	2
+DefLvd	deforbit.lvd
+DefPreset	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 5.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	10.842184
+Camera RadiusMin Set	3.000000
+Camera RadiusMax Set	12.000000
+Camera RadiusMaxD Set	0.500000
+Camera Theta Set	1544.309570
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	60.000000
+Camera Phi Set	95.522049
+Camera PhiMin Set	45.000000
+Camera PhiMax Set	135.000000
+Camera PhiMaxD Set	10.000000
+Camera Direction0 Set	-0.339281
+Camera Direction1 Set	-0.662193
+Camera Direction2 Set	-0.668123
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	2000.000000
+Camera LookAt Set	0.000000 0.000000 0.000000

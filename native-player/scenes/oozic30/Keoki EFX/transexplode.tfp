@@ -1,0 +1,56 @@
+Version	3
+TfxType	Explode
+PresetFriendlyName	Explode
+NumPresets	4
+###############################################################################
+Preset	0
+PresetName	Shatter
+FadeTime	7.000000
+GridSize	2.500000
+MaxDelay	0.800000
+Jitter	0.900000
+MinRot	0.240000
+MaxRot	0.550000
+MinBreakoffSpeed	0.500000
+MaxBreakoffSpeed	0.500000
+ZoomAccel	4.000000
+GravityAccel	0.000000
+###############################################################################
+Preset	1
+PresetName	Delayed_shatter
+FadeTime	8.000000
+GridSize	5.500000
+MaxDelay	3.500000
+Jitter	0.900000
+MinRot	0.540000
+MaxRot	0.750000
+MinBreakoffSpeed	3.000000
+MaxBreakoffSpeed	3.000000
+ZoomAccel	4.000000
+GravityAccel	0.000000
+###############################################################################
+Preset	2
+PresetName	High_spin_shatter
+FadeTime	12.000000
+GridSize	3.000000
+MaxDelay	1.500000
+Jitter	0.900000
+MinRot	0.340000
+MaxRot	0.950000
+MinBreakoffSpeed	0.200000
+MaxBreakoffSpeed	0.300000
+ZoomAccel	0.500000
+GravityAccel	0.000000
+###############################################################################
+Preset	3
+PresetName	Breaking_Window
+FadeTime	12.000000
+GridSize	3.000000
+MaxDelay	1.000000
+Jitter	0.990000
+MinRot	0.140000
+MaxRot	0.750000
+MinBreakoffSpeed	0.000000
+MaxBreakoffSpeed	0.000000
+ZoomAccel	0.000000
+GravityAccel	-2.500000

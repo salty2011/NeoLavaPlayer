@@ -1,0 +1,92 @@
+Version	3
+LfxType	Static
+PresetFriendlyName	Static
+NumPresets	8
+###############################################################################
+Preset	0
+PresetName	Fine_Grain
+GrainSizeInPixels	1.000000
+Interlaced	0.000000
+Alpha	0.300000
+ScaleDev	0.000000
+BaseRotation	0.000000
+RotationDev	1.600000
+StaticMinBrightness	64.000000
+StaticMaxBrightness	192.000000
+###############################################################################
+Preset	1
+PresetName	Medium_Grain
+GrainSizeInPixels	4.000000
+Interlaced	0.000000
+Alpha	0.350000
+ScaleDev	0.000000
+BaseRotation	0.000000
+RotationDev	1.600000
+StaticMinBrightness	64.000000
+StaticMaxBrightness	192.000000
+###############################################################################
+Preset	2
+PresetName	Large_Grain
+GrainSizeInPixels	8.000000
+Interlaced	0.000000
+Alpha	0.350000
+ScaleDev	0.000000
+BaseRotation	0.000000
+RotationDev	1.600000
+StaticMinBrightness	64.000000
+StaticMaxBrightness	192.000000
+###############################################################################
+Preset	3
+PresetName	Horz_Scanlines
+GrainSizeInPixels	3.000000
+Interlaced	1.000000
+Alpha	0.100000
+ScaleDev	0.400000
+BaseRotation	0.000000
+RotationDev	0.000000
+StaticMinBrightness	64.000000
+StaticMaxBrightness	192.000000
+###############################################################################
+Preset	4
+PresetName	Vert_Scanlines
+GrainSizeInPixels	4.000000
+Interlaced	1.000000
+Alpha	0.120000
+ScaleDev	0.000000
+BaseRotation	1.570000
+RotationDev	0.000000
+StaticMinBrightness	64.000000
+StaticMaxBrightness	192.000000
+###############################################################################
+Preset	5
+PresetName	Anisotropy
+GrainSizeInPixels	3.000000
+Interlaced	1.000000
+Alpha	0.100000
+ScaleDev	0.800000
+BaseRotation	0.000000
+RotationDev	6.280000
+StaticMinBrightness	0.000000
+StaticMaxBrightness	192.000000
+###############################################################################
+Preset	6
+PresetName	Diag_Scanlines
+GrainSizeInPixels	3.000000
+Interlaced	1.000000
+Alpha	0.140000
+ScaleDev	0.800000
+BaseRotation	0.300000
+RotationDev	0.100000
+StaticMinBrightness	64.000000
+StaticMaxBrightness	192.000000
+###############################################################################
+Preset	7
+PresetName	Nearly_opaque_medium_grain_static
+GrainSizeInPixels	4.000000
+Interlaced	1.000000
+Alpha	0.700000
+ScaleDev	0.000000
+BaseRotation	0.000000
+RotationDev	0.000000
+StaticMinBrightness	64.000000
+StaticMaxBrightness	192.000000

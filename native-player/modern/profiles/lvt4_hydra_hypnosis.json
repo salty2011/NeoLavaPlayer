@@ -1,0 +1,203 @@
+{
+	"name": "LVT4 Hydra Hypnosis",
+	"extends": "abstract_space",
+	"folders": [
+		"lava25/LVT4",
+		"oozic30/LVT4"
+	],
+	"notes": "Hydroid's twin with magenta backdrop and a toxic-yellow hydra. The textures never shipped, so the backdrop becomes a flowing hypnotic plasma (magenta to violet to deep blue) and the island a veined rock; the hydra is a glossy yellow with a beat-driven glow.",
+	"environment": {
+		"ambient_color": [
+			0.6,
+			0.25,
+			0.65
+		],
+		"ambient_energy": 0.5,
+		"fog_color": [
+			0.5,
+			0.1,
+			0.55
+		],
+		"fog_density": 0.008,
+		"volumetric_fog_density": 0.01,
+		"volumetric_fog_albedo": [
+			1.0,
+			0.45,
+			0.9
+		],
+		"volumetric_fog_emission": [
+			0.05,
+			0.0,
+			0.06
+		],
+		"adjust_saturation": 1.15
+	},
+	"lights": {
+		"key": {
+			"energy": 1.7,
+			"specular": 0.9
+		},
+		"fill": {
+			"color": [
+				1.0,
+				0.35,
+				0.9
+			],
+			"energy": 0.5,
+			"direction": [
+				-0.7,
+				-0.2,
+				0.7
+			]
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.9,
+				0.4
+			],
+			"energy": 0.8
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 1.0,
+				"albedo_gain": 1.5,
+				"emission_base": 0.1,
+				"drift": [
+					0.0,
+					0.0
+				],
+				"procedural": {
+					"mode": "plasma",
+					"a": [
+						0.55,
+						0.04,
+						0.55
+					],
+					"b": [
+						0.9,
+						0.2,
+						0.75
+					],
+					"c": [
+						0.2,
+						0.1,
+						0.8
+					],
+					"scale": 7.0,
+					"speed": 0.08
+				}
+			},
+			"Surfboard": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.4,
+				"roughness_scale": 0.9,
+				"roughness_bias": 0.15,
+				"specular": 0.35,
+				"albedo_gain": 1.4,
+				"shadows": false,
+				"emission_base": 0.04,
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						0.45,
+						0.2,
+						0.4
+					],
+					"b": [
+						0.85,
+						0.5,
+						0.7
+					],
+					"scale": 2.6
+				}
+			},
+			"Hydra": {
+				"roughness_scale": 0.5,
+				"roughness_bias": 0.05,
+				"clearcoat": 0.5,
+				"clearcoat_gloss": 0.75,
+				"albedo_gain": 1.1,
+				"saturation": 1.1,
+				"rim_strength": 0.6,
+				"rim_color": [
+					1.0,
+					0.4,
+					0.9
+				],
+				"emission_base": 0.05,
+				"emission_music": 0.7,
+				"specular": 0.6,
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 0.0,
+				"procedural": {
+					"mode": "rock",
+					"a": [
+						1.0,
+						0.95,
+						0.2
+					],
+					"b": [
+						1.0,
+						1.0,
+						0.5
+					],
+					"scale": 4.0
+				},
+				"procedural_force": true
+			}
+		}
+	},
+	"atmosphere": {
+		"particles": [
+			{
+				"name": "spores",
+				"center": [
+					0.0,
+					1.2,
+					0.0
+				],
+				"extents": [
+					3.2,
+					1.6,
+					3.2
+				],
+				"amount": 80,
+				"lifetime": 7.0,
+				"size": 0.035,
+				"color": [
+					1.0,
+					0.5,
+					1.0
+				],
+				"energy": 2.4,
+				"velocity": [
+					0.0,
+					0.22,
+					0.0
+				],
+				"spread": 60.0,
+				"turbulence": 0.3,
+				"base": 0.45,
+				"sparkle": 0.5,
+				"pulse": 0.3,
+				"impact": 0.5
+			}
+		]
+	}
+}

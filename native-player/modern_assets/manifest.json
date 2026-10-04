@@ -1,0 +1,7461 @@
+{
+ "textures": {
+  "native-player/scenes/Hydroid/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "Hydroid",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/Hydroid/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "Hydroid",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/Hydroid/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "Hydroid",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/Hydroid/logo.jpg": {
+   "hash": "fe8eb3144291ce94a724673e8f39c838f689ae1a17058f6fef413137d9146f39",
+   "scene": "Hydroid",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/Hydroid/moon2.jpg": {
+   "hash": "248d457305746fcd301670b9155a219983eb0c3ece3572ff883531d1b9d53a8a",
+   "scene": "Hydroid",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/Hydroid/_root/moon2",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "9c5ddce81f95",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 1051675,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/Hydroid/neb.jpg": {
+   "hash": "7c1b2ff927f9012a34b021c751bc809ec0b580aa5ca281b2a973b77e847f38f3",
+   "scene": "Hydroid",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/Hydroid/_root/neb",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "0b7679ff1f6b",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 425991,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Aqua Boogie/SpaceBall1.jpg": {
+   "hash": "e2f237d1a6bbcf8bf76661cda36f8cb565a40dbe806c4f640bd0ba4f5eaacc0c",
+   "scene": "lava25/Aqua Boogie",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Aqua Boogie/SpaceBall1",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "b2715a9bdfb8",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 251967,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Aqua Boogie/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/Aqua Boogie",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Aqua Boogie/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "lava25/Aqua Boogie",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Aqua Boogie/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/Aqua Boogie",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Aqua Boogie/logo.jpg": {
+   "hash": "fe8eb3144291ce94a724673e8f39c838f689ae1a17058f6fef413137d9146f39",
+   "scene": "lava25/Aqua Boogie",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Aqua Boogie/pitchinfo1.jpg": {
+   "hash": "c3ba4dcd9af50daef7b0fb62a52a0d4c507742d64cb9fb973c1e21ba57d5598b",
+   "scene": "lava25/Aqua Boogie",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Aqua Boogie/pitchinfo1",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3e9f309392f3",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 686782,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Aqua Boogie/teknik2.jpg": {
+   "hash": "bb514199c06b41831838b52e4759915b30fc961f2b103c584a1498288d34bd50",
+   "scene": "lava25/Aqua Boogie",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Aqua Boogie/teknik2",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "b30523d9cdf3",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 394666,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/azteci.jpg": {
+   "hash": "b4eb495fcc327b14f705caa9fa7f5e7dd1856b5dd2ce7c3d152fc96122df4763",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/azteci",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "db548da7bae6",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 1256426,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/banner.jpg": {
+   "hash": "760ed4c1fa406ad1f472228b02e47d4ba585e36ace9d2e505e3a3312def5262a",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    1,
+    1
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/black.jpg": {
+   "hash": "cad245e7c059cb17be0ae09018da36b6b1e3b1d7034104f4214e9cebe19ed932",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    16,
+    16
+   ],
+   "status": "skipped_tiny"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/bsand.jpg": {
+   "hash": "e0b0c6347e8e291271f349ae9cd30b80f65df27faeb61c3a5120b43a68c1652b",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/bsand",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "7f873a3ea039",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 96045,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/carbonfiber.jpg": {
+   "hash": "49de37215df58ec90ffe2587c5cdb19463cbda2999bbc200dab8cf0c86a9860f",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "fabric",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/carbonfiber",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "fabric",
+    "scale": 4,
+    "strength": 3.5,
+    "sigmas": [
+     0.7,
+     1.8,
+     4.0
+    ],
+    "weights": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "rough": 0.7,
+    "rough_var": 0.15,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2ab25e1d9179",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 854271,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/chrmos.jpg": {
+   "hash": "410ac18a40a25f2b8f0a87a5f1ae464482a2a2932e8398a555480be3e9f23b4a",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/chrmos",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "0d678dff4fbe",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 65407,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/chroom.jpg": {
+   "hash": "8b393a7c103b28c6dd078131104bae32c9d5cf12b59d2508ee3e7bcffa21fad7",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/chroom",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "8084fb62cd2e",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 62457,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/circuit2.jpg": {
+   "hash": "c342284e50e80c2c25da4e56bbb8ce1159c0dd49c82b62c1c1ce9bc6e0adeef7",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/circuit2",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3f629dfb16b8",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 150472,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/crow.jpg": {
+   "hash": "ec36a9b5ae2ac4b695ef180ae62c4bf7e52a1150efcf8a72efe5b5d131032ea1",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/crow",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "7a0a967f12a9",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 898310,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/cscree.jpg": {
+   "hash": "71b9112ec40a1d3698feca52870d95a61b5b1fa3f4fee4a417f0f61bb0c104f2",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/cscree",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "a00c960b6205",
+   "out_size": [
+    512,
+    256
+   ],
+   "bytes": 89626,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/cyberdivaintro.jpg": {
+   "hash": "6e250e717e5cbb9dfaa32aa38706a0c0c0ab3b597677dd7d282ddab9fd490ff0",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    512,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/cyberdivaintro",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "b7528f8fadac",
+   "out_size": [
+    2048,
+    1024
+   ],
+   "bytes": 1353043,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/divalips.jpg": {
+   "hash": "d0e248d32f7c4c6d33e5c428a61fb3e82dc91ff78c243a87ac11255477efdb5d",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/divalips",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3b58403f126e",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 43266,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/doublepanel.jpg": {
+   "hash": "53ed818df060e1bf585d3fb2d1f110c8e7923a2f3d04a0553ff696c73a29a091",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/doublepanel",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "fe8b09133b21",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 173007,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/eye.jpg": {
+   "hash": "84c70c7d6cc389f23aa53298ee41b1622402012f8efcf41a9667ff86fd2023bb",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/eye",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "ec0c5292f065",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 304030,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/face1.jpg": {
+   "hash": "1bb4edcc853d0464691f3ffa780d5e3648bc4308c40caad55dcc175723e64036",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/face1",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "799c9d3d8125",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 458638,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/face2.jpg": {
+   "hash": "3b0c0f374944194aaa005e27a90a291da5744715d7fc23fefeb141aa6681bf77",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/face2",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "01f0a3a96c60",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 313683,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/face3.jpg": {
+   "hash": "aa422366cd020f35fd85d4109bee424333d36ca9519bbfbb4c8e126dee1a2ca0",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/face3",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "d43d6d212446",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 516076,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/face4.jpg": {
+   "hash": "5b6946af933aa8b0fa3d937ee56a5d177a9a8ee181c2e3a434438678500cf50a",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/face4",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2de7668fe06c",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 301962,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/face5.jpg": {
+   "hash": "80c39f1b3be361d6ab2b0d910bab90393e59af13f60b9500825ed7801a47d2d2",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/face5",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "f7dc34e32009",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 483651,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/face6.jpg": {
+   "hash": "4f3de3e0beb05ae7ed95de19449de2d99467dfc493d02688eb89bcda1f601054",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/face6",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "cf0e1519fb51",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 345175,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/floralE.jpg": {
+   "hash": "2e21d926b1c388f1df636ae3c1c6e6fac8205b3546a40a89c1c99e436eecd0ae",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/floralE",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "c99f368a4758",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 569460,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/floralsa.jpg": {
+   "hash": "8a2f2e5b3c56c315f76da17753b918b4e34dae9c487ae63b11c7c2bc3f79f606",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/floralsa",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "14936da2f907",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 590374,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/greendrape.jpg": {
+   "hash": "de42ef53edc2e262294a0865431fb110c6d14ec2fd3100e335a563ecc5093d20",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/greendrape",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "604075f6c6e3",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 566784,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/hand.jpg": {
+   "hash": "d8a1f3482ee090e670ae363b8935b7f4c17017187f71f4e99ea07e87f8eefda4",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/hand",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "fd366d5dc6dc",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 300688,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/hinge.jpg": {
+   "hash": "f553a368171f6da2c85807f59ea7379c7f44e8e9a154281608e6c1ad57a98e74",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/hinge",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "c4e3e435bdb7",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 17144,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/hix.jpg": {
+   "hash": "784bc1d88e1ad65d8f1ccc92d3c9d31982d52a84fc4ecd0dcd81fa08484eb089",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/hix",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "6f7bf0617ef7",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 373424,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/knob.jpg": {
+   "hash": "1ede8852fd8e78b7f51c0dab75742f1f94a4eb3b1a21ae98550d4e0fe35c718b",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/knob",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "4a03bd9be04d",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 19335,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/laminate.jpg": {
+   "hash": "4a7f9913562cb679f0420cc7c6c6c6c7c7bf7d77098de0377643629410004391",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/laminate",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "7202f3762d5e",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 225458,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/lens2.jpg": {
+   "hash": "9a928091db3455222eb7aafa1f25fa97c7075adcecda5c9541155e1ca5089d20",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/lens2",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "6a9850b60d56",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 85832,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/mtlaminate.jpg": {
+   "hash": "3898c4c1561f4cca4c0d6e5f6cd360c737439437ebb99219c13f92680cc9ce27",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/mtlaminate",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "4df590705410",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 225236,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/or.jpg": {
+   "hash": "43f7c3ab3c3525828eb63337e13bc475d7cb0836ce53a3a8b1a41cd2354412d6",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/or",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "c478a7e98e35",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 121640,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/panel.jpg": {
+   "hash": "fd47f769f4db1fb1637ee72fa3f9689829fa7619f91c6e684c859d480548a510",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/panel",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2b84dadb0c39",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 102133,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/panelt.jpg": {
+   "hash": "c6bd0e1e566712de67144d33c1d90984e15ee896c713f6c6ebd52b0ec4769925",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/panelt",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3b2eac1de825",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 53837,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/pillar.jpg": {
+   "hash": "e1594d012230d850df5c1d325b82fa25a031ce2fc7ea9e128637a2055e884353",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/pillar",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3af55169cad0",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 360692,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/pit.jpg": {
+   "hash": "83c5c909fbf32ea89a89f5bb649bed94d76fd3c3055f74ffc5637de7c8aea6f7",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/pit",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "48f745d29cce",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 587378,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/redtube.jpg": {
+   "hash": "9310ea26f5a244c395cffba71043cfb79b7091ad18d5a97c127f5f093c680aab",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/redtube",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "1587183e8198",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 115840,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/rusted_metal.jpg": {
+   "hash": "5871127f67cb756d2fcb46b0ebd89ed6c881710562fb0d6bd606bcbfc368832b",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/rusted_metal",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "aa70272dfc09",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 109824,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/scarab.jpg": {
+   "hash": "6024b55029fd802a310dbc4b7dc712165e91955b29c5a0db8cf9df419acb573a",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "fabric",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/scarab",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "fabric",
+    "scale": 4,
+    "strength": 3.5,
+    "sigmas": [
+     0.7,
+     1.8,
+     4.0
+    ],
+    "weights": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "rough": 0.7,
+    "rough_var": 0.15,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "1a80c05641af",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 481455,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/screen.jpg": {
+   "hash": "95045399654a76c2016e76119af6e6fbe5b558c3e14df4a3366a11a8f7cfe67c",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/screen",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "db3e6d8b5094",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 198869,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/smarbmet.jpg": {
+   "hash": "78acdd93a0a6fc4a602226bfd7292f2d394c64a434bcf25fefdb549654c6c47e",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/smarbmet",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "57e25becfc69",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 324364,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/smarbmetalg.jpg": {
+   "hash": "60b932ef1c46d50906fcfbd89829c1ea1941997e9d8debd814e2f2314e9dacb2",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/smarbmetalg",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "4a3e467010e3",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 321932,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/snaketile.jpg": {
+   "hash": "f0c860d2d9e0086fdce8fd350d21d74438d97021490f2e2ad7be9414ea7cead1",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/snaketile",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "0d497b6e1d7a",
+   "out_size": [
+    512,
+    256
+   ],
+   "bytes": 214112,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/starpoint.jpg": {
+   "hash": "ac5df70211c6ef5285e691d56cd2a59cca4b0efa933d5d4be95df9da28791f6d",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "glow",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/starpoint",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "58352bc98282",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 51376,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/steelring.jpg": {
+   "hash": "9003b3d52b097ced92241b9004259e1baaca119ae2b60a7b967c4c4a2cc3680b",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/steelring",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "bfad13bfd50b",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 20324,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/swan.jpg": {
+   "hash": "7b84bed6bcdec2b10e79538f47ecd73b9cae0f12cee60be920f9418ccd1b092b",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/swan",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "9ec6ec267a0d",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 286851,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/trit.jpg": {
+   "hash": "c3c525a0861f7e333dc824e7b6106c891c33076a1ef8f2aed92a2987bfc45c09",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/trit",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "d7eccdc8bbb3",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 56165,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/tube.jpg": {
+   "hash": "65042165c395c67076f8591a07078b495db7a699375acb09058d0251faf66c94",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/tube",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "8a5fd905f08c",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 92785,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/tubge.jpg": {
+   "hash": "567ec448ca9a1bb4769407a9255ffa13e31426764ec9e1c6adbb3b7cf7b9ea62",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/tubge",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "6c8e0e38190b",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 106448,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/white.jpg": {
+   "hash": "1da867116aea005cda5dc146a3abbe1457bbc639f266ec696afb93af40655481",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Cyber Diva (Hi-res)/white",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "e110df45bf3f",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 21051,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Cyber Diva (Hi-res)/white2.jpg": {
+   "hash": "4f993386d6c49ea95bd50e11e67bd05d14c8b568254dd24fbd061e16d488812a",
+   "scene": "lava25/Cyber Diva (Hi-res)",
+   "size": [
+    16,
+    16
+   ],
+   "status": "skipped_tiny"
+  },
+  "native-player/scenes/lava25/Hydroid/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/Hydroid",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Hydroid/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "lava25/Hydroid",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Hydroid/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/Hydroid",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Hydroid/logo.jpg": {
+   "hash": "fe8eb3144291ce94a724673e8f39c838f689ae1a17058f6fef413137d9146f39",
+   "scene": "lava25/Hydroid",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Hydroid/moon2.jpg": {
+   "hash": "248d457305746fcd301670b9155a219983eb0c3ece3572ff883531d1b9d53a8a",
+   "scene": "lava25/Hydroid",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/Hydroid/moon2.jpg",
+   "dir": "native-player/modern_assets/textures/Hydroid/_root/moon2",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/lava25/Hydroid/neb.jpg": {
+   "hash": "7c1b2ff927f9012a34b021c751bc809ec0b580aa5ca281b2a973b77e847f38f3",
+   "scene": "lava25/Hydroid",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/Hydroid/neb.jpg",
+   "dir": "native-player/modern_assets/textures/Hydroid/_root/neb",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/AlanSee.jpg": {
+   "hash": "6d1ea7c292877703448ece9c0976cb2f9a86053599d3b75f19693d423f0b1619",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/AlanSee",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "045e585905e0",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 764948,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/Alans.jpg": {
+   "hash": "c734ba3f8cc4fb7b8817cee4151910d2ad1944ccb045ea0dc281f6b566f7c0fa",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/Alans",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "b0c54cef3a0b",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 1215601,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/Nigel.jpg": {
+   "hash": "f504e729a97e551438465bf2bc778daf77ead2407e4076b13dbe4e8e23979d5c",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/Nigel",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2f7009353fa6",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 627151,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/Rebecca.jpg": {
+   "hash": "88910988a4c12dcf2ad4786e80f69ea98c12d07b144d1719c93d79e707229554",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/Rebecca",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "a9a67d721cbd",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 528234,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/ZYN.jpg": {
+   "hash": "be295815e889d0c9842e642490be16bee1311cd58e597d8e4d5fcffc6cc32917",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/ZYN",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "ba3a9baaba13",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 403343,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/billsat.jpg": {
+   "hash": "a8c1e5ffac6c03cdb528baa25f96a2dff339ba25250e7a8606664adbf2f10bf8",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/billsat",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "e96be049c118",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 632631,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/logo.jpg": {
+   "hash": "fe8eb3144291ce94a724673e8f39c838f689ae1a17058f6fef413137d9146f39",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/mike.jpg": {
+   "hash": "77054a32bb862947bcd1ca9ea70d94b89f7bd3b061bcc30bc796474d5c80677c",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/mike",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2be1012e392f",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 461648,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/spaceD.jpg": {
+   "hash": "6025bcb9ff9827e387259c88d33eabbbb2811c1e00dab432e801f80e07263d77",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/spaceD",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "d637bc5fc53d",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 302748,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/KaleidaTribe/triple.jpg": {
+   "hash": "35a01389504a42e5b66770f2c8034effa756f9d1d5415fcb99356ef5d612fc2e",
+   "scene": "lava25/KaleidaTribe",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/KaleidaTribe/triple",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "16c79e7c5118",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 563035,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/LVT1/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT1",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT1/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT1",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT1/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT1",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT1/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT1",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT1/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT1",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT2/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT2",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT2/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT2",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT2/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT2",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT2/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT2",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT2/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT2",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT3/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT3",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT3/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT3",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT3/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT3",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT3/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT3",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT3/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT3",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT4/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT4",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT4/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT4",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT4/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT4",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT4/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT4",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT4/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT4",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT5/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT5",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT5/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT5",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT5/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT5",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT5/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT5",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT5/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT5",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT6/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT6",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT6/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT6",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT6/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT6",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT6/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT6",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT6/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT6",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT7/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT7/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT7",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT7/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT7",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT7/heightmap0.bmp": {
+   "hash": "476edc0fc3d962ddec72211d24958e3212aeabfc239efc4d65e1858f6b74b44d",
+   "scene": "lava25/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/LVT7/heightmap0",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "081473654210",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 715608,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/LVT7/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT7",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT7/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT7/maskmap0.bmp": {
+   "hash": "7aaee305db725974f03b0bcf5a92172e9dc78043fa70d19e25a4893cc3db495c",
+   "scene": "lava25/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/LVT7/maskmap0",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "b27259578d5d",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 94108,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/LVT8/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT8",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT8/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/LVT8",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT8/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "lava25/LVT8",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT8/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/LVT8",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/LVT8/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "lava25/LVT8",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/heightmap0.bmp": {
+   "hash": "476edc0fc3d962ddec72211d24958e3212aeabfc239efc4d65e1858f6b74b44d",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/LVT7/heightmap0.bmp",
+   "dir": "native-player/modern_assets/textures/lava25/LVT7/heightmap0",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/lo1.jpg": {
+   "hash": "a2a21a61bed6ba5fa9afdaf89d822c56cf4c9d02695e4a559f34654ecb3cb2b5",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Lost Road Rave/lo1",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "cecf3812b027",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 929028,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/logo.jpg": {
+   "hash": "fe8eb3144291ce94a724673e8f39c838f689ae1a17058f6fef413137d9146f39",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/maskmap0.bmp": {
+   "hash": "7aaee305db725974f03b0bcf5a92172e9dc78043fa70d19e25a4893cc3db495c",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/LVT7/maskmap0.bmp",
+   "dir": "native-player/modern_assets/textures/lava25/LVT7/maskmap0",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/lava25/Lost Road Rave/neb11s.jpg": {
+   "hash": "df501237561ee3ad707077d866188b48ab4e5c833f70850b9410145e27ab13c3",
+   "scene": "lava25/Lost Road Rave",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Lost Road Rave/neb11s",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2c82828e4abe",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 725039,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Music Metropolis/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Music Metropolis/billboard.jpg": {
+   "hash": "38426d4e87c18c7be9eab19e5516e63b54713aa5e118d192afc9b775661e1634",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    64,
+    64
+   ],
+   "status": "ok",
+   "category": "glow",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/billboard",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "018ff7a8e461",
+   "out_size": [
+    256,
+    256
+   ],
+   "bytes": 38219,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/building_A.jpg": {
+   "hash": "21384605cbc4968ca4ceb5a86f0dea1e188b3e89969fc2b2ac69bd4408518817",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_A",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "920e1098b586",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 258703,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/building_B.jpg": {
+   "hash": "d33b5df4252a866b4457efd5ff3898dda07fc00a0d63e467f201aa77d81fc365",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_B",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "02a00e83570d",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 271161,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/building_C.jpg": {
+   "hash": "94b87b225a286611faaf06335e46f076521b1efdc2f90c94efdf610a7f80ae7f",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_C",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "aab0d928a75f",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 237250,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/building_D.jpg": {
+   "hash": "aa193d1b56b67660064553b97caf5a03a5033c40633d7593ce8d926e1948a5a7",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_D",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "59df563c5fd4",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 294689,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/cars.jpg": {
+   "hash": "374b9f78838f10c37cc181fa1ab99f0b44d184fc953c144bc4aea90b08b54c23",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "fabric",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/cars",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "fabric",
+    "scale": 4,
+    "strength": 3.5,
+    "sigmas": [
+     0.7,
+     1.8,
+     4.0
+    ],
+    "weights": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "rough": 0.7,
+    "rough_var": 0.15,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "0c8764f1cc9d",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 306767,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Music Metropolis/light.jpg": {
+   "hash": "7d4d15fa429cf3808496ac2335b66b78baf8583bfa7aaf7af48701cac8808910",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    16,
+    16
+   ],
+   "status": "skipped_tiny"
+  },
+  "native-player/scenes/lava25/Music Metropolis/logo.jpg": {
+   "hash": "fe8eb3144291ce94a724673e8f39c838f689ae1a17058f6fef413137d9146f39",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Music Metropolis/roads.jpg": {
+   "hash": "d070bb1cf7d1052841a9ee51ba8a7dfc051fd8c9073df1a3656319afab3e15fa",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/roads",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2115aafb042d",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 716529,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/sign1.jpg": {
+   "hash": "1f9fbeba411ab2bf837523577c43c5e86669fcda922250f33525f9fdef85903a",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/sign1",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "8a0b9d5a256a",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 357878,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/sign2.jpg": {
+   "hash": "e0400378cad450c5d6e61f0bf445bed9841b17b095796072473d3f916770894b",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/sign2",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "42094dace401",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 254658,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Music Metropolis/statue.jpg": {
+   "hash": "f2bebea9b47335f27570df001ee894f5349d54f8d337f6cfd1328f015b742917",
+   "scene": "lava25/Music Metropolis",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/statue",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "89b9e26b2cdf",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 462687,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Polyesterday/Gus128.jpg": {
+   "hash": "e068c6c548ca629e1281267e84437c801b4f8fde06cdd820240ab357b5b83154",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Polyesterday/Gus128",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "d08559317a77",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 332217,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Polyesterday/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Polyesterday/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Polyesterday/bios32.jpg": {
+   "hash": "06e0d44722991a85b6d12ae9d3acdcf1a903ce3808263af1ba2eba2aa0e56727",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    32,
+    32
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Polyesterday/bios32",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "7fe65bb95780",
+   "out_size": [
+    128,
+    128
+   ],
+   "bytes": 41667,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Polyesterday/cover.jpg": {
+   "hash": "961180074923436f9503de2455a8dbb29db39907e2758d6b5fc66d5efa4c4622",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    250,
+    250
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Polyesterday/gusolo128.jpg": {
+   "hash": "1a93091a7313327fa1abcd9daf0b589bb2ab03e5ac3357b01410d6ddeb335797",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Polyesterday/gusolo128",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3372906e5871",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 309286,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Polyesterday/gusolo2.jpg": {
+   "hash": "3cefbed71738f5545e98153c7d19ee5412a6a01489f8337e857ad5359e096525",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Polyesterday/gusolo2",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "6bd45d234b7d",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 341393,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Polyesterday/gusphoto.jpg": {
+   "hash": "5470639bfca79e8947455fe7ae9e2b490dd110bb6c929dfbb1a69c4dd44adc14",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Polyesterday/gusphoto",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "6198dbdfc601",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 1228782,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Polyesterday/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/Polyesterday",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Triple Trance/arrow.jpg": {
+   "hash": "f33d8b31160165e63645bdb321bcbba64b67dacde704f1cb0d3db2555dce3c1e",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Triple Trance/banner.jpg": {
+   "hash": "e60a76dcca1fbeb28ff81209c359b65986a3cf54c24e6876d845fa12fc836d28",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Triple Trance/blue-lightlines.jpg": {
+   "hash": "8ae91fa5bac055afcc450957d03e54d69eebec8756f0289393673f13ca793762",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    100,
+    100
+   ],
+   "status": "ok",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/blue-lightlines",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "glow",
+   "param_hash": "b6d8df89c671",
+   "out_size": [
+    400,
+    400
+   ],
+   "bytes": 302802
+  },
+  "native-player/scenes/lava25/Triple Trance/blue-oil.jpg": {
+   "hash": "43a9aa7ec0c2a7da3835d36170920d6f89aa2a381454055991c3c4f4da227586",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    100,
+    100
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/blue-oil",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "8f04d07720e2",
+   "out_size": [
+    400,
+    400
+   ],
+   "bytes": 280024,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Triple Trance/hotspot.jpg": {
+   "hash": "5bae3002af5aa4ef4db17ff348ec873613b0925d915b2be43bb2d3c35e2b585d",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Triple Trance/logo.jpg": {
+   "hash": "fe8eb3144291ce94a724673e8f39c838f689ae1a17058f6fef413137d9146f39",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Triple Trance/purple-ooze.jpg": {
+   "hash": "5372049619f9cec87e32c48eb4d793f3d43bbf8b5c888acd094f207fe2273ecd",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    100,
+    95
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/purple-ooze",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "693487450136",
+   "out_size": [
+    400,
+    380
+   ],
+   "bytes": 222391,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Triple Trance/purple-pore.jpg": {
+   "hash": "844673d7ae0a5b66b6c1193bdef918cfa29aebaffdbfab17843f1d04ec2cd070",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    100,
+    100
+   ],
+   "status": "ok",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/purple-pore",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock",
+   "param_hash": "4b58c1c6818d",
+   "out_size": [
+    400,
+    400
+   ],
+   "bytes": 447266
+  },
+  "native-player/scenes/lava25/Triple Trance/violet-stripes.jpg": {
+   "hash": "cebc6b78368fdb389f819af4c349cbd6903965fa00ff713de3136cdc6b8e3d67",
+   "scene": "lava25/Triple Trance",
+   "size": [
+    100,
+    100
+   ],
+   "status": "ok",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/violet-stripes",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "fabric",
+    "scale": 4,
+    "strength": 3.5,
+    "sigmas": [
+     0.7,
+     1.8,
+     4.0
+    ],
+    "weights": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "rough": 0.7,
+    "rough_var": 0.15,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "fabric",
+   "param_hash": "cc45496de388",
+   "out_size": [
+    400,
+    400
+   ],
+   "bytes": 396314
+  },
+  "native-player/scenes/lava25/Wizard/3Dwizard.jpg": {
+   "hash": "f39e0fb36b4415f3a25b9c23b88b7be26d09bc2b5f146d68d2168adde97a0a8c",
+   "scene": "lava25/Wizard",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Wizard/3Dwizard",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "0a3eb17df631",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 199364,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Wizard/Lava_wizard.jpg": {
+   "hash": "7f6082ff8988d83233e1801326a933c190042da520e86570933743e55d076998",
+   "scene": "lava25/Wizard",
+   "size": [
+    512,
+    256
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/lava25/Wizard/Lava_wizard",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "4178e28c2a04",
+   "out_size": [
+    2048,
+    1024
+   ],
+   "bytes": 1436190,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Wizard/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "lava25/Wizard",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Wizard/circuit1.jpg": {
+   "hash": "741d64091a15a0c2304dbbb6facb5b2a3084c906ef2a1d0264596bef1f482f80",
+   "scene": "lava25/Wizard",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Wizard/circuit1",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "dc972f9f1b5e",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 952712,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/lava25/Wizard/cover.jpg": {
+   "hash": "e962d6e49d51ad15d804da88d78ed8c2f0829ed6c393034a8ad98871707a4e59",
+   "scene": "lava25/Wizard",
+   "size": [
+    1,
+    1
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Wizard/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "lava25/Wizard",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Wizard/logo.jpg": {
+   "hash": "eaca6bf41aeecb60be7a830e9414e822053752a6c2b534c802940ee8c280b6c7",
+   "scene": "lava25/Wizard",
+   "size": [
+    520,
+    45
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/lava25/Wizard/soniceye.jpg": {
+   "hash": "2711bdc6b44a4ce09b6d36ee5fd96a23c838b3675e40541d7cd2fd8bb30d49cb",
+   "scene": "lava25/Wizard",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/lava25/Wizard/soniceye",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "a6e00c903dfa",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 940673,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/AK1200reflected.jpg": {
+   "hash": "2f4c3b447996520f65d8d2191e4157cc22c6e3f3a2a9312dab7e72dd3414ee5f",
+   "scene": "oozic30/AK1200",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/AK1200reflected",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "4ab2ac88f001",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 493397,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/MOONSHI1.jpg": {
+   "hash": "54972e90489c7123e200436d2d954867df3aacb0d3e344c6a6e3359d2206fafe",
+   "scene": "oozic30/AK1200",
+   "size": [
+    40,
+    40
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/MOONSHI1",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "f04ecd2cad6f",
+   "out_size": [
+    160,
+    160
+   ],
+   "bytes": 58002,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/ak1200album.jpg": {
+   "hash": "a0ceb58d9ecb947f86cdcafdb733c5a4b4a4ce66ec4b0808ba424e7635c5dcf2",
+   "scene": "oozic30/AK1200",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/ak1200album",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "cdf61bb05303",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 725152,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/ak1200ball.jpg": {
+   "hash": "166e7e8dd97e8377a370726069b8ae6bf344f64f2e25a38f970218c166e44242",
+   "scene": "oozic30/AK1200",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/ak1200ball",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "ceb552715d3c",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 545113,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/highlight.jpg": {
+   "hash": "0a3a001e39f15c795e7fe9eeea5ed737ff110e971461ec7a720c5089c86d948f",
+   "scene": "oozic30/AK1200",
+   "size": [
+    128,
+    128
+   ],
+   "status": "ok",
+   "category": "glow",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/highlight",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "46040bd90b00",
+   "out_size": [
+    512,
+    512
+   ],
+   "bytes": 130450,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/moonshineface.jpg": {
+   "hash": "0c0be47a7433b7d7d5bb4ed5c752ac4cdfa804d5c1b65e36f956d188d908f723",
+   "scene": "oozic30/AK1200",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/moonshineface",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "0006cd367a09",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 816877,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/neb06s.jpg": {
+   "hash": "ffd6bec63c0fd00f332bb98028afca7a2e285e1c026a7587ea8f8c4409ecaee1",
+   "scene": "oozic30/AK1200",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/neb06s",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "b4ce614c5407",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 430422,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/orange.jpg": {
+   "hash": "f453c180d7bdcb31104a9ccd2782b61f2eb70db2eb5396d22ee8c993309fa2d0",
+   "scene": "oozic30/AK1200",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/orange",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "e5d2fd5995d3",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 239993,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/AK1200/spaceD.jpg": {
+   "hash": "cb08f4860e7d040e14f83d23e933914631a349919638b3039fe904eafb673be8",
+   "scene": "oozic30/AK1200",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/AK1200/spaceD",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "a8875dc37735",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 274562,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/MOONSHI1.jpg": {
+   "hash": "fac2cd3f149968fa8b9eca9b39b6804174692f825231b943df2fd76e15c8c69d",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    40,
+    40
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/MOONSHI1",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2f8550553460",
+   "out_size": [
+    160,
+    160
+   ],
+   "bytes": 57995,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/Misc/sprite04.jpg": {
+   "hash": "96bc9e1ee5e82a08b62f4141cff3acf62dfb1e00a6287f20f3f1a52b4dfbd358",
+   "scene": "oozic30/Keoki EFX/Misc",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX_Misc/sprite04",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "dcdff11b08b8",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 267201,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/Misc/sprite05.jpg": {
+   "hash": "ec52627c810bae8a02c1f6eda5e197675a80f12075e23e89de5a6413d3817ef9",
+   "scene": "oozic30/Keoki EFX/Misc",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX_Misc/sprite05",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "a713a286c319",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 308452,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/blue.jpg": {
+   "hash": "985119c0ab93cef3bc9acd369beb664baf79149f84e490708e59cf1e35403fa7",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/blue",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "323bc92df1b2",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 277222,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/flyout.jpg": {
+   "hash": "58620bff142a34b84bfe3362dee9f5d3f7c06edea7fe20cc296728ded98ab942",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    246,
+    246
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/flyout",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "c53ada8ee0c1",
+   "out_size": [
+    984,
+    984
+   ],
+   "bytes": 290991,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/highlight.jpg": {
+   "hash": "b4eaaee4d2a5a5a6ad62684210f9cf54ca59a32f935f1f66da695454bd019d7b",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "glow",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/highlight",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "ad5e70543618",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 385853,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/keokiblack.jpg": {
+   "hash": "b30df566dabb7ece4af6b120d71d4e3bf14bfc7ae29b564a14b2bca105ff651a",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/keokiblack",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3a197f0edb7f",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 500456,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/link.jpg": {
+   "hash": "a808f9a5d0eabe4890a7d8384cff571c287df3f314867c90ab8df1845202939a",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/link",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "ecf3bf3518ba",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 588992,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/listen.jpg": {
+   "hash": "690be0e63ef9171224328ca5e8700adc3e5a45d3d4c90311af5e97242b2499ff",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/listen",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "ef907950e154",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 566000,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/look.jpg": {
+   "hash": "e69a357313406e14585e5f2f5aa7fb8b36c318eac1b7f8aa1d064e037cb8d18d",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/look",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "f430d59a95ff",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 680825,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Keoki EFX/moonshineclover.jpg": {
+   "hash": "93c3546ddcae38fe10d5845687ac5e085b3d8addff5371f649ec0ff7994e6d97",
+   "scene": "oozic30/Keoki EFX",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/oozic30/Keoki EFX/moonshineclover",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "e788558a7032",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 683245,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/LVT1/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT1",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT1/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT1",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT1/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT1",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT1/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT1",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT1/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT1",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT2/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT2",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT2/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT2",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT2/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT2",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT2/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT2",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT2/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT2",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT3/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT3",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT3/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT3",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT3/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT3",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT3/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT3",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT3/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT3",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT4/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT4",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT4/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT4",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT4/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT4",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT4/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT4",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT4/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT4",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT5/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT5",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT5/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT5",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT5/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT5",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT5/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT5",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT5/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT5",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT6/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT6",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT6/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT6",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT6/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT6",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT6/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT6",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT6/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT6",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT7/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT7/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT7",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT7/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT7",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT7/heightmap0.bmp": {
+   "hash": "476edc0fc3d962ddec72211d24958e3212aeabfc239efc4d65e1858f6b74b44d",
+   "scene": "oozic30/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/LVT7/heightmap0.bmp",
+   "dir": "native-player/modern_assets/textures/lava25/LVT7/heightmap0",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/oozic30/LVT7/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT7",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT7/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT7/maskmap0.bmp": {
+   "hash": "7aaee305db725974f03b0bcf5a92172e9dc78043fa70d19e25a4893cc3db495c",
+   "scene": "oozic30/LVT7",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/LVT7/maskmap0.bmp",
+   "dir": "native-player/modern_assets/textures/lava25/LVT7/maskmap0",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/oozic30/LVT8/album.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT8",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT8/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/LVT8",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT8/cover.jpg": {
+   "hash": "c27b19577a67038ee8802044ad0bf2aac99963c49c4528af2a329463e8fa14d6",
+   "scene": "oozic30/LVT8",
+   "size": [
+    256,
+    64
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT8/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/LVT8",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/LVT8/logo.jpg": {
+   "hash": "661e0174b56095937e68627c049ffd65213e73d3a44bce4d70842b69e8573ec7",
+   "scene": "oozic30/LVT8",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/Oozic.jpg": {
+   "hash": "0d97d8dd9ec055bf93395d8d0c1f58ae0fa89db616a892e3cca56c29ed3d81c1",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Mind_s Eye/Oozic",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "3d9536804544",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 276873,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/lensflare.jpg": {
+   "hash": "84093f3140909a16a7c50f40f4f950495bf5093d25f85a36447275c63aa535f4",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Mind_s Eye/lensflare",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "cf045b55a89d",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 176663,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/logo.jpg": {
+   "hash": "9db06c291f25162df3d0e686928155b8b925f9c04354d3a7604647482a696738",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/orb0.jpg": {
+   "hash": "b8be33e36e0b8106056db3ca10f7aad8302c1df4ac4a1e962a69ab1a22717056",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Mind_s Eye/orb0",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "a34da5dff970",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 592975,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/orb1.jpg": {
+   "hash": "baa4b6e7faa15406bc2b0d2e64dfafe0e16ff26817bc3f3708063e93c585eadb",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Mind_s Eye/orb1",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "a88fdb796507",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 460804,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/orb2.jpg": {
+   "hash": "58b9b0faa951ce1e287dc422a192243e28ef03b31e129bcc0bd1073dc13bbe5e",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Mind_s Eye/orb2",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "112980eead9d",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 759062,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/orb3.jpg": {
+   "hash": "e55488e684a517720d40b60a6e8edc1314a4a794e5fe29448a5b717b5551b523",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Mind_s Eye/orb3",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "9b36c847c19b",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 448760,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Mind's Eye/sprite00.jpg": {
+   "hash": "8d5a73de25fe52a138fe5ea399076e5668c3c9dde2aa3333c8a1fc3840245cb2",
+   "scene": "oozic30/Mind's Eye",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "generic",
+   "dir": "native-player/modern_assets/textures/oozic30/Mind_s Eye/sprite00",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "2598619385df",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 210943,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Wizard/3Dwizard.jpg": {
+   "hash": "f39e0fb36b4415f3a25b9c23b88b7be26d09bc2b5f146d68d2168adde97a0a8c",
+   "scene": "oozic30/Wizard",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Wizard/3Dwizard.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Wizard/3Dwizard",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/oozic30/Wizard/Lava_wizard.JPG": {
+   "hash": "1cd81996d400a3d4a5973eeae89513fa569175c44d6a26665209a61bd9dead8d",
+   "scene": "oozic30/Wizard",
+   "size": [
+    512,
+    256
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/oozic30/Wizard/Lava_wizard",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "5484b8569e1e",
+   "out_size": [
+    2048,
+    1024
+   ],
+   "bytes": 1457677,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/oozic30/Wizard/arrow.bmp": {
+   "hash": "49488d1cd303cbca12fd88e892fcd8446dfee1bb806aa3cb940a8c065471ba45",
+   "scene": "oozic30/Wizard",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/Wizard/circuit1.jpg": {
+   "hash": "741d64091a15a0c2304dbbb6facb5b2a3084c906ef2a1d0264596bef1f482f80",
+   "scene": "oozic30/Wizard",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Wizard/circuit1.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Wizard/circuit1",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/oozic30/Wizard/cover.jpg": {
+   "hash": "e962d6e49d51ad15d804da88d78ed8c2f0829ed6c393034a8ad98871707a4e59",
+   "scene": "oozic30/Wizard",
+   "size": [
+    1,
+    1
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/Wizard/hotspot.bmp": {
+   "hash": "67ea9926e98b729ba127a50bb125f381ac2c459d719b243029aab7e439dc7325",
+   "scene": "oozic30/Wizard",
+   "size": [
+    32,
+    32
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/Wizard/logo.jpg": {
+   "hash": "eaca6bf41aeecb60be7a830e9414e822053752a6c2b534c802940ee8c280b6c7",
+   "scene": "oozic30/Wizard",
+   "size": [
+    520,
+    45
+   ],
+   "status": "skipped_ui"
+  },
+  "native-player/scenes/oozic30/Wizard/soniceye.jpg": {
+   "hash": "2711bdc6b44a4ce09b6d36ee5fd96a23c838b3675e40541d7cd2fd8bb30d49cb",
+   "scene": "oozic30/Wizard",
+   "size": [
+    256,
+    256
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Wizard/soniceye.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Wizard/soniceye",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "generic",
+    "scale": 4,
+    "strength": 2.5,
+    "sigmas": [
+     1.0,
+     3.0,
+     8.0
+    ],
+    "weights": [
+     0.35,
+     0.4,
+     0.25
+    ],
+    "rough": 0.55,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "generic"
+  },
+  "native-player/scenes/shared-textures/Body.jpg": {
+   "hash": "f6c12702d7178fd269b6a25b342675c23daacc6918768de5eb32e502d34eb039",
+   "scene": "shared-textures",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/shared-textures/_root/Body",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "5aee6d670e49",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 591856,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/shared-textures/Fractal.jpg": {
+   "hash": "d31b83c893e2a4fd3b550a9a644c25fcb3b58eb55bbe7c25203aace06465a8d0",
+   "scene": "shared-textures",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/shared-textures/_root/Fractal",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "f250b3145e99",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 1618253,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/shared-textures/LongLight.jpg": {
+   "hash": "27b381518a6937157b32935ac1943a7f20f738034850cd0f3745a1ac4baebc0f",
+   "scene": "shared-textures",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "glow",
+   "dir": "native-player/modern_assets/textures/shared-textures/_root/LongLight",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "5d7e3ba8a3b8",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 280078,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/shared-textures/Mystery.jpg": {
+   "hash": "ac8a3b4de59d0690f91195e507c46bd64fc36bc60c1ef8184e13bd59d642ff9f",
+   "scene": "shared-textures",
+   "size": [
+    256,
+    256
+   ],
+   "status": "ok",
+   "category": "rock",
+   "dir": "native-player/modern_assets/textures/shared-textures/_root/Mystery",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "6081a346b2ee",
+   "out_size": [
+    1024,
+    1024
+   ],
+   "bytes": 1634318,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/shared-textures/StainGlass.jpg": {
+   "hash": "a7bad310ae0fa5b86dc1009c8421cfb2d648d330b3ed342540d905cfa0b0b6d8",
+   "scene": "shared-textures",
+   "size": [
+    300,
+    300
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/shared-textures/_root/StainGlass",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "8b08c3c5163b",
+   "out_size": [
+    1200,
+    1200
+   ],
+   "bytes": 552557,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/shared-textures/Twirl.jpg": {
+   "hash": "56aadbf14fd20c71a178d83abf1f6ac339ccac37bc06377271ec8d472fb6d6a8",
+   "scene": "shared-textures",
+   "size": [
+    300,
+    300
+   ],
+   "status": "ok",
+   "category": "fabric",
+   "dir": "native-player/modern_assets/textures/shared-textures/_root/Twirl",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "fabric",
+    "scale": 4,
+    "strength": 3.5,
+    "sigmas": [
+     0.7,
+     1.8,
+     4.0
+    ],
+    "weights": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "rough": 0.7,
+    "rough_var": 0.15,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "717240f0e113",
+   "out_size": [
+    1200,
+    1200
+   ],
+   "bytes": 1213611,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/shared-textures/Wavy.jpg": {
+   "hash": "1e73744fb1af8b5b5ec52c1bfa70243ac345890ac3a92163835547a5a685fbb1",
+   "scene": "shared-textures",
+   "size": [
+    250,
+    250
+   ],
+   "status": "ok",
+   "category": "glossy",
+   "dir": "native-player/modern_assets/textures/shared-textures/_root/Wavy",
+   "maps": {
+    "albedo": "albedo_4x.jpg",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "param_hash": "8a5a8d537dc8",
+   "out_size": [
+    1000,
+    1000
+   ],
+   "bytes": 1167920,
+   "normal_convention": "OpenGL (Y+ up, green = up)",
+   "label": "derived"
+  },
+  "native-player/scenes/shared-textures/billboard.jpg": {
+   "hash": "38426d4e87c18c7be9eab19e5516e63b54713aa5e118d192afc9b775661e1634",
+   "scene": "shared-textures",
+   "size": [
+    64,
+    64
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/billboard.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/billboard",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "glow"
+  },
+  "native-player/scenes/shared-textures/blue-lightlines.jpg": {
+   "hash": "8ae91fa5bac055afcc450957d03e54d69eebec8756f0289393673f13ca793762",
+   "scene": "shared-textures",
+   "size": [
+    100,
+    100
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Triple Trance/blue-lightlines.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/blue-lightlines",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glow",
+    "scale": 4,
+    "strength": 0.8,
+    "sigmas": [
+     2.0,
+     6.0,
+     14.0
+    ],
+    "weights": [
+     0.3,
+     0.4,
+     0.3
+    ],
+    "rough": 0.4,
+    "rough_var": 0.2,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "glow"
+  },
+  "native-player/scenes/shared-textures/blue-oil.jpg": {
+   "hash": "43a9aa7ec0c2a7da3835d36170920d6f89aa2a381454055991c3c4f4da227586",
+   "scene": "shared-textures",
+   "size": [
+    100,
+    100
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Triple Trance/blue-oil.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/blue-oil",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "glossy"
+  },
+  "native-player/scenes/shared-textures/building_A.jpg": {
+   "hash": "21384605cbc4968ca4ceb5a86f0dea1e188b3e89969fc2b2ac69bd4408518817",
+   "scene": "shared-textures",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/building_A.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_A",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/shared-textures/building_B.jpg": {
+   "hash": "d33b5df4252a866b4457efd5ff3898dda07fc00a0d63e467f201aa77d81fc365",
+   "scene": "shared-textures",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/building_B.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_B",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/shared-textures/building_C.jpg": {
+   "hash": "94b87b225a286611faaf06335e46f076521b1efdc2f90c94efdf610a7f80ae7f",
+   "scene": "shared-textures",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/building_C.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_C",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/shared-textures/building_D.jpg": {
+   "hash": "aa193d1b56b67660064553b97caf5a03a5033c40633d7593ce8d926e1948a5a7",
+   "scene": "shared-textures",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/building_D.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/building_D",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/shared-textures/cars.jpg": {
+   "hash": "374b9f78838f10c37cc181fa1ab99f0b44d184fc953c144bc4aea90b08b54c23",
+   "scene": "shared-textures",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/cars.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/cars",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "fabric",
+    "scale": 4,
+    "strength": 3.5,
+    "sigmas": [
+     0.7,
+     1.8,
+     4.0
+    ],
+    "weights": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "rough": 0.7,
+    "rough_var": 0.15,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "fabric"
+  },
+  "native-player/scenes/shared-textures/light.jpg": {
+   "hash": "7d4d15fa429cf3808496ac2335b66b78baf8583bfa7aaf7af48701cac8808910",
+   "scene": "shared-textures",
+   "size": [
+    16,
+    16
+   ],
+   "status": "skipped_tiny"
+  },
+  "native-player/scenes/shared-textures/purple-ooze.jpg": {
+   "hash": "5372049619f9cec87e32c48eb4d793f3d43bbf8b5c888acd094f207fe2273ecd",
+   "scene": "shared-textures",
+   "size": [
+    100,
+    95
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Triple Trance/purple-ooze.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/purple-ooze",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "glossy",
+    "scale": 4,
+    "strength": 3.8,
+    "sigmas": [
+     1.2,
+     3.5,
+     9.0
+    ],
+    "weights": [
+     0.25,
+     0.45,
+     0.3
+    ],
+    "rough": 0.16,
+    "rough_var": 0.22,
+    "height": false,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "glossy"
+  },
+  "native-player/scenes/shared-textures/purple-pore.jpg": {
+   "hash": "844673d7ae0a5b66b6c1193bdef918cfa29aebaffdbfab17843f1d04ec2cd070",
+   "scene": "shared-textures",
+   "size": [
+    100,
+    100
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Triple Trance/purple-pore.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/purple-pore",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/shared-textures/roads.jpg": {
+   "hash": "d070bb1cf7d1052841a9ee51ba8a7dfc051fd8c9073df1a3656319afab3e15fa",
+   "scene": "shared-textures",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/roads.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/roads",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/shared-textures/statue.jpg": {
+   "hash": "f2bebea9b47335f27570df001ee894f5349d54f8d337f6cfd1328f015b742917",
+   "scene": "shared-textures",
+   "size": [
+    128,
+    128
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Music Metropolis/statue.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Music Metropolis/statue",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "rock",
+    "scale": 4,
+    "strength": 5.0,
+    "sigmas": [
+     0.8,
+     2.0,
+     5.0
+    ],
+    "weights": [
+     0.45,
+     0.35,
+     0.2
+    ],
+    "rough": 0.78,
+    "rough_var": 0.18,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "rock"
+  },
+  "native-player/scenes/shared-textures/violet-stripes.jpg": {
+   "hash": "cebc6b78368fdb389f819af4c349cbd6903965fa00ff713de3136cdc6b8e3d67",
+   "scene": "shared-textures",
+   "size": [
+    100,
+    100
+   ],
+   "status": "duplicate",
+   "duplicate_of": "native-player/scenes/lava25/Triple Trance/violet-stripes.jpg",
+   "dir": "native-player/modern_assets/textures/lava25/Triple Trance/violet-stripes",
+   "maps": {
+    "albedo": "albedo_4x.png",
+    "normal": "normal.png",
+    "roughness": "roughness.png",
+    "height": "height.png"
+   },
+   "params": {
+    "pipeline": "1.0",
+    "category": "fabric",
+    "scale": 4,
+    "strength": 3.5,
+    "sigmas": [
+     0.7,
+     1.8,
+     4.0
+    ],
+    "weights": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "rough": 0.7,
+    "rough_var": 0.15,
+    "height": true,
+    "upscaler": "lanczos+unsharp(r1.6,40%)"
+   },
+   "category": "fabric"
+  }
+ },
+ "_meta": {
+  "pipeline_version": "1.0",
+  "generator": "tools/texture_pipeline/build.py",
+  "upscaler": "Lanczos 4x (wrap-padded) + UnsharpMask r1.6 40%",
+  "label": "derived",
+  "note": "Derived from original textures; originals untouched. Normals are OpenGL convention.",
+  "albedo_cap_px": 2048
+ }
+}

@@ -1,0 +1,139 @@
+{
+	"failures": [],
+	"hot_swap": {
+		"beats_during_swap": {
+			"blend": 5,
+			"track": 5
+		},
+		"blend_seconds": 2.0,
+		"excess_bands_blend": 0.0737118124961853,
+		"excess_bands_hard": 0.513709485530853,
+		"excess_channels_blend": 0.00616782903671265,
+		"excess_channels_hard": 0.0286526679992676,
+		"swap_time": 40.0
+	},
+	"impact": {
+		"big_moments": [
+			[
+				30.0166666666662,
+				"drop"
+			],
+			[
+				45.0166666666654,
+				"downbeat"
+			],
+			[
+				60.0166666666645,
+				"downbeat"
+			],
+			[
+				105.016666666662,
+				"drop"
+			],
+			[
+				120.016666666661,
+				"downbeat"
+			],
+			[
+				135.016666666666,
+				"downbeat"
+			],
+			[
+				180.000000000035,
+				"drop"
+			],
+			[
+				195.000000000047,
+				"downbeat"
+			],
+			[
+				210.000000000059,
+				"downbeat"
+			]
+		],
+		"close_drops": 2,
+		"close_impacts": 1,
+		"drops": [
+			30.0166666666662,
+			105.016666666662,
+			180.000000000035
+		],
+		"impacts": [
+			[
+				30.0166666666662,
+				1.0,
+				"drop"
+			],
+			[
+				105.016666666662,
+				1.0,
+				"drop"
+			],
+			[
+				180.000000000035,
+				1.0,
+				"drop"
+			]
+		],
+		"min_gap_s": 74.9833333333734
+	},
+	"mock_beats": {
+		"144": {
+			"beats": 85,
+			"downbeats": 21,
+			"latency_ms": [
+				0.0000000000435207425653061,
+				17.3611111071423
+			],
+			"pulses": 85,
+			"worst_beat_time_ms": 0.0000000000035527136788005
+		},
+		"30": {
+			"beats": 85,
+			"downbeats": 21,
+			"latency_ms": [
+				0.000000000277111666946439,
+				43.7500000005642
+			],
+			"pulses": 85,
+			"worst_beat_time_ms": 0.0000000000035527136788005
+		},
+		"60": {
+			"beats": 85,
+			"downbeats": 21,
+			"latency_ms": [
+				0.0000000000035527136788005,
+				27.0833333326195
+			],
+			"pulses": 85,
+			"worst_beat_time_ms": 0.0000000000035527136788005
+		}
+	},
+	"offline_media": [
+		{
+			"analysis_s": 1.174681,
+			"beats": 61,
+			"bpm": 120.012352981019,
+			"downbeat_confidence": 0.998623224546524,
+			"duration_s": 30.0,
+			"file": "DemoBeat.mp3",
+			"onsets": 119,
+			"realtime_factor": 25.538848419273,
+			"sections": [
+				"steady@0.0"
+			],
+			"tempo_confidence": 0.961198761370764
+		}
+	],
+	"passes": 66,
+	"real_path": {
+		"beat_index_before_after_seek": [
+			6,
+			40
+		],
+		"live_frames": 170,
+		"live_stream_seconds": 1.02167800453515,
+		"position_after_swap": 3.39097797541809,
+		"swap_after_s": 1.169
+	}
+}

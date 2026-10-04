@@ -1,0 +1,59 @@
+Version	3
+TfxType	Peel
+PresetFriendlyName	Splendid
+NumPresets	5
+###############################################################################
+Preset	0
+PresetName	Stretchy_Peel
+GridSize	16.000000
+Duration	2.000000
+SplitFromCenter	0.000000
+MinPeelAngle	0.400000
+MaxPeelAngle	1.000000
+AxisMigrateSpeed	0.900000
+PeelAmount	0.550000
+FullPeelRadius	0.750000
+###############################################################################
+Preset	1
+PresetName	Good_Peel
+GridSize	16.000000
+Duration	2.000000
+SplitFromCenter	0.000000
+MinPeelAngle	0.400000
+MaxPeelAngle	1.000000
+AxisMigrateSpeed	1.100000
+PeelAmount	0.450000
+FullPeelRadius	1.250000
+###############################################################################
+Preset	2
+PresetName	Almost_a_Peel
+GridSize	16.000000
+Duration	2.000000
+SplitFromCenter	0.000000
+MinPeelAngle	0.400000
+MaxPeelAngle	1.000000
+AxisMigrateSpeed	0.900000
+PeelAmount	0.250000
+FullPeelRadius	0.250000
+###############################################################################
+Preset	3
+PresetName	4_way_Peel
+GridSize	12.000000
+Duration	2.000000
+SplitFromCenter	1.000000
+MinPeelAngle	0.100000
+MaxPeelAngle	1.000000
+AxisMigrateSpeed	1.100000
+PeelAmount	0.550000
+FullPeelRadius	0.750000
+###############################################################################
+Preset	4
+PresetName	Aligned_Squish
+GridSize	16.000000
+Duration	2.000000
+SplitFromCenter	0.000000
+MinPeelAngle	0.000000
+MaxPeelAngle	0.000000
+AxisMigrateSpeed	0.900000
+PeelAmount	0.250000
+FullPeelRadius	0.250000

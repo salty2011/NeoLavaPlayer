@@ -1,0 +1,78 @@
+{
+	"name": "Polyesterday",
+	"extends": "veils",
+	"folders": [
+		"lava25/Polyesterday"
+	],
+	"notes": "A photo-sphere inside two nested translucent shells, with spinning rays and a bumping mirror. Shells use the transparent variant with a reduced alpha scale (linear-light blending of nested shells reads brighter than the original); backdrop self-lit; soft bloom.",
+	"materials": {
+		"objects": {
+			"Background": {
+				"albedo_gain": 1.1,
+				"emission_base": 0.05,
+				"emission_music": 0.2
+			},
+			"Shell1": {
+				"alpha_gain": 0.85,
+				"priority": 1,
+				"emission_base": 0.1,
+				"emission_music": 0.4
+			},
+			"Shell2": {
+				"alpha_gain": 0.85,
+				"priority": 2,
+				"emission_base": 0.1,
+				"emission_music": 0.4
+			},
+			"Ray1": {
+				"unlit": false,
+				"roughness_scale": 0.6,
+				"specular": 0.35,
+				"albedo_gain": 1.6,
+				"emission_base": 0.1,
+				"emission_music": 0.7,
+				"clearcoat": 0.2,
+				"shadows": true
+			},
+			"Ray2": {
+				"unlit": false,
+				"roughness_scale": 0.6,
+				"specular": 0.35,
+				"albedo_gain": 1.6,
+				"emission_base": 0.1,
+				"emission_music": 0.7,
+				"clearcoat": 0.2,
+				"shadows": true
+			},
+			"Mirror": {
+				"unlit": false,
+				"metallic": 0.0,
+				"roughness_scale": 0.5,
+				"specular": 0.2,
+				"clearcoat": 0.1,
+				"clearcoat_gloss": 0.9,
+				"albedo_gain": 1.2,
+				"emission_base": 0.1,
+				"emission_music": 0.5,
+				"rim_strength": 0.5,
+				"rim_color": [
+					1.0,
+					0.9,
+					0.6
+				]
+			}
+		}
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 40.0,
+			"far_transition": 30.0,
+			"amount": 0.015
+		}
+	},
+	"lights": {
+		"key": {
+			"specular": 0.2
+		}
+	}
+}

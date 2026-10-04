@@ -1,0 +1,21 @@
+DefType	DefElastic
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+ResetMat	0.000000
+DoRestore	0.000000
+DecayMin	1.250000
+DecayMax	1.250000
+XXMin	0.250000
+XXMax	1.500000
+XXVMin	0.250000
+XXVMax	0.250000
+YYMin	0.250000
+YYMax	2.500000
+YYVMin	0.500000
+YYVMax	0.500000
+ZZMin	0.250000
+ZZMax	1.500000
+ZZVMin	0.250000
+ZZVMax	0.250000

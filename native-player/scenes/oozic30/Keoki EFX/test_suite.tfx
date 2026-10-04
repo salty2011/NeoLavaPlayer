@@ -1,0 +1,9 @@
+TransitionEffectFile
+Version	3
+NumTfp	6
+0	transexplode.tfp	explode
+1	transblob.tfp	paintbrush
+2	transpeel.tfp	peel
+3	transfade.tfp	fade
+4	transiris.tfp	iris
+5	transburn.tfp	alphaburn

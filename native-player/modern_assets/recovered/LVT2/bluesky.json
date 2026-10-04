@@ -1,0 +1,8 @@
+{
+ "label": "recovered-original",
+ "source": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/LVT7.lvt/bluesky.jpg",
+ "provenance": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/provenance.json",
+ "chosen_variant": "LVT7.lvt, 128x128 (md5 53623bfb...)",
+ "rejected_variant": "Hydra.mv3/bluesky.jpg, 192x192 (md5 6c8a05b0...), kaleidoscopic sparkle motif belonging to the Hydra gallery scene",
+ "reason": "LVT2 is a stock LVT-series template like LVT7 (which also references bluesky.bmp); LVT7's package ships this plain tileable cloud-sky variant, matching a generic template water/sky texture. Which variant LVT2 actually used is unproven."
+}

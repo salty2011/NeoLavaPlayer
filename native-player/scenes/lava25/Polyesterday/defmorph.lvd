@@ -1,0 +1,10 @@
+DefType	DefMorph
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+DecayMin	0.500000
+DecayMax	0.500000
+MorphMin	0.050000
+MorphMax	1.500000
+Random	1.000000

@@ -1,0 +1,12 @@
+LensEffectsFile
+Version	3
+NumLenses	9
+0	lensfeedback.lfp	feedback
+1	lensstatic.lfp	static
+2	lensedge.lfp	edge
+3	lensoldfilm.lfp	oldfilm
+4	lenswarprect.lfp	warprect
+5	lenswarpcirc.lfp	warpcirc
+6	lensfilter.lfp	filter1
+7	lenssprite.lfp	sprite
+8	lensfilter.lfp	filter2

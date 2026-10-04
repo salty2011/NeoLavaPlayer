@@ -1,0 +1,18 @@
+DefType	DefOrbit
+MaxInstance	1
+NumPresets	1
+###############################################################################
+Preset	0
+AmpScale	1.000000
+DecayMin	0.750000
+DecayMax	0.750000
+AngleVelocityMin	0.000000
+AngleVelocityMax	45.000000
+AngleVelocityDirection	1.000000
+AngleVDirectionMultiply	-1.000000
+OrbitNormal0	1.000000
+OrbitNormal1	0.000000
+OrbitNormal2	0.000000
+OrbitRadius	26.000000
+ResetMat	1.000000
+Angle	90.000000

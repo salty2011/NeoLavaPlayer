@@ -1,0 +1,163 @@
+{
+	"name": "LVT7 River Rave",
+	"extends": "outdoor_sky",
+	"folders": [
+		"lava25/LVT7",
+		"oozic30/LVT7"
+	],
+	"notes": "A rolling river valley seen from just above the ground. The terrain texture never shipped, so Modern paints a procedural river valley (water, sand banks, grass) that scrolls with the original texture translation; the cloud sphere is replaced by the procedural sky. Low sun, soft haze, glints on the river.",
+	"environment": {
+		"sky": {
+			"sky_top": [
+				0.08,
+				0.3,
+				0.8
+			],
+			"sky_horizon": [
+				0.78,
+				0.88,
+				0.97
+			],
+			"ground_color": [
+				0.4,
+				0.5,
+				0.3
+			],
+			"sun_dir": [
+				0.3,
+				0.35,
+				0.9
+			],
+			"sun_color": [
+				1.0,
+				0.92,
+				0.8
+			],
+			"sun_energy": 7.0,
+			"cloud_cover": 0.6,
+			"cloud_speed": [
+				0.006,
+				0.002
+			],
+			"haze": 0.25
+		},
+		"adjust_saturation": 1.12,
+		"fog_density": 0.006,
+		"fog_height_density": 0.0,
+		"fog_aerial_perspective": 0.4,
+		"fog_color": [
+			0.72,
+			0.82,
+			0.92
+		]
+	},
+	"lights": {
+		"key": {
+			"direction": [
+				-0.3,
+				-0.35,
+				-0.9
+			],
+			"energy": 1.8,
+			"shadow_distance": 25.0
+		},
+		"rim": {
+			"color": [
+				1.0,
+				0.8,
+				0.6
+			],
+			"energy": 0.35
+		}
+	},
+	"materials": {
+		"objects": {
+			"Background": {
+				"hidden": true,
+				"shadows": false
+			},
+			"Landscape": {
+				"tint_to": [
+					1,
+					1,
+					1
+				],
+				"tint_amount": 1.0,
+				"roughness_scale": 0.9,
+				"roughness_bias": 0.1,
+				"specular": 0.25,
+				"albedo_gain": 0.8,
+				"saturation": 1.15,
+				"emission_base": 0.05,
+				"emission_music": 0.3,
+				"shadows": false,
+				"glint_normal": 0.06,
+				"glint_scale": 22.0,
+				"glint_strength": 0.0,
+				"glint_threshold": 0.62,
+				"procedural": {
+					"mode": "terrain",
+					"a": [
+						0.15,
+						0.45,
+						0.8
+					],
+					"b": [
+						0.85,
+						0.7,
+						0.45
+					],
+					"c": [
+						0.3,
+						0.62,
+						0.25
+					],
+					"scale": 6.0,
+					"speed": 0.0
+				}
+			}
+		}
+	},
+	"atmosphere": {
+		"particles": [
+			{
+				"name": "pollen",
+				"center": [
+					0.0,
+					1.0,
+					0.0
+				],
+				"extents": [
+					6.0,
+					1.5,
+					4.0
+				],
+				"amount": 80,
+				"lifetime": 8.0,
+				"size": 0.03,
+				"color": [
+					1.0,
+					0.92,
+					0.7
+				],
+				"energy": 2.0,
+				"velocity": [
+					0.2,
+					0.1,
+					0.05
+				],
+				"spread": 80.0,
+				"turbulence": 0.3,
+				"base": 0.5,
+				"sparkle": 0.5
+			}
+		]
+	},
+	"effects": {
+		"dof": {
+			"far_distance": 14.0,
+			"far_transition": 10.0,
+			"amount": 0.035
+		}
+	}
+}

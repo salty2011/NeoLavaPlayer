@@ -1,0 +1,209 @@
+{
+ "entries": [
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT1/starfield2.jpg",
+   "label": "recovered-original",
+   "missing": "starfield2.jpg",
+   "recovered_from": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/LAVA - Music In Motion.mv3/starfield2.jpg",
+   "scene": "lava25/LVT1",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT2/bluesky.jpg",
+   "label": "recovered-original",
+   "missing": "bluesky.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/LVT7.lvt/bluesky.jpg",
+   "scene": "lava25/LVT2",
+   "selection": "override: see recovered/LVT2/bluesky.json"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT5/blue-lightwater.jpg",
+   "label": "recovered-original",
+   "missing": "blue-lightwater.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/blue-lightwater.jpg",
+   "scene": "lava25/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT5/blue-masiac.jpg",
+   "label": "recovered-original",
+   "missing": "blue-masiac.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/blue-masiac.jpg",
+   "scene": "lava25/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT5/green-pits.jpg",
+   "label": "recovered-original",
+   "missing": "green-pits.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/green-pits.jpg",
+   "scene": "lava25/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT5/pink-oil.jpg",
+   "label": "recovered-original",
+   "missing": "pink-oil.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/pink-oil.jpg",
+   "scene": "lava25/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT5/purple-satin.jpg",
+   "label": "recovered-original",
+   "missing": "purple-satin.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/purple-satin.jpg",
+   "scene": "lava25/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT6/brown-rock.jpg",
+   "label": "recovered-original",
+   "missing": "brown-rock.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Photoshow07.mv3/brown-rock.jpg",
+   "scene": "lava25/LVT6",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/lava25/LVT7/bluesky.jpg",
+   "label": "recovered-original",
+   "missing": "bluesky.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/LVT7.lvt/bluesky.jpg",
+   "scene": "lava25/LVT7",
+   "selection": "package name matches scene"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT1/starfield2.jpg",
+   "label": "recovered-original",
+   "missing": "starfield2.jpg",
+   "recovered_from": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/LAVA - Music In Motion.mv3/starfield2.jpg",
+   "scene": "oozic30/LVT1",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT2/bluesky.jpg",
+   "label": "recovered-original",
+   "missing": "bluesky.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/LVT7.lvt/bluesky.jpg",
+   "scene": "oozic30/LVT2",
+   "selection": "override: see recovered/LVT2/bluesky.json"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT5/blue-lightwater.jpg",
+   "label": "recovered-original",
+   "missing": "blue-lightwater.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/blue-lightwater.jpg",
+   "scene": "oozic30/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT5/blue-masiac.jpg",
+   "label": "recovered-original",
+   "missing": "blue-masiac.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/blue-masiac.jpg",
+   "scene": "oozic30/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT5/green-pits.jpg",
+   "label": "recovered-original",
+   "missing": "green-pits.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/green-pits.jpg",
+   "scene": "oozic30/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT5/pink-oil.jpg",
+   "label": "recovered-original",
+   "missing": "pink-oil.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/pink-oil.jpg",
+   "scene": "oozic30/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT5/purple-satin.jpg",
+   "label": "recovered-original",
+   "missing": "purple-satin.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Acid Dream.mv3/purple-satin.jpg",
+   "scene": "oozic30/LVT5",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT6/brown-rock.jpg",
+   "label": "recovered-original",
+   "missing": "brown-rock.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/creative-audigy-2201US0003071-oozic/Photoshow07.mv3/brown-rock.jpg",
+   "scene": "oozic30/LVT6",
+   "selection": "same-stem file from other package/disc (variants possible)"
+  },
+  {
+   "copied_to": "native-player/modern_assets/recovered/oozic30/LVT7/bluesky.jpg",
+   "label": "recovered-original",
+   "missing": "bluesky.bmp",
+   "recovered_from": "research/oozic/assets/recovered-textures/sb-live-platinum-application-cd/LVT7.lvt/bluesky.jpg",
+   "scene": "oozic30/LVT7",
+   "selection": "package name matches scene"
+  }
+ ],
+ "label": "recovered-original",
+ "still_unrecovered": {
+  "lava25/LVT1": [
+   "earth.jpg",
+   "moon.jpg",
+   "sun2.bmp"
+  ],
+  "lava25/LVT2": [
+   "rainbowflowers.bmp",
+   "rainbowflowerwater.bmp",
+   "waterflowers.bmp"
+  ],
+  "lava25/LVT4": [
+   "Point-Six-Four-1.jpg",
+   "Send-You-The-Bill-1.jpg",
+   "Time-For-Lunch-3.jpg"
+  ],
+  "lava25/LVT6": [
+   "alaneye.jpg",
+   "eye-rock.bmp"
+  ],
+  "lava25/LVT7": [
+   "tririver.bmp"
+  ],
+  "lava25/LVT8": [
+   "background.bmp",
+   "core.bmp",
+   "creativelogo.bmp",
+   "flame.bmp",
+   "glass.bmp"
+  ],
+  "oozic30/LVT1": [
+   "earth.jpg",
+   "moon.jpg",
+   "sun2.bmp"
+  ],
+  "oozic30/LVT2": [
+   "rainbowflowers.bmp",
+   "rainbowflowerwater.bmp",
+   "waterflowers.bmp"
+  ],
+  "oozic30/LVT4": [
+   "Point-Six-Four-1.jpg",
+   "Send-You-The-Bill-1.jpg",
+   "Time-For-Lunch-3.jpg"
+  ],
+  "oozic30/LVT6": [
+   "alaneye.jpg",
+   "eye-rock.bmp"
+  ],
+  "oozic30/LVT7": [
+   "tririver.bmp"
+  ],
+  "oozic30/LVT8": [
+   "background.bmp",
+   "core.bmp",
+   "creativelogo.bmp",
+   "flame.bmp",
+   "glass.bmp"
+  ]
+ }
+}

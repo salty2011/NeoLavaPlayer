@@ -1,0 +1,77 @@
+{
+	"name": "template: space / abstract",
+	"notes": "Floating subjects against a textured backdrop sphere (nebulae, starfields, ooze). The backdrop is self-lit (unlit + emission, so it keeps the Classic image but goes through HDR, glow and the grade), the subjects are lit by the original light 0 as a soft shadowed key with a cool fill and a camera-relative rim, volumetric haze catches the key, bloom on HDR highlights. Profiles override the palette (ambient, fog, rim, fill) and the object roles.",
+	"version": 1,
+	"environment": {
+		"background": [0.0, 0.0, 0.0],
+		"ambient_color": [0.45, 0.42, 0.8],
+		"ambient_energy": 0.45,
+		"tonemap": "filmic",
+		"exposure": 1.0,
+		"white": 6.0,
+		"adjust_brightness": 1.0,
+		"adjust_contrast": 1.05,
+		"adjust_saturation": 1.1,
+		"glow_intensity": 0.35,
+		"glow_strength": 0.95,
+		"glow_bloom": 0.0,
+		"glow_hdr_threshold": 1.5,
+		"glow_levels": [0.0, 0.4, 0.8, 1.0, 0.6, 0.3, 0.0],
+		"fog_color": [0.35, 0.28, 0.7],
+		"fog_density": 0.006,
+		"fog_sky_affect": 0.0,
+		"volumetric_fog_density": 0.008,
+		"volumetric_fog_albedo": [0.6, 0.5, 1.0],
+		"volumetric_fog_emission": [0.02, 0.01, 0.06],
+		"volumetric_fog_anisotropy": 0.45,
+		"volumetric_fog_length": 48.0,
+		"ssao_radius": 0.6,
+		"ssao_intensity": 1.5,
+		"ssil_intensity": 0.8,
+		"ssr_max_steps": 64,
+		"sdfgi_cascades": 4,
+		"sdfgi_min_cell": 0.15,
+		"sdfgi_energy": 0.8
+	},
+	"lights": {
+		"key": {"from_scene_light": 0, "energy": 1.4, "range": 60.0, "attenuation": 0.0, "size": 0.35, "shadow": true, "volumetric": 0.4, "specular": 0.5},
+		"fill": {"color": [0.5, 0.6, 1.0], "energy": 0.35, "direction": [-0.6, -0.35, 0.7]},
+		"rim": {"color": [1.0, 0.45, 0.9], "energy": 0.6, "camera_relative": [0.0, 0.25, -1.0]}
+	},
+	"materials": {
+		"default": {
+			"roughness_scale": 0.8,
+			"roughness_bias": 0.0,
+			"normal_strength": 1.0,
+			"specular": 0.5,
+			"clearcoat": 0.0,
+			"albedo_gain": 1.0,
+			"saturation": 1.05,
+			"emission_base": 0.0,
+			"emission_music": 0.0,
+			"rim_strength": 0.0,
+			"shadows": true,
+			"clearcoat_gloss": 0.6
+		},
+		"objects": {
+			"Background": {"unlit": true, "albedo_gain": 1.25, "saturation": 1.12, "emission_base": 0.12, "emission_music": 0.2, "shadows": false, "gi_static": true, "drift": [0.003, 0.001]},
+			"BackGround": {"unlit": true, "albedo_gain": 1.25, "saturation": 1.12, "emission_base": 0.12, "emission_music": 0.2, "shadows": false, "gi_static": true, "drift": [0.003, 0.001]}
+		}
+	},
+	"reactions": {
+		"key_energy_swell": 0.5,
+		"key_energy_pulse": 0.3,
+		"rim_swell": 0.6,
+		"fog_calm": 0.3,
+		"fog_anticipation": 0.6,
+		"emission_pulse": 1.0,
+		"emission_accent": 0.5,
+		"glow_impact": 0.6,
+		"exposure_impact": 0.1,
+		"background_drift_swell": 3.0
+	},
+	"effects": {
+		"dof": {"far_distance": 16.0, "far_transition": 12.0, "amount": 0.05},
+		"post": {"chromatic": 0.003, "motion_blur": 0.012}
+	}
+}

@@ -1,0 +1,15 @@
+DefType	DefTexTranslate
+MaxInstance	3
+NumPresets	1
+###############################################################################
+Preset	0
+DecayMin	1.500000
+DecayMax	1.500000
+VXMin	0.000000
+VXMax	0.200000
+VYMin	0.000000
+VYMax	0.000000
+VXDir	0.000000
+VYDir	1.000000
+VXDirMultiply	1.000000
+VYDirMultiply	1.000000

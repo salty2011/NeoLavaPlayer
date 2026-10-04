@@ -1,0 +1,98 @@
+Version	3
+NumMacros	5
+
+Macro	0
+MacroName	lens1
+0:0:0.0 LFX : DisableAll
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableGlobalLens Feedback 12
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+
+Macro	1
+MacroName	lens2
+0:0:0.0 LFX : DisableAll
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableGlobalLens Feedback 7
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+
+Macro	2
+MacroName	lens3
+0:0:0.0 LFX : DisableAll
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableGlobalLens Feedback 8
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+
+Macro	3
+MacroName	lens4
+0:0:0.0 LFX : DisableAll
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableGlobalLens Feedback 10
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+
+Macro	4
+MacroName	lens5
+0:0:0.0 LFX : DisableAll
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableLens Sprite0 Explode0
+0:0:0.0 LFX : EnableGlobalLens Feedback 9
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+0:0:0.0 LFX : EnableLens Sprite1 Explode0
+

@@ -1,0 +1,261 @@
+2
+25.000000
+0.720000
+1.000000
+2
+33
+6
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Gus Gus                                    Polyesterday
+0.600000
+700
+1
+255 255 255 255
+0.100000
+Arial
+
+Background
+1
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 3.000000 1.000000
+1.000000
+Gus128.jpg
+255 255 255 255
+255 255 255 255
+38
+2
+background.lvo
+2
+0
+2
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defrotate.lvd
+rotate
+0
+Shell1
+1
+0
+0.000000 0.000000 0.000000
+45.000000 0.000000 0.000000
+1.000000 3.000000 1.000000
+1.000000
+gusolo2.jpg
+255 255 255 255
+255 255 255 255
+38
+3
+shell1.lvo
+2
+0
+2
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defrotate.lvd
+rotate
+0
+2
+0
+2
+1
+defalpha.lvd
+alpha
+1
+Shell2
+1
+0
+0.000000 0.000000 0.000000
+90.000000 0.000000 0.000000
+1.000000 3.000000 1.000000
+1.000000
+gusolo128.jpg
+255 255 255 255
+255 255 255 255
+38
+3
+shell2.lvo
+2
+0
+2
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defrotate.lvd
+rotate
+0
+2
+0
+2
+1
+defalpha.lvd
+alpha
+0
+Ray1
+1
+0
+0.000000 0.000000 0.000000
+90.000000 0.000000 -45.000000
+6.000000 6.000000 6.000000
+1.000000
+bios32.jpg
+111 111 111 255
+255 255 255 255
+38
+3
+rays.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+1
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+2
+0
+2
+1
+defpools.lvd
+pools
+0
+Mirror
+4
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+gusphoto.jpg
+255 255 128 255
+255 255 255 255
+38
+2
+sheet.lvo
+sphere.lvo
+torus.lvo
+cylinder.lvo
+0
+0
+0
+1
+defsuperbump.lvd
+superbump
+0
+2
+0
+2
+1
+defmorph.lvd
+morph
+0
+Ray2
+1
+0
+0.000000 0.000000 0.000000
+90.000000 0.000000 45.000000
+6.000000 6.000000 6.000000
+1.000000
+bios32.jpg
+255 255 128 255
+255 255 255 255
+38
+3
+rays.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+1
+2
+0
+2
+1
+defelastic.lvd
+elastic
+0
+2
+0
+2
+1
+defpools.lvd
+pools
+0
+Culling Background	Back
+Culling Mirror	None
+SceneDetail ReadOnly Set	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 1.000000 1.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 2.000000 0.000000 1.000000
+Camera Radius Set	10.000000
+Camera RadiusMin Set	3.000000
+Camera RadiusMax Set	13.000000
+Camera RadiusMaxD Set	1.500000
+Camera Theta Set	0.000000
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	30.000000
+Camera Phi Set	90.000000
+Camera PhiMin Set	45.000000
+Camera PhiMax Set	135.000000
+Camera PhiMaxD Set	30.000000
+Camera Direction0 Set	-0.339281
+Camera Direction1 Set	-0.662193
+Camera Direction2 Set	-0.668123
+Camera MaxMove Set	10.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	0.100000
+Camera FarClip Set	500.000000
+EffectPresetCategoryInfo Distortion 7 3
+EffectPreset distortion1.lvm distortion1
+EffectPreset distortion2.lvm distortion2
+EffectPreset distortion3.lvm distortion3
+EffectPreset distortion4.lvm distortion4
+EffectPreset distortion5.lvm distortion5
+EffectPreset distortion6.lvm distortion6
+EffectPreset distortion7.lvm distortion7
+EffectPresetCategoryInfo Ripple 2 1
+EffectPreset OFFripple.lvm OFFripple
+EffectPreset ONripple.lvm ONripple

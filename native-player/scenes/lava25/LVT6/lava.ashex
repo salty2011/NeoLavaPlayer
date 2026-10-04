@@ -1,0 +1,200 @@
+2
+25.000000
+0.500000
+1.000000
+2
+33
+6
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Ancient Egypt
+0.800000
+700
+1
+255 101 0 255
+0.100000
+Arial
+
+PyramidTop
+1
+0
+0.000000 22.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+brown-rock.bmp
+206 103 0 255
+255 255 255 255
+38
+1
+pyramidtop.lvo
+1
+0
+1
+1
+defrotate.lvd
+rotate
+1
+TopSlab
+1
+0
+0.000000 2.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+brown-rock.bmp
+206 103 0 255
+255 255 255 255
+38
+0
+cube.lvo
+Mirror
+4
+0
+0.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 2.000000 1.000000
+1.000000
+alaneye.jpg
+255 255 128 255
+255 255 0 255
+38
+2
+sheet.lvo
+sphere.lvo
+torus.lvo
+cylinder.lvo
+0
+0
+0
+1
+defsuperbump.lvd
+superbump
+0
+0
+0
+0
+1
+defswitch.lvd
+switch
+0
+BottomSlab
+1
+0
+0.000000 -2.250000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+brown-rock.bmp
+206 103 0 255
+255 255 255 255
+38
+0
+cube.lvo
+PyramidBottom
+1
+0
+0.000000 -22.000000 0.000000
+0.000000 0.000000 0.000000
+1.000000 1.000000 1.000000
+1.000000
+brown-rock.bmp
+206 103 0 255
+255 255 255 255
+38
+1
+pyramidbot.lvo
+2
+0
+2
+1
+defrotate.lvd
+rotate
+2
+Background
+1
+0
+0.000000 0.000000 0.000000
+45.000000 0.000000 0.000000
+1.000000 2.000000 1.000000
+1.000000
+eye-rock.bmp
+255 210 90 255
+255 255 255 255
+38
+2
+background.lvo
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+defrotate.lvd
+rotate
+0
+SceneDetail ReadOnly Set	0
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Culling PyramidTop	Back
+Culling TopSlab	Front
+Culling Mirror	None
+Culling BottomSlab	Front
+Culling PyramidBottom	Back
+Culling Background	Back
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 0.000000 5.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	10.463312
+Camera RadiusMin Set	3.000000
+Camera RadiusMax Set	12.000000
+Camera RadiusMaxD Set	2.500000
+Camera Theta Set	110.001587
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	54.384529
+Camera PhiMin Set	45.000000
+Camera PhiMax Set	135.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	-0.339281
+Camera Direction1 Set	-0.662193
+Camera Direction2 Set	-0.668123
+Camera MaxMove Set	5.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	1.000000
+Camera FarClip Set	200.000000
+EffectPresetCategoryInfo Distortion 7 0
+EffectPreset distortion1.lvm distortion1
+EffectPreset distortion2.lvm distortion2
+EffectPreset distortion3.lvm distortion3
+EffectPreset distortion4.lvm distortion4
+EffectPreset distortion5.lvm distortion5
+EffectPreset distortion6.lvm distortion6
+EffectPreset distortion7.lvm distortion7
+EffectPresetCategoryInfo Ripple 2 0
+EffectPreset OFFripple.lvm OFFripple
+EffectPreset ONripple.lvm ONripple
+EffectPresetCategoryInfo Morph 4 0
+EffectPreset morph1.lvm sheet
+EffectPreset morph2.lvm sphere
+EffectPreset morph3.lvm torus
+EffectPreset morph4.lvm cylinder

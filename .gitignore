@@ -1,0 +1,8 @@
+.DS_Store
+# Godot editor/import cache (regenerated on import)
+.godot/
+native-player/.godot/
+# Build output
+/builds/
+/dist/
+*.tmp

@@ -1,0 +1,330 @@
+2
+25.000000
+0.680000
+1.000000
+2
+33
+5
+1.000000.3,2.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3,0.000000.3
+3
+0.000000
+300.000000
+1000.000000
+2000.000000
+4000.000000
+6000.000000
+1
+Aqua Boogie
+0.600000
+700
+1
+51 101 255 255
+0.200000
+Arial
+
+stingray1
+4
+0
+0.000000 -7.600000 0.000000
+0.000000 0.000000 0.000000
+2.880000 2.880000 2.880000
+1.000000
+pitchinfo1.jpg
+204 255 255 255
+255 255 255 255
+38
+6
+stingrayc.lvo
+stingraya.lvo
+stingrayb.lvo
+stingraya.lvo
+2
+0
+2
+1
+defmorph.lvd
+morph
+0
+1
+0
+1
+1
+deforbit.lvd
+orbit
+1
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+1
+2
+0
+2
+1
+deftexcos.lvd
+texcos
+0
+0
+0
+0
+1
+defelastic.lvd
+elastic
+0
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+stingray2
+4
+0
+-5.040000 -7.200000 7.200000
+10.000000 0.000000 -20.000000
+1.800000 1.800000 1.800000
+1.000000
+pitchinfo1.jpg
+196 255 255 255
+255 255 255 255
+38
+6
+stingraya.lvo
+stingrayc.lvo
+stingraya.lvo
+stingrayb.lvo
+2
+0
+2
+1
+defmorph.lvd
+morph
+1
+2
+0
+2
+1
+deforbit.lvd
+orbit
+0
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+1
+2
+0
+2
+1
+deftexcos.lvd
+texcos2
+0
+0
+0
+0
+1
+defelastic.lvd
+elastic
+1
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+stingray3
+4
+0
+1.440000 -1.080000 -0.720000
+0.000000 0.000000 0.000000
+2.880000 2.880000 2.880000
+1.000000
+teknik2.jpg
+255 255 185 255
+255 255 255 255
+38
+5
+stingrayc.lvo
+stingrayb.lvo
+stingrayc.lvo
+stingrayb.lvo
+2
+0
+2
+1
+defmorph.lvd
+morph
+2
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+1
+2
+0
+2
+1
+deftexcos.lvd
+texcos
+0
+0
+0
+0
+1
+defelastic.lvd
+elastic
+2
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+stingray4
+4
+0
+-3.080000 1.800000 -1.720000
+0.000000 0.000000 0.000000
+2.160000 2.160000 2.160000
+1.000000
+pitchinfo1.jpg
+183 255 255 255
+255 255 255 255
+38
+6
+stingraya.lvo
+stingrayb.lvo
+stingrayc.lvo
+stingrayb.lvo
+2
+0
+2
+1
+defmorph.lvd
+morph
+3
+1
+0
+1
+1
+deforbit.lvd
+orbit
+0
+1
+0
+1
+1
+deftexscroll.lvd
+texscroll
+1
+2
+0
+2
+1
+deftexcos.lvd
+texcos3
+0
+0
+0
+0
+1
+defelastic.lvd
+elastic
+3
+0
+0
+0
+1
+defpools.lvd
+pools
+0
+Background
+1
+0
+30.000000 0.000000 0.000000
+0.000000 0.000000 0.000000
+20.000000 20.000000 50.000000
+1.000000
+SpaceBall1.jpg
+128 255 255 255
+255 255 255 255
+38
+4
+background.lvo
+0
+0
+0
+1
+deftexscroll.lvd
+texscroll
+0
+0
+0
+0
+1
+deftextranslate.lvd
+textranslate
+0
+2
+0
+2
+1
+deftexwave.lvd
+texwave3
+0
+0
+0
+0
+1
+defpools.lvd
+pools
+1
+Culling stingray1	None
+Culling stingray2	None
+Culling stingray3	None
+Culling stingray4	None
+Culling Background	Back
+SceneDetail ReadOnly Set	0
+TextDeform Parent Background
+TextDeform	Num	1
+TextDeform Load	DefMsgRot.lvd	0
+Lighting 0  Diffuse	1.000000 1.000000 1.000000 1.000000
+Lighting 0  Position	0.000000 2.000000 0.000000 1.000000
+Lighting 0  Spot	0
+Lighting 0  SpotCutOff	0.000000
+Lighting 0  Direction	0.000000 0.000000 2.000000 1.000000
+Camera Radius Set	12.037119
+Camera RadiusMin Set	1.800000
+Camera RadiusMax Set	25.200001
+Camera RadiusMaxD Set	2.160000
+Camera Theta Set	264.264954
+Camera ThetaMin Set	0.000000
+Camera ThetaMax Set	360.000000
+Camera ThetaMaxD Set	40.000000
+Camera Phi Set	43.411724
+Camera PhiMin Set	1.000000
+Camera PhiMax Set	145.000000
+Camera PhiMaxD Set	40.000000
+Camera Direction0 Set	-0.309918
+Camera Direction1 Set	0.481952
+Camera Direction2 Set	-0.819557
+Camera MaxMove Set	10.000000
+Camera Lock Set	0.000000
+Camera LockPosition0 Set	7.500000
+Camera LockPosition1 Set	10.606602
+Camera LockPosition2 Set	-7.500000
+Camera FOV Set	45.000000
+Camera NearClip Set	0.100000
+Camera FarClip Set	300.000000
+EffectPresetCategoryInfo Darting 2 1
+EffectPreset nodarting.lvm nodarting
+EffectPreset darting.lvm darting
