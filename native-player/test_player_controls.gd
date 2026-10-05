@@ -152,10 +152,15 @@ func run():
 	audio.persist = false
 	DirAccess.remove_absolute(saved)
 	DirAccess.remove_absolute(audio.settings_path)
-	# Playlist panel: Ctrl+L from the visualiser opens it; the window grows.
+	# Playlist panel: Ctrl+L from the visualiser opens its window (docked under main).
 	var closed_height: int = controller.size.y
 	app.visualiser._input(key(KEY_L, true))
-	assert(controller.playlist_open and bus.drawer_open and controller.size.y > closed_height and playlist.visible)
+	assert(controller.playlist_open and bus.drawer_open and controller.size.y == closed_height and controller.playlist_window.visible)
+	# Keys from the playlist window reach the same controller (F3 below from main).
+	controller.playlist_window._input(key(KEY_M, true))
+	assert(bus.muted)
+	controller.playlist_window._input(key(KEY_M, true))
+	assert(not bus.muted)
 	# Debug keys from the control window: F3 overlay, F4 session-only cap cycle.
 	controller._input(key(KEY_F3))
 	assert(app.visualiser.overlay.visible)

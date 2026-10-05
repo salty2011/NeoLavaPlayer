@@ -34,6 +34,7 @@ func run():
 		[KEY_F3, false, false]: &"toggle_debug_overlay", [KEY_F3, false, true]: &"", [KEY_F4, false, false]: &"cycle_fps_cap",
 		[KEY_LEFT, false, false]: &"seek_relative", [KEY_UP, false, false]: &"volume_step", [KEY_PAGEDOWN, false, false]: &"next_scene",
 		[KEY_T, false, false]: &"", [KEY_W, false, false]: &"",
+		[KEY_L, true, true]: &"toggle_library", [KEY_V, true, true]: &"toggle_visualiser", [KEY_R, true, true]: &"reset_layout", [KEY_X, true, true]: &"",
 	}
 	for combo in expected:
 		var result := Hotkeys.action_for(key(combo[0], combo[1], combo[2]))

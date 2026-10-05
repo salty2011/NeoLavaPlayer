@@ -16,6 +16,7 @@ const ReactivityServiceScript = preload("res://analysis/reactivity_service.gd")
 const ModernLayer = preload("res://modern/modern_layer.gd")
 const ModernProfiles = preload("res://modern/modern_profiles.gd")
 const SceneTransition = preload("res://scene_transition.gd")
+const VisualiserFrame = preload("res://player/visualiser_frame.gd")
 ## Style bits shown as Effects toggles (0x100/0x200 have no engine consumer).
 const EFFECT_FLAGS := [StyleFlags.TEXTURE, StyleFlags.WIREFRAME, StyleFlags.STROBE, StyleFlags.COLORED_LIGHTING, StyleFlags.DYNAMIC_COLORING, StyleFlags.PAUSE_CAMERA, StyleFlags.FLAT_SHADING, StyleFlags.LIGHTS]
 
@@ -28,7 +29,25 @@ var mock_feed
 ## Section schedule for the mock feed (--mock-sections=quiet:8,build:8,...).
 var mock_schedule: Array = SyntheticSource.SCHEDULE
 var overlay
+var overlay_layer: CanvasLayer
+var hint_layer: CanvasLayer
 var hint_button: Button
+## Docked-panel mode (set_framed): borderless window with the themed frame.
+var framed := false
+var frame: CanvasLayer
+## macOS ignores (and gets confused by) leaving fullscreen while it is still
+## animating into it: a request that early waits until this time (ms).
+const FULLSCREEN_SETTLE_MS := 1500
+var _fullscreen_since := -100000
+var _leave_fullscreen_at := 0
+## Back from fullscreen the window keeps the title bar macOS gave it. Going
+## borderless again mid-animation breaks its frame, so the frame waits until
+## the window rect has been still for a moment (framed mode only).
+var _was_fullscreen := false
+var _border_pending := false
+var _border_since := 0
+var _border_rect := Rect2i()
+var _border_still_since := 0
 var hint_remaining := 0.0
 var details: AcceptDialog
 var inspection := false
@@ -85,6 +104,7 @@ func _build_ui():
 	var layer := CanvasLayer.new()
 	layer.layer = 90
 	add_child(layer)
+	hint_layer = layer
 	hint_button = Button.new()
 	hint_button.text = "Show controls · Tab"
 	hint_button.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
@@ -94,7 +114,7 @@ func _build_ui():
 	hint_button.focus_mode = Control.FOCUS_NONE
 	hint_button.pressed.connect(func(): bus.command(&"show_controller"))
 	layer.add_child(hint_button)
-	var overlay_layer := CanvasLayer.new()
+	overlay_layer = CanvasLayer.new()
 	overlay_layer.layer = 100
 	add_child(overlay_layer)
 	overlay = DebugOverlay.new()
@@ -405,6 +425,53 @@ func show_details():
 
 # --- Window -------------------------------------------------------------
 
+## Docked-panel mode (main.gd turns it on when the player is there): the
+## window is borderless and wears the themed frame (player/visualiser_frame.gd)
+## while windowed; fullscreen stays frameless. The 2D canvas expands to the
+## whole window (instead of letterboxing to 1200x760) so the frame reaches
+## the window edges; the 3D view renders the whole window under it.
+func set_framed(on: bool) -> void:
+	framed = on
+	if on and frame == null:
+		frame = VisualiserFrame.new()
+		add_child(frame)
+	_update_frame()
+
+func _restore_border() -> void:
+	var w := get_window()
+	var full := is_fullscreen()
+	var now := Time.get_ticks_msec()
+	if _was_fullscreen and not full:
+		_border_pending = true
+		_border_since = now
+	_was_fullscreen = full
+	if not _border_pending or full or w.mode != Window.MODE_WINDOWED: return
+	if w.borderless:
+		_border_pending = false
+		return
+	var rect := Rect2i(w.position, w.size)
+	if rect != _border_rect:
+		_border_rect = rect
+		_border_still_since = now
+	if (now - _border_since > 600 and now - _border_still_since > 300) or now - _border_since > 6000:
+		_border_pending = false
+		w.borderless = true
+
+func _update_frame() -> void:
+	var w := get_window()
+	var full := is_fullscreen()
+	var show := framed and not full
+	if frame != null: frame.visible = show
+	var aspect := Window.CONTENT_SCALE_ASPECT_EXPAND if show else Window.CONTENT_SCALE_ASPECT_KEEP
+	if w.content_scale_aspect != aspect: w.content_scale_aspect = aspect
+	# (macOS gives the window a title bar for fullscreen; Godot makes it
+	# borderless again once the exit animation has finished. Changing the
+	# style here, mid-animation, leaves macOS with a broken frame.)
+	if frame != null: frame.rescale()
+	var inset: Vector2 = frame.inner_offset() if frame != null else Vector2.ZERO
+	if overlay_layer != null: overlay_layer.offset = inset
+	if hint_layer != null: hint_layer.offset = Vector2(-inset.x, inset.y)
+
 func is_fullscreen() -> bool:
 	var mode := get_window().mode
 	return mode == Window.MODE_FULLSCREEN or mode == Window.MODE_EXCLUSIVE_FULLSCREEN
@@ -416,11 +483,20 @@ func set_fullscreen(on: bool):
 	var w := get_window()
 	if DisplayServer.get_name() == "headless": return
 	if on:
+		_leave_fullscreen_at = 0
+		if is_fullscreen(): return
 		if w.mode == Window.MODE_MINIMIZED: w.mode = Window.MODE_WINDOWED
 		var screen := DisplayServer.window_get_current_screen(w.get_window_id())
 		w.current_screen = screen
 		w.mode = Window.MODE_FULLSCREEN
-	elif is_fullscreen(): w.mode = Window.MODE_WINDOWED
+		_fullscreen_since = Time.get_ticks_msec()
+	elif is_fullscreen():
+		var settled := _fullscreen_since + FULLSCREEN_SETTLE_MS
+		if Time.get_ticks_msec() < settled:
+			_leave_fullscreen_at = settled
+			return
+		w.mode = Window.MODE_WINDOWED
+	_update_frame()
 	_publish_windows()
 
 func _publish_windows():
@@ -436,6 +512,7 @@ func _input(event):
 		if details.visible: return
 		if bus.handle_key(event, "visualiser"): get_viewport().set_input_as_handled()
 	elif event is InputEventMouseButton and event.pressed and event.double_click and event.button_index == MOUSE_BUTTON_LEFT:
+		if frame != null and frame.owns_point(event.position): return
 		toggle_fullscreen()
 		get_viewport().set_input_as_handled()
 	elif event is InputEventMouseMotion and bus.controller_present and not bus.controller_visible:
@@ -443,6 +520,12 @@ func _input(event):
 		hint_button.visible = true
 
 func _process(delta):
+	# Fullscreen ends asynchronously on macOS: frame back once windowed.
+	if framed and frame != null and frame.visible == is_fullscreen(): _update_frame()
+	if _leave_fullscreen_at > 0 and Time.get_ticks_msec() >= _leave_fullscreen_at:
+		_leave_fullscreen_at = 0
+		set_fullscreen(false)
+	if framed: _restore_border()
 	if hint_button.visible:
 		hint_remaining = maxf(0.0, hint_remaining - delta)
 		if hint_remaining == 0.0 and not hint_button.is_hovered(): hint_button.visible = false

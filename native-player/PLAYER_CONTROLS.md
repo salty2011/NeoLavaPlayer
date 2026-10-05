@@ -1,11 +1,17 @@
 # Player controls
 
-The app opens two windows:
+The app is a set of Winamp-style panels, each its own borderless window drawn in the same theme (entirely in code, no bitmap skins, so sharp at any size):
 
-- **The visualiser.** This is the main window and shows only the scene.
-- **The player.** A separate, borderless window in a Winamp-like layout: the main panel on top, a resizable playlist panel attached below it and, when open, the music library browser attached to their right. It is drawn entirely in code (no bitmap skins), so it is sharp at any size.
+- **Main** (the player): LCD, seek bar, transport, toggles.
+- **Playlist** (PL), docked under Main by default.
+- **Music library** (LIB), docked to the right of Main when opened.
+- **Visualiser** (VIS): the 3D scene in a themed frame (title strip, minimise, fullscreen, close; a bottom bar with the scene name and ‹ › to change scene). By default it sits beside Main and the playlist, as tall as both.
 
-Move the player by dragging its title strip or any empty part of its body. Each window can be moved, minimised and placed on any screen on its own. Architecture and window policy are described in docs/WINDOWS_AND_BUS.md.
+**Moving and docking.** Drag a panel by its title strip (or any empty part of its body; the visualiser by its title strip or bottom bar). While you drag, its edges snap to other panels' edges (side by side or aligned) and to the screen edges within about 10 points. Panels touching Main form a group: dragging Main moves every panel docked to it, directly or through another panel. Dragging any other panel moves only that panel, which detaches it; drop it against a panel's edge and it docks there. Opening the library pushes the panels docked beyond its place (the visualiser) out of the way; closing it lets them slide back.
+
+**Resizing.** The playlist, the library and the visualiser resize from their right edge, bottom edge and corner grip; panels docked against the edge that moves are pushed along so they stay flush. Main has a fixed size per player size.
+
+**Reset window layout** (≡ menu, Ctrl+Shift+R) puts every panel back in the default arrangement and sizes. Architecture and window policy are described in docs/WINDOWS_AND_BUS.md.
 
 ## Player window
 
@@ -37,9 +43,9 @@ Move the player by dragging its title strip or any empty part of its body. Each 
 - Double-click or Enter plays a track. Drag a track to reorder it (an orange line shows where it lands), or use Alt+↑/↓. Delete or Backspace removes it.
 - **Search field**: shows only tracks whose title or path contains every word typed. Esc clears it. Keys typed here never reach the player or the scene.
 - Bottom bar: **ADD** files (FLAC, MP3 or .m3u), **DIR** a folder with its sub-folders, **REM** the selected track, **LOAD** / **SAVE** an .m3u playlist. The track count and total time sit above it ("+" means some lengths are not known yet).
-- Drag the bottom edge or the corner grip to resize the panel.
+- Drag the right edge, the bottom edge or the corner grip to resize the panel (at least as wide as Main). × on its title strip closes it (as PL does).
 
-**Music library panel** (LIB). Your Music app library (Apple Music and local files), attached to the right of the player; the window widens. docs/APPLE_MUSIC.md explains how the library is read.
+**Music library panel** (LIB). Your Music app library (Apple Music and local files), in its own panel, docked to the right of Main when it opens. docs/APPLE_MUSIC.md explains how the library is read.
 
 - **Left:** Songs, Artists, Albums and Playlists with their counts; a state box (CACHED / REFRESHING / READY / ERROR with the last library message, and what to allow in System Settings when access was refused); **REFRESH** reads the library again.
 - **Right:** a search field, a breadcrumb, sortable column headers and the list. Artists, Albums and Playlists list their groups first; double-click, Enter or → opens one (an album in disc and track order), and ‹, ← or Backspace goes back. Songs lists every track.
@@ -49,7 +55,7 @@ Move the player by dragging its title strip or any empty part of its body. Each 
 - **Selecting:** click; Cmd/Ctrl-click adds or removes a row; Shift-click or Shift+↑/↓ selects a range; Cmd/Ctrl+A selects all; Esc clears.
 - **Acting:** double-click a track, or press Enter, to add it (or the selection) to the end of the playlist and play it. **PLAY** replaces the playlist with the selection and plays; **ADD** appends it. With albums, artists or playlists selected these act on all their tracks. Inside an album, artist or playlist, **PLAY ALL** / **ADD ALL** act on the whole group. Right-click a row for the same actions plus "Play album", "Add album", "Play artist", "Add artist", "Show album" and "Show artist".
 - **First run:** before the library has been read the panel offers **LOAD MUSIC LIBRARY**. That is when macOS asks for access to Media & Apple Music. If access is refused, the state box says what to allow and the button becomes **TRY AGAIN**.
-- Drag the corner grip, right edge or bottom edge to resize it. The library is at least as tall as the player column; when the playlist is closed, the space under the main panel is plain body. The open state, size and current view (source, album/artist/playlist, sort) are restored at the next start. × on the library closes only the library.
+- Drag the corner grip, right edge or bottom edge to resize it. The open state, size and current view (source, album/artist/playlist, sort) are restored at the next start. × on the library closes only the library.
 
 **Size.** The player renders at the screen's own scale (2 on Retina) times the player size chosen in Settings → Display or the ≡ menu: 1x, 1.5x, 2x (default) or 3x. At 2x the player is 550 points wide. It re-scales at once when the size changes or the window moves to a screen with another scale.
 
@@ -71,9 +77,9 @@ You can also drop files, folders or .m3u playlists on either window.
 - **Persistence.**
   - The playlist (`user://playlist.json`) is saved on every change and restored at the next start without autoplay.
   - Volume, mute, shuffle, repeat and the player size (`ui_size`) are kept in `user://settings.cfg [player]`.
-  - The player position and screen, whether the playlist panel is open, its height, the time mode and the spectrum mode are kept in `[windows]`.
+  - Every panel's position, which panel is docked to which, the playlist and library open state and size, the visualiser's size, the time mode and the spectrum mode are kept in `[windows]` (`dock`), and come back clamped to the screens connected now. A layout saved by the older single-window player is converted on first start.
 
-## Keys (in either window)
+## Keys (in any window)
 
 | Key | Action |
 |---|---|
@@ -88,13 +94,15 @@ You can also drop files, folders or .m3u playlists on either window.
 | Ctrl+R | Shuffle |
 | Ctrl+L | Playlist panel |
 | Ctrl+Shift+L | Music library panel |
+| Ctrl+Shift+V | Show or hide the visualiser |
+| Ctrl+Shift+R | Reset the window layout |
 | Ctrl+A / Shift+A | Add files / add folder |
 | Ctrl+D | Remove the selected track |
 | Ctrl+T | Settings |
-| Ctrl+I | Minimise the window the key was pressed in |
+| Ctrl+I | Minimise the player (with its playlist and library) or the visualiser, whichever the key was pressed in |
 | Ctrl+Q | Quit |
-| Tab | Show or hide the player window |
-| F11, Ctrl+F, double-click the visualiser | Toggle visualiser fullscreen, on its current screen |
+| Tab | Show or hide the player's windows |
+| F11, Ctrl+F, double-click the visualiser, its frame's ⛶ button | Toggle visualiser fullscreen, on its current screen (without the frame; back to its docked place after) |
 | Esc | Leave fullscreen. In `--scene-only`, quit |
 | Page Up / Page Down | Previous / next scene (alphabetical by title) |
 | F3 | Debug overlay |
@@ -158,10 +166,11 @@ Headless (`Godot --headless --audio-driver Dummy --path native-player --script r
 - `test_library_browser.gd` (the library browser on a synthetic library: views, search, sorting, selection, the commands of every action, states, 20k-track speed, Settings scale)
 - `test_player_controls.gd`
 - `test_windows_bus.gd`
+- `test_docking.gd` (snapping, groups, detach/re-dock, resize pushing neighbours, layout save/restore/migration/reset, with the split windows)
 - `test_playback_queue.gd`
 - `test_frame_rate_independence.gd`
 - the other `test_*.gd` files
 
-Windowed: `test_windows_live.gd` and `test_legacy_lighting.gd`. Proof captures of the player in several states: `Godot --audio-driver Dummy --path native-player --script res://tools/capture_player.gd -- <out_dir> size=2`. With the library open, on the synthetic library: `tools/capture_library.gd -- <out_dir> size=2` (proofs in `research/oozic/proof/ui-library/`).
+Windowed: `test_windows_live.gd` and `test_legacy_lighting.gd`. Proof captures of the player in several states: `Godot --audio-driver Dummy --path native-player --script res://tools/capture_player.gd -- <out_dir> size=2`. With the library open, on the synthetic library: `tools/capture_library.gd -- <out_dir> size=2` (proofs in `research/oozic/proof/ui-library/`). The docked panels with the visualiser, default and alternative layouts at 1x/2x: `tools/capture_docking.gd -- <out_dir>` (proofs in `research/oozic/proof/ui-docking/`).
 
 The `--smoke-report`, `--scene-sweep-report`, `--reference-report` and `--flac-report` modes still work. They run single-window, except the reference mode, which also captures the player window as `tripletrance-controls.png`.

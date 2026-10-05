@@ -458,6 +458,23 @@ func _build_playlist(tabs: TabContainer):
 		var command: StringName = spec[1]
 		b.pressed.connect(func(): bus.command(command))
 		page.add_child(b)
+	_build_apple_music(page)
+
+## Apple Music options (docs/APPLE_MUSIC.md): the volume link (default off)
+## and the diagnostics log.
+var music_volume_check: CheckBox
+func _build_apple_music(page: Control):
+	_heading(page, "Apple Music")
+	music_volume_check = CheckBox.new()
+	music_volume_check.text = "Oozic volume controls the Music app"
+	music_volume_check.tooltip_text = "Off (default): Oozic's volume and mute only affect files Oozic plays itself; the Music app keeps its own volume. On: Oozic sets Music's volume (mute sets it to 0 until you unmute or quit)."
+	music_volume_check.toggled.connect(func(on): if not _updating: bus.command(&"set_music_volume_link", {"on": on}))
+	page.add_child(music_volume_check)
+	var reveal := Button.new()
+	reveal.text = "Reveal diagnostics log"
+	reveal.tooltip_text = "~/Library/Logs/NeoLavaPlayer/music.log: what Oozic asked Music to do and what it heard back. Send it with a problem report."
+	reveal.pressed.connect(func(): bus.command(&"reveal_diagnostics"))
+	page.add_child(reveal)
 
 func _build_tools(tabs: TabContainer):
 	var page := _page(tabs, "Scene tools")
@@ -513,6 +530,7 @@ func refresh():
 	timing_option.select(1 if settings.timing == "frame" else 0)
 	recon_check.button_pressed = settings.use_reconstructions
 	source_option.select(1 if settings.analysis_source == "mock" else 0)
+	music_volume_check.button_pressed = bool(AppSettings.load_section(settings.path, "player").get("music_volume_link", false))
 	var controller := get_parent()
 	var current_size: float = controller.user_size if controller and "user_size" in controller else AppSettings.load_player_size()
 	size_option.select(maxi(PlayerFormat.USER_SIZES.find(PlayerFormat.nearest_user_size(current_size)), 0))

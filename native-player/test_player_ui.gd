@@ -1,7 +1,8 @@
 extends SceneTree
 ## Player UI (player/): scaling math, titles/filter/total helpers, every
 ## control's bus command, window-level commands and menus, hit areas,
-## playlist reorder/remove/filter/durations, keys and resize.
+## playlist reorder/remove/filter/durations, keys and resize, with the
+## split panel windows (main / playlist / library; docking in test_docking.gd).
 ##   Godot --headless --audio-driver Dummy --path native-player --script res://test_player_ui.gd
 const Main = preload("res://main.gd")
 const Fmt = preload("res://player/player_format.gd")
@@ -69,7 +70,9 @@ func run():
 	var pl = w.playlist_panel
 	assert(w != null and w.borderless and not w.transparent and w.user_size == 2.0)
 	assert(w.screen_scale == 1.0 and w.ui_scale == 2.0 and w.content_scale_factor == 2.0 and w.size == Vector2i(550, 232))
-	assert(not w.playlist_open and not pl.visible)
+	assert(not w.playlist_open and not w.playlist_window.visible)
+	# Split windows: main, playlist and library are separate (embedded when headless) windows.
+	assert(w.playlist_window is Window and w.library_window is Window and pl.get_window() == w.playlist_window and w.library_panel.get_window() == w.library_window and main.get_window() == w)
 	for pair in [[1.0, Vector2i(276, 116)], [3.0, Vector2i(826, 348)], [2.0, Vector2i(550, 232)]]:
 		w.set_user_size(pair[0], false)
 		assert(w.size == pair[1] and is_equal_approx(w.content_scale_factor, pair[0]), "size %s" % pair[0])
@@ -109,7 +112,7 @@ func run():
 		main.buttons[id].click()
 		assert(log.size() == 1 and log[0][0] == expected[id], "button %s sent %s" % [id, log])
 	assert(log.size() == 1 and main.buttons.close.args.is_empty() and main.buttons.minimize.args.source == "controller")
-	var pl_expected := {&"add": &"add_tracks", &"add_dir": &"add_directory", &"remove": &"remove_track", &"load": &"import_m3u_dialog", &"save": &"export_m3u_dialog"}
+	var pl_expected := {&"close": &"toggle_drawer", &"add": &"add_tracks", &"add_dir": &"add_directory", &"remove": &"remove_track", &"load": &"import_m3u_dialog", &"save": &"export_m3u_dialog"}
 	for id in pl_expected:
 		log.clear()
 		pl.buttons[id].click()
@@ -155,7 +158,7 @@ func run():
 	assert(log.size() == 1 and log[0][0] == &"play_index" and log[0][1].index == 1)
 	# Menus: every system-menu entry and the scene menu dispatch bus commands.
 	w.build_system_menu()
-	var menu_expected := {1: &"toggle_visualiser", 2: &"toggle_fullscreen", 3: &"next_scene", 11: &"previous_scene", 10: &"show_scene_menu", 4: &"toggle_drawer", 15: &"toggle_library", 12: &"add_tracks", 13: &"add_directory", 5: &"import_m3u_dialog", 6: &"export_m3u_dialog", 14: &"clear_playlist", 7: &"open_settings", 8: &"minimize", 9: &"quit_app", 100: &"set_player_size", 103: &"set_player_size"}
+	var menu_expected := {1: &"toggle_visualiser", 2: &"toggle_fullscreen", 3: &"next_scene", 11: &"previous_scene", 10: &"show_scene_menu", 4: &"toggle_drawer", 15: &"toggle_library", 16: &"reset_layout", 12: &"add_tracks", 13: &"add_directory", 5: &"import_m3u_dialog", 6: &"export_m3u_dialog", 14: &"clear_playlist", 7: &"open_settings", 8: &"minimize", 9: &"quit_app", 100: &"set_player_size", 103: &"set_player_size"}
 	for id in menu_expected:
 		assert(w.system_menu.get_item_index(id) >= 0, "menu item %d" % id)
 		log.clear()
@@ -181,8 +184,10 @@ func run():
 	# --- Window-level commands with the real handlers ---
 	var closed_height: int = w.size.y
 	bus.command(&"toggle_drawer")
-	assert(w.playlist_open and pl.visible and bus.drawer_open and w.size.y > closed_height and main.buttons.playlist.active)
-	assert(w.size == Fmt.window_pixels(Vector2(275, 116 + w.playlist_height), w.ui_scale))
+	var pw: Window = w.playlist_window
+	assert(w.playlist_open and pw.visible and bus.drawer_open and w.size.y == closed_height and main.buttons.playlist.active)
+	assert(pw.size == Fmt.window_pixels(Vector2(275, w.playlist_height), w.ui_scale) and pw.content_scale_factor == w.ui_scale)
+	assert(pw.position == w.position + Vector2i(0, w.size.y), "playlist docked under main: %s / %s" % [pw.position, w.position])
 	bus.command(&"add_tracks")
 	assert(w.last_dialog == "add_tracks")
 	bus.command(&"add_directory")
@@ -192,12 +197,15 @@ func run():
 	bus.command(&"import_m3u_dialog")
 	assert(w.last_dialog == "import_m3u")
 	# LIB: the library panel opens to the right (the window widens), LED lit.
-	var width_before: int = w.size.x
+	var lw: Window = w.library_window
+	var vis_window: Window = root
+	assert(vis_window.position == w.position + Vector2i(w.size.x, 0), "visualiser docked right of main while the library is closed")
 	bus.command(&"toggle_library")
-	assert(w.library_open and w.library_panel.visible and bus.library_open and main.buttons.library.active and w.size.x > width_before)
-	assert(w.size == Fmt.window_pixels(Vector2(275 + w.library_width, maxf(116 + w.playlist_height, w.library_height)), w.ui_scale))
+	assert(w.library_open and lw.visible and bus.library_open and main.buttons.library.active)
+	assert(lw.size == Fmt.window_pixels(Vector2(w.library_width, w.library_height), w.ui_scale) and lw.position == w.position + Vector2i(w.size.x, 0))
+	assert(vis_window.position == lw.position + Vector2i(lw.size.x, 0), "the library opens between main and the visualiser")
 	bus.command(&"toggle_library")
-	assert(not w.library_open and not w.library_panel.visible and not bus.library_open and w.size.x == width_before)
+	assert(not w.library_open and not lw.visible and not bus.library_open and vis_window.position == w.position + Vector2i(w.size.x, 0))
 	bus.command(&"set_player_size", {"size": 1.5})
 	assert(w.user_size == 1.5 and w.ui_scale == 1.5)
 	bus.command(&"set_player_size", {"size": 2.0})
@@ -205,13 +213,19 @@ func run():
 	w.set_playlist_height(150)
 	w._on_resize_drag(0.0, true)
 	w._on_resize_drag(40.0, false)
-	assert(is_equal_approx(w.playlist_height, 170.0) and pl.size.y == 170.0 and w.size.y == int(Fmt.window_pixels(Vector2(275, 286), 2.0).y))
+	assert(is_equal_approx(w.playlist_height, 170.0) and pl.size.y == 170.0 and pw.size == Fmt.window_pixels(Vector2(275, 170), 2.0) and w.size == Fmt.window_pixels(Fmt.MAIN_SIZE, 2.0))
+	# Width too (grip): LOAD / SAVE follow the right edge.
+	w._on_playlist_resize(Vector2.ZERO, Vector2.ONE, true)
+	w._on_playlist_resize(Vector2(50, 0), Vector2.ONE, false)
+	assert(is_equal_approx(w.playlist_width, 300.0) and pl.size.x == 300.0 and pl.buttons.save.position.x == 255.0 and pl.list.size.x == 283.0)
+	w._on_playlist_resize(Vector2(-500, 0), Vector2.ONE, false)
+	assert(w.playlist_width == 275.0)
 	w._on_resize_drag(-1000.0, false)
 	assert(w.playlist_height == Fmt.PLAYLIST_MIN_HEIGHT)
 	w.set_playlist_height(170)
 	assert(pl.list.size.y > 100 and pl.filter.position.y > pl.list.position.y + pl.list.size.y)
 	var state: Dictionary = w.layout_state()
-	assert(state.drawer_open and state.playlist_height == 170.0 and state.has("time_remaining") and state.vis_mode == "spectrum")
+	assert(state.drawer_open and state.playlist_height == 170.0 and state.playlist_width == 275.0 and state.has("time_remaining") and state.vis_mode == "spectrum" and state.dock.version == 2)
 
 	# --- Playlist through the real AudioService: filter, reorder, remove, durations ---
 	audio.stop_play()
@@ -247,8 +261,8 @@ func run():
 	# Typing in the filter does not trigger keys; Escape clears it.
 	pl.filter.grab_focus()
 	var volume_before: float = bus.volume
-	w._input(key(KEY_UP))
-	w._input(key(KEY_T))
+	pw._input(key(KEY_UP))
+	pw._input(key(KEY_T))
 	assert(bus.volume == volume_before)
 	pl.filter.text = "zzz"
 	pl.set_filter("zzz")
@@ -278,7 +292,7 @@ func run():
 	AppSettings.save_section(scratch, "player", {"ui_size": 7.0})
 	assert(AppSettings.load_player_size(scratch) == 2.0)
 	DirAccess.remove_absolute(scratch)
-	print("PASS: player UI scaling math 1x/1.5x/2x/3x (+ Retina default 550 pt), titles/filter/totals, window size + content scale per size, hit areas (inside, no overlaps, >= 9 units), all %d main + %d playlist buttons, volume/seek sliders, scene line, list double-click/drag/Delete/Alt+Down/Enter, %d menu entries + scene menu, Space/Ctrl+L from the player, playlist panel toggle, dialogs, LIB toggle, size command, grip resize + clamp, filtered drag reorder, remove selected, durations + total, failed marks, filter swallows keys, time toggle, spectrum + scope, Settings size choice, size persistence" % [expected.size(), pl_expected.size(), menu_expected.size()])
+	print("PASS: player UI scaling math 1x/1.5x/2x/3x (+ Retina default 550 pt), titles/filter/totals, window size + content scale per size, hit areas (inside, no overlaps, >= 9 units), all %d main + %d playlist buttons, volume/seek sliders, scene line, list double-click/drag/Delete/Alt+Down/Enter, %d menu entries + scene menu, Space/Ctrl+L from the player, split windows (playlist docked under main, library opening between main and the visualiser), dialogs, LIB toggle, size command, grip resize (height + width) + clamp, filtered drag reorder, remove selected, durations + total, failed marks, filter swallows keys, time toggle, spectrum + scope, Settings size choice, size persistence" % [expected.size(), pl_expected.size(), menu_expected.size()])
 	app.queue_free()
 	await create_timer(0.2).timeout
 	quit()

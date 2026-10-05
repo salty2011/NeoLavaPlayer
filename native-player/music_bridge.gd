@@ -16,8 +16,12 @@ extends Node
 ## - `control` commands run one at a time, in order, without blocking a frame.
 ## - The library is read on a Thread, cached in user://music-library.json and
 ##   published as PlayerBus.library (+ library_changed).
+## - Diagnostics: `diagnostics` (MusicLog) records control commands, helper
+##   processes and the stream's events in ~/Library/Logs/NeoLavaPlayer/music.log
+##   in real app runs only; `reveal_diagnostics` shows it in Finder.
 
 const PlayerBusScript = preload("res://player_bus.gd")
+const MusicLog = preload("res://music_log.gd")
 const HELPER_RES := "res://bin/oozic-music-helper"
 const HELPER_USER := "user://bin/oozic-music-helper"
 const CACHE_PATH := "user://music-library.json"
@@ -39,6 +43,8 @@ var _controls: Array = []
 var _control = null
 ## Smoke/diagnostic CLI flags (exported builds): print and quit.
 var _report_library := false
+## Diagnostics log (MusicLog); disabled (path "") outside real app runs.
+var diagnostics
 
 ## One helper child process with non-blocking pipes, polled by its owner.
 class HelperProcess extends RefCounted:
@@ -135,6 +141,20 @@ class ControlJob extends RefCounted:
 func _init(persistent := true) -> void:
 	persist = persistent
 	name = "MusicBridge"
+	diagnostics = MusicLog.new(MusicLog.default_path() if MusicLog.app_mode(persistent, OS.get_cmdline_args()) else "")
+
+## Appends one event to the diagnostics log (no-op when it is disabled).
+func diag(event: String, data := {}) -> void:
+	diagnostics.write(event, data)
+
+## Shows the diagnostics log in Finder (creating it if needed).
+func reveal_diagnostics() -> bool:
+	if not diagnostics.touch():
+		bus.publish_status("The Apple Music diagnostics log is off in test and --no-persist runs.")
+		return false
+	OS.shell_show_in_file_manager(diagnostics.path)
+	bus.publish_status("Diagnostics log: " + diagnostics.path)
+	return true
 
 func _ready() -> void:
 	bus = PlayerBusScript.instance()
@@ -149,6 +169,8 @@ func _ready() -> void:
 		refresh_library()
 		return
 	if not persist: return
+	if diagnostics.enabled():
+		diag("app_start", {"version": str(ProjectSettings.get_setting("application/config/version", "")), "os": OS.get_name() + " " + OS.get_version(), "helper": helper_path()})
 	load_cache()
 	# Refresh in the background when the user already uses the library (a
 	# cache exists or Media access is granted); otherwise wait for the first
@@ -159,6 +181,7 @@ func _ready() -> void:
 func _on_command(command: StringName, _args: Dictionary) -> void:
 	match command:
 		&"library_refresh": refresh_library()
+		&"reveal_diagnostics": reveal_diagnostics()
 		&"open_library":
 			if not _refreshed: refresh_library()
 
@@ -212,6 +235,7 @@ func spawn(args: PackedStringArray, binary := false) -> HelperProcess:
 	var proc := HelperProcess.new()
 	if not proc.start(path, args, binary): return null
 	processes.append(proc)
+	if not args.is_empty() and args[0] != "control": diag("spawn", {"args": Array(args), "pid": proc.pid})
 	return proc
 
 func release(proc) -> void:
@@ -235,6 +259,7 @@ func permissions() -> Dictionary:
 	var out := []
 	if OS.execute(path, PackedStringArray(["permissions"]), out, false) != 0 or out.is_empty(): return {}
 	var parsed = JSON.parse_string(str(out[0]).strip_edges())
+	if parsed is Dictionary: diag("permissions", parsed)
 	return parsed if parsed is Dictionary else {}
 
 # --- control --------------------------------------------------------------
@@ -300,6 +325,7 @@ func _finish_control(code: int) -> void:
 	result.ok = code == 0 and bool(result.get("ok", true))
 	if code == -2: result.error = "timeout"
 	if not result.has("command"): result.command = job.args[0] if not job.args.is_empty() else ""
+	diag("control", {"args": Array(job.args), "code": code, "ok": result.ok, "error": str(result.get("error", "")), "message": str(result.get("message", "")), "ms": Time.get_ticks_msec() - job.started_ms})
 	job.finish(result)
 
 # --- Library --------------------------------------------------------------

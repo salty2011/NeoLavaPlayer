@@ -12,6 +12,7 @@ const AppleMusicStream = preload("res://apple_music_stream.gd")
 const Queue = preload("res://playback_queue.gd")
 const ReactivityServiceScript = preload("res://analysis/reactivity_service.gd")
 const Fmt = preload("res://player/player_format.gd")
+const MusicLog = preload("res://music_log.gd")
 
 const A1 := "0000000000000001"
 const A2 := "0000000000000002"
@@ -68,9 +69,26 @@ static func sine_bytes(rate: int, seconds: float, freq := 440.0) -> PackedByteAr
 		floats[2 * i + 1] = v
 	return floats.to_byte_array()
 
-func watch(id: String, state: String, position: float, duration: float, running := true) -> void:
+func watch(id: String, state: String, position: float, duration: float, running := true, volume := 100) -> void:
 	music.fake_now += 1000
-	music.apply_watch({"running": running, "state": state, "id": id, "title": "", "artist": "", "album": "", "position": position, "duration": duration, "volume": 100})
+	music.apply_watch({"running": running, "state": state, "id": id, "title": "", "artist": "", "album": "", "position": position, "duration": duration, "volume": volume})
+
+## Helper log lines starting with `prefix`.
+func count_log(prefix: String) -> int:
+	var n := 0
+	for line in log_lines():
+		if line.begins_with(prefix): n += 1
+	return n
+
+## (mtime, size) of a file, (0, -1) when missing.
+static func file_state(path: String) -> Array:
+	if path.is_empty() or not FileAccess.file_exists(path): return [0, -1]
+	var f := FileAccess.open(path, FileAccess.READ)
+	return [FileAccess.get_modified_time(path), f.get_length() if f != null else -1]
+
+static func write_bytes(path: String, bytes: PackedByteArray) -> void:
+	var f := FileAccess.open(path, FileAccess.WRITE)
+	f.store_buffer(bytes)
 
 func run():
 	var fake := ProjectSettings.globalize_path("res://tools/fake_music_helper.sh")
@@ -79,6 +97,9 @@ func run():
 	OS.set_environment("OOZIC_MUSIC_HELPER", fake)
 	OS.set_environment("FAKE_HELPER_LOG", log_path)
 	clear_log()
+	# The user's real diagnostics log must not be touched by test runs.
+	var real_log := MusicLog.default_path()
+	var real_log_before := [file_state(real_log), file_state(real_log.get_basename() + ".1.log")]
 	audio = AudioService.new(false)
 	root.add_child(audio)
 	await process_frame
@@ -88,6 +109,29 @@ func run():
 	assert(bridge.helper_path() == fake)
 	var settings_path := OS.get_temp_dir().path_join("oozic-test-music-settings.cfg")
 	audio.settings_path = settings_path
+
+	# --- Diagnostics log: app runs only ----------------------------------------------
+	assert(not bridge.diagnostics.enabled() and not music.volume_link)
+	assert(MusicLog.app_mode(true, PackedStringArray(["--path", "native-player"])))
+	assert(not MusicLog.app_mode(true, PackedStringArray(["--headless", "--script", "res://test_music_bridge.gd"])))
+	assert(not MusicLog.app_mode(false, PackedStringArray()))
+	assert(not MusicLog.app_mode(true, OS.get_cmdline_args()))
+	assert(real_log.ends_with("Library/Logs/NeoLavaPlayer/music.log"))
+	bus.command(&"reveal_diagnostics")
+	assert(bus.status.contains("off in test"))
+	# An app-mode log (here at a scratch path): event lines, rotation at the cap.
+	var diag_path := OS.get_temp_dir().path_join("oozic-test-diag-%d/music.log" % OS.get_process_id())
+	var diag_log = MusicLog.new(diag_path)
+	diag_log.max_bytes = 600
+	diag_log.write("control", {"args": ["play-id", A1], "code": 0})
+	var first_line := FileAccess.get_file_as_string(diag_path).strip_edges()
+	assert(first_line.contains(" control {") and JSON.parse_string(first_line.substr(first_line.find("{"))).args == ["play-id", A1])
+	for i in 20: diag_log.write("level", {"peak_db": -20.0 - i})
+	assert(FileAccess.file_exists(diag_log.rotated_path()) and FileAccess.get_file_as_string(diag_path).length() < 1200)
+	DirAccess.remove_absolute(diag_log.rotated_path())
+	DirAccess.remove_absolute(diag_path)
+	# The test's bridge logs to the scratch path from here on (app-mode behaviour).
+	bridge.diagnostics = MusicLog.new(diag_path)
 
 	# --- Library: parse, indexes, cache -------------------------------------
 	var changes := [0]
@@ -170,13 +214,23 @@ func run():
 	audio.queue.repeat_mode = Queue.Repeat.ALL
 	audio.player.stream = null
 	clear_log()
+	music.fake_now = Time.get_ticks_msec() + 100000
 	assert(await audio.play_track(0))
-	assert(audio.streaming() and music.id == A1 and bus.transport == "playing" and bus.track_title == "Alpha — Artist One")
-	assert(is_equal_approx(music.duration, 200.0) and audio.is_playing() and audio.player.stream == null)
+	# Transport truth: play-id succeeded, but Music hasn't confirmed yet.
+	assert(audio.streaming() and music.id == A1 and music.state == "starting" and bus.transport == "loading" and bus.track_title == "Alpha — Artist One")
+	assert(not audio.is_playing() and is_equal_approx(music.duration, 200.0) and audio.player.stream == null)
+	watch(OTHER, "playing", 1.0, 150.0)  # a stale line from before play-id
+	assert(music.state == "starting" and bus.transport == "loading")
+	watch(A1, "paused", 0.0, 200.0)  # Music has our track but isn't playing yet
+	assert(music.state == "starting")
+	watch(A1, "playing", 0.0, 200.0)
+	assert(music.state == "playing" and bus.transport == "playing" and audio.is_playing())
 	assert(log_lines()[0] == "control play-id " + A1)
 	assert(await wait_log("watch --interval 0.25"))
 	assert(await wait_log("tap --app com.apple.Music --rate %d --backend tap" % rate))
-	assert(await wait_log("control volume 100"))
+	# Volume link off (default): Oozic never sends `control volume`.
+	assert(await wait_until(bridge.controls_idle))
+	assert(count_log("control volume") == 0)
 	# The tap's f32le stereo reaches the classic inputs and the live analyser
 	# at the analysers' own rate; no pre-analysis job for a stream.
 	var reactivity = ReactivityServiceScript.instance()
@@ -198,14 +252,20 @@ func run():
 	assert(music.take_frames() == PackedVector2Array([Vector2(0.5, -0.25), Vector2(0.125, 1.0)]))
 
 	# --- watch JSON -> bus state -------------------------------------------------------
-	music.fake_now = Time.get_ticks_msec() + 100000
+	music.fake_now += 2000
 	watch(A1, "playing", 12.5, 201.0)
 	audio._process(0.016)
 	assert(is_equal_approx(music.position, 12.5) and is_equal_approx(bus.position, 12.5) and is_equal_approx(bus.duration, 201.0))
 	music.fake_now += 500
 	assert(is_equal_approx(audio.playback_time(), 13.0))
+	# Paused from outside Oozic (Music, a headset button, another app): reflected, with a status.
 	watch(A1, "paused", 13.0, 201.0)
-	assert(bus.transport == "paused" and not audio.is_playing())
+	assert(bus.transport == "paused" and not audio.is_playing() and bus.status.contains("not from Oozic"))
+	# ...and resumed from outside.
+	watch(A1, "playing", 13.0, 201.0)
+	assert(bus.transport == "playing")
+	watch(A1, "paused", 13.5, 201.0)
+	assert(bus.transport == "paused")
 
 	# --- bus commands -> control args ----------------------------------------------------
 	clear_log()
@@ -220,21 +280,42 @@ func run():
 	assert(await wait_log("control seek 30.000"))
 	bus.command(&"seek_fraction", {"fraction": 0.5})
 	assert(await wait_log("control seek 100.500"))
+	# Volume policy. Link off (default): Oozic's volume/mute never reach Music;
+	# one status explains it.
+	bus.command(&"set_volume", {"value": 0.8})
+	bus.command(&"toggle_mute")
+	bus.command(&"toggle_mute")
+	assert(bus.status.contains("doesn't change the Music app"))
+	assert(await wait_until(bridge.controls_idle))
+	assert(count_log("control volume") == 0)
+	# Link on: explicit changes are sent; mute sends 0, unmute restores.
+	bus.command(&"set_music_volume_link", {"on": true})
+	assert(music.volume_link and await wait_log("control volume 80"))
 	bus.command(&"set_volume", {"value": 0.5})
 	assert(await wait_log("control volume 50"))
 	bus.command(&"toggle_mute")
-	assert(await wait_log("control volume 0"))
+	assert(await wait_log("control volume 0") and music.music_muted_by_oozic())
 	clear_log()
 	bus.command(&"toggle_mute")
-	assert(await wait_log("control volume 50"))
+	assert(await wait_log("control volume 50") and not music.music_muted_by_oozic())
+	# Unlinking while muted puts Music's volume back (never left at 0).
+	bus.command(&"toggle_mute")
+	assert(await wait_log("control volume 0"))
+	clear_log()
+	bus.command(&"set_music_volume_link", {"on": false})
+	assert(await wait_log("control volume 50") and not music.music_muted_by_oozic())
+	bus.command(&"toggle_mute")
+	assert(not audio.muted)
 	bus.command(&"stop")
 	assert(bus.transport == "stopped" and music.state == "stopped")
 	assert(await wait_log("control stop"))
-	# Play after Stop restarts our track (Music forgot it).
+	# Play after Stop restarts our track (Music forgot it): loading until confirmed.
 	clear_log()
 	bus.command(&"play_pause")
-	assert(bus.transport == "playing")
+	assert(bus.transport == "loading" and music.state == "starting")
 	assert(await wait_log("control play-id " + A1))
+	watch(A1, "playing", 0.0, 200.0)
+	assert(bus.transport == "playing")
 	# Volume drags coalesce: a queued volume is replaced by the newest one.
 	assert(await wait_until(bridge.controls_idle))
 	clear_log()
@@ -268,10 +349,18 @@ func run():
 	# Not confirmed yet: other ids are ignored until the timeout.
 	music.resume()
 	watch(OTHER, "playing", 3.0, 150.0)
-	assert(music.state == "playing")
+	assert(music.state == "starting" and bus.transport == "loading")
 	music.fake_now += AppleMusicStream.CONFIRM_TIMEOUT_MS
 	watch(OTHER, "playing", 3.0, 150.0)
 	assert(music.state == "stopped" and bus.status.contains("didn't start"))
+	# Music has our track but never starts it (network/account): paused, with a status.
+	music.resume()
+	watch(A2, "paused", 0.0, 180.0)
+	assert(music.state == "starting")
+	music.fake_now += AppleMusicStream.CONFIRM_TIMEOUT_MS
+	watch(A2, "paused", 0.0, 180.0)
+	assert(music.state == "paused" and bus.transport == "paused" and bus.status.contains("hasn't started"))
+	music.stop()
 	# Music quit.
 	music.resume()
 	watch(A2, "playing", 1.0, 180.0)
@@ -352,6 +441,106 @@ func run():
 	music.push_pcm_bytes(sine_bytes(rate, 0.05))
 	assert(music.tap_ok)
 
+	# --- Tap retry with backoff: silent -> retry 2 s, 5 s -> real audio again ----------------
+	# Real tap processes from here: start 1 and 2 deliver digital silence, start 3 sound.
+	var scratch := OS.get_temp_dir().path_join("oozic-test-tap-%d" % OS.get_process_id())
+	DirAccess.make_dir_recursive_absolute(scratch)
+	var zeros_path := scratch.path_join("zeros.f32")
+	var sound_path := scratch.path_join("sound.f32")
+	var counter_path := scratch.path_join("count")
+	var events_path := scratch.path_join("events.jsonl")
+	var zeros := PackedFloat32Array()
+	zeros.resize(int(rate * 0.2) * 2)
+	write_bytes(zeros_path, zeros.to_byte_array())
+	write_bytes(sound_path, sine_bytes(rate, 0.2))
+	var events := FileAccess.open(events_path, FileAccess.WRITE)
+	events.store_string("{\"event\":\"attached\",\"backend\":\"tap\",\"source\":\"app\",\"pids\":[4242]}\n{\"event\":\"device\",\"reason\":\"default_output_changed\",\"output\":\"Headphones\"}\n{\"event\":\"rebuilt\",\"reason\":\"default_output_changed\",\"pids\":[4242]}\n{\"event\":\"output\",\"running\":true,\"pids\":[4242],\"others\":[]}\n")
+	events = null
+	OS.unset_environment("FAKE_TAP_PCM")
+	OS.set_environment("FAKE_TAP_COUNTER", counter_path)
+	OS.set_environment("FAKE_TAP_EVENTS", events_path)
+	OS.set_environment("FAKE_TAP_PCM_1", zeros_path)
+	OS.set_environment("FAKE_TAP_PCM_2", zeros_path)
+	OS.set_environment("FAKE_TAP_PCM_3", sound_path)
+	OS.set_environment("FAKE_TAP_PCM_5", sound_path)  # start 4 delivers nothing (stall)
+	clear_log()
+	music._tap_denied = false
+	music._tap_restart_at = 0
+	music.bytes_total = 0
+	var tap_line := "tap --app com.apple.Music --rate %d --backend tap" % rate
+	assert(await wait_until(func(): return music.bytes_total > 0 and music.tap_rebuilds >= 1))
+	# The helper's rebuild/device/output events are parsed (and logged).
+	assert(count_log(tap_line) == 1 and music.music_output == true and music.tap_ok and music.state == "playing")
+	assert(music.debug_line().begins_with("music: playing · tap tap pid ") and music.debug_line().contains("· level -120 dB · ok") and music.debug_line().contains("1 helper rebuild"))
+	assert(audio.music_debug_line() == music.debug_line())
+	# (A real tap streams continuously; the fake wrote its block once, so
+	# the zeros "keep arriving" by hand while fake time advances.)
+	music.fake_now += AppleMusicStream.SILENT_MS + 100
+	music.push_pcm_bytes(zeros.to_byte_array().slice(0, 64))
+	assert(await wait_until(func(): return music.tap_reason == "silent"))
+	assert(audio.fallback_feed != null and reactivity.is_mock() and bus.status.contains("Retrying"))
+	assert(music.debug_line().ends_with("· silent, 1 helper rebuild"))
+	# First retry after 2 s (not before).
+	music.fake_now += 1900
+	for i in 5: await process_frame
+	assert(count_log(tap_line) == 1)
+	music.fake_now += 100
+	assert(await wait_until(func(): return count_log(tap_line) == 2 and music.retry_count == 1))
+	assert(music.debug_line().contains("retrying 1 (silent)"))
+	# Second retry 5 s later; that tap delivers real sound -> back to live analysis.
+	music.fake_now += 4900
+	for i in 5: await process_frame
+	assert(count_log(tap_line) == 2 and not music.tap_ok)
+	music.fake_now += 100
+	assert(await wait_until(func(): return music.tap_ok))
+	assert(count_log(tap_line) == 3 and music.retry_count == 0 and audio.fallback_feed == null and not reactivity.is_mock())
+
+	# --- Stalled (no bytes at all) -> retry -> recovery ------------------------------------------
+	bridge.release(music.tap_proc)
+	music.tap_proc = null
+	music._tap_restart_at = 0
+	assert(await wait_until(func(): return count_log(tap_line) == 4 and music.tap_proc != null))
+	music.fake_now += AppleMusicStream.STALL_MS + 100
+	assert(await wait_until(func(): return music.tap_reason == "stalled"))
+	assert(bus.status.contains("capture stalled") and audio.fallback_feed != null)
+	music.fake_now += AppleMusicStream.RETRY_DELAYS_MS[0]
+	assert(await wait_until(func(): return music.tap_ok))
+	assert(count_log(tap_line) == 5 and audio.fallback_feed == null)
+	assert(AppleMusicStream.RETRY_DELAYS_MS == [2000, 5000, 10000, 30000])
+	for name in ["FAKE_TAP_COUNTER", "FAKE_TAP_EVENTS", "FAKE_TAP_PCM_1", "FAKE_TAP_PCM_2", "FAKE_TAP_PCM_3", "FAKE_TAP_PCM_5"]: OS.unset_environment(name)
+
+	# --- Speakers silent while "playing": Music not outputting / Music volume 0 --------------
+	var statuses := []
+	music.status.connect(func(text): statuses.append(text))
+	music.music_output = false
+	music.fake_now += AppleMusicStream.SILENT_MS + 100
+	assert(await wait_until(func(): return statuses.any(func(s): return s.contains("isn't producing any audio"))))
+	assert(music.debug_line().contains("Music not outputting"))
+	music.music_output = true
+	watch(A1, "playing", 20.0, 200.0, true, 0)
+	assert(statuses.any(func(s): return s.contains("own volume is at 0")) and music.state == "playing")
+
+	# --- Diagnostics: the app-mode log recorded controls, watch, state and tap events --------
+	var diag_text := FileAccess.get_file_as_string(diag_path)
+	for needle in [" control {\"args\":[\"play-id\"", " watch {", " state {", " tap_header {", " tap_rebuilt {", " tap_device {", " tap_health {", " tap_retry {", " spawn {", " volume_link {", " status {"]:
+		if not diag_text.contains(needle): print("diagnostics log lacks: ", needle)
+		assert(diag_text.contains(needle))
+
+	# --- Quit while muted with the volume link on: pause and restore Music's volume ------------
+	bus.command(&"set_music_volume_link", {"on": true})
+	bus.command(&"set_volume", {"value": 0.6})
+	bus.command(&"toggle_mute")
+	assert(await wait_log("control volume 0") and music.music_muted_by_oozic())
+	# A new start while muted never sends 0 implicitly.
+	assert(await wait_until(bridge.controls_idle))
+	clear_log()
+	assert(await audio.play_track(0))
+	watch(A1, "playing", 0.0, 200.0)
+	assert(await wait_until(bridge.controls_idle))
+	assert(count_log("control volume") == 0 and bus.transport == "playing")
+	# (play() leaves the earlier zeroing recorded, so quitting restores it.)
+	assert(music.music_muted_by_oozic())
+
 	# --- Cleanup: freeing the service kills every helper process ----------------------------
 	var pids: Array = []
 	for proc in bridge.processes: pids.append(proc.pid)
@@ -361,8 +550,15 @@ func run():
 	await process_frame
 	await process_frame
 	for pid in pids: assert(not alive(pid))
-	# Quitting while a Music track plays pauses Music (synchronously).
-	assert(log_lines().has("control pause"))
+	# Quitting while a Music track plays pauses Music (synchronously) and puts
+	# back the volume Oozic's mute had zeroed.
+	assert(log_lines().has("control pause") and log_lines().has("control volume 60"))
+	DirAccess.remove_absolute(diag_path)
+	DirAccess.remove_absolute(diag_path.get_base_dir())
+	for file in ["zeros.f32", "sound.f32", "count", "events.jsonl"]: DirAccess.remove_absolute(scratch.path_join(file))
+	DirAccess.remove_absolute(scratch)
+	# Nothing in this run wrote the user's real diagnostics log.
+	assert([file_state(real_log), file_state(real_log.get_basename() + ".1.log")] == real_log_before)
 
 	# --- Runtime install of the real helper (exported-build path) ---------------------------
 	var target := "user://test-bin/oozic-music-helper"
@@ -383,5 +579,5 @@ func run():
 	clear_log()
 	DirAccess.remove_absolute(pcm_path)
 	DirAccess.remove_absolute(settings_path)
-	print("PASS: library parse/indexes/cache/exit 2, permissions, track_meta (applemusic, library file, unknown file), add_library_tracks/playlist, .m4p rejected, playlist.json + M3U applemusic: round trip, play-id/watch/tap/volume spawn args, tap f32le -> classic inputs + live analyser at tap rate (no pre-analysis), partial-frame carry, watch -> position/duration/transport, play/pause/seek/seek_fraction/volume/mute/stop/replay -> control args, volume coalescing, end-of-track advance (auto-advance id, stopped near end, repeat one, repeat off finish), external switch/timeout/quit, file after stream pauses Music and kills watch/tap, control exit 3/4/5/6 statuses, tap exit 3 + stall + silence -> synthetic fallback and recovery, process cleanup + pause on exit, runtime helper install")
+	print("PASS: library parse/indexes/cache/exit 2, permissions, track_meta (applemusic, library file, unknown file), add_library_tracks/playlist, .m4p rejected, playlist.json + M3U applemusic: round trip, play-id/watch/tap/volume spawn args, tap f32le -> classic inputs + live analyser at tap rate (no pre-analysis), partial-frame carry, watch -> position/duration/transport, play/pause/seek/seek_fraction/volume/mute/stop/replay -> control args, volume coalescing, end-of-track advance (auto-advance id, stopped near end, repeat one, repeat off finish), external switch/timeout/quit, file after stream pauses Music and kills watch/tap, control exit 3/4/5/6 statuses, tap exit 3 + stall + silence -> synthetic fallback and recovery, transport loading until watch confirms the id, external pause/resume reflected, Music-has-track-but-never-starts, volume link off by default / on / unlink restores / no implicit 0 / quit restores, tap retry backoff silent -> 2 s -> 5 s -> real audio, stalled -> retry -> recovery, helper rebuilt/device/output events, Music not outputting + Music volume 0 statuses, F3 music line, diagnostics log (app mode only, rotation, events; real log untouched), process cleanup + pause on exit, runtime helper install")
 	quit()

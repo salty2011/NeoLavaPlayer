@@ -7,6 +7,10 @@
 #   FAKE_CONTROL_EXIT  exit code for `control` (default 0)
 #   FAKE_TAP_EXIT      `tap` writes its header and an error event, then exits with it
 #   FAKE_TAP_PCM       file `tap` copies to stdout (f32le stereo) before idling
+#   FAKE_TAP_COUNTER   file counting `tap` starts; start N then uses
+#                      FAKE_TAP_PCM_<N> instead of FAKE_TAP_PCM when it is set
+#                      (e.g. silence, silence, then sound across retries)
+#   FAKE_TAP_EVENTS    file of JSON event lines `tap` writes to stderr after its header
 #   FAKE_WATCH_FILE    lines `watch` prints before idling
 [ -n "$FAKE_HELPER_LOG" ] && echo "$*" >> "$FAKE_HELPER_LOG"
 case "$1" in
@@ -42,7 +46,14 @@ tap)
 		echo '{"event":"error","error":"permission_denied","message":"fake"}' >&2
 		exit "$FAKE_TAP_EXIT"
 	fi
-	[ -n "$FAKE_TAP_PCM" ] && cat "$FAKE_TAP_PCM"
+	pcm="$FAKE_TAP_PCM"
+	if [ -n "$FAKE_TAP_COUNTER" ]; then
+		n=$(( $(cat "$FAKE_TAP_COUNTER" 2>/dev/null || echo 0) + 1 ))
+		echo "$n" > "$FAKE_TAP_COUNTER"
+		eval "pcm=\${FAKE_TAP_PCM_$n:-}"
+	fi
+	[ -n "$FAKE_TAP_EVENTS" ] && cat "$FAKE_TAP_EVENTS" >&2
+	[ -n "$pcm" ] && cat "$pcm"
 	exec sleep 30
 	;;
 version)

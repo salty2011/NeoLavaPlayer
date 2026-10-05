@@ -84,6 +84,7 @@ func _ready():
 		muted = bool(values.get("muted", false))
 		queue.set_shuffle(bool(values.get("shuffle", false)))
 		queue.repeat_mode = clampi(int(values.get("repeat", PlaybackQueue.Repeat.ALL)), 0, 2)
+		music.volume_link = bool(values.get("music_volume_link", false))
 		load_playlist_file()
 	_apply_volume()
 	bus.publish_modes(queue.shuffle, queue.repeat_mode)
@@ -138,6 +139,7 @@ func _on_command(command: StringName, args: Dictionary):
 		&"export_m3u": export_m3u(str(args.get("path", "")))
 		&"add_library_tracks": add_library_tracks(args.get("ids", []), bool(args.get("play", true)))
 		&"add_library_playlist": add_library_playlist(str(args.get("id", "")), bool(args.get("play", true)))
+		&"set_music_volume_link": set_music_volume_link(bool(args.get("on", false)))
 
 func is_playing() -> bool:
 	if music != null and music.is_playing(): return true
@@ -413,10 +415,23 @@ func _apply_volume():
 	var master := AudioServer.get_bus_index("Master")
 	AudioServer.set_bus_volume_db(master, linear_to_db(maxf(volume, 0.0001)))
 	AudioServer.set_bus_mute(master, muted or volume <= 0.0)
-	# The Music app's own volume while one of its tracks is current (the tap
-	# captures after it, so the analysers' adaptive levels absorb it).
+	# The Music app's own volume, only with the volume link on (see
+	# set_music_volume_link; the tap captures after it, so the analysers'
+	# adaptive levels absorb it).
 	if music != null: music.set_volume(volume, muted)
 	bus.publish_volume(volume, muted)
+
+## Setting "Oozic volume controls the Music app" ([player] music_volume_link,
+## default off). Off: Oozic never changes Music's volume; Music's volume is
+## Music's own persistent setting, and driving it (a mute sends 0) left Music
+## silent outside Oozic too.
+func set_music_volume_link(on: bool):
+	music.set_volume_link(on)
+	if persist: AppSettings.save_section(settings_path, "player", {"music_volume_link": on})
+
+## F3 overlay line for the Apple Music path ("music: idle" for file playback).
+func music_debug_line() -> String:
+	return music.debug_line() if music != null else "music: idle"
 
 func advance_track(finished := false):
 	if loading_audio:
@@ -527,9 +542,14 @@ func load_apple_music(path: String) -> bool:
 	inputs.reset()
 	capture.clear_buffer()
 	stream_started.emit(path)
-	bus.publish_transport("playing")
+	# "loading" until watch confirms Music is playing this track.
+	bus.publish_transport(_transport_for(music.state))
 	bus.publish_position(0.0, music.duration)
 	return true
+
+## Bus transport for an AppleMusicStream state ("starting" shows as loading).
+static func _transport_for(music_state: String) -> String:
+	return "loading" if music_state == "starting" else music_state
 
 func _restore_transport():
 	if is_playing(): bus.publish_transport("playing")
@@ -583,7 +603,7 @@ func _leave_music():
 
 func toggle_play():
 	if streaming():
-		if music.state == "playing": music.pause()
+		if music.state in ["playing", "starting"]: music.pause()
 		else: music.resume()
 		return
 	if not player.stream:
@@ -643,7 +663,7 @@ func upcoming_paths(count: int) -> PackedStringArray:
 
 func _on_music_state(state: String):
 	# During a load, play_track/load_apple_music publish the outcome.
-	if not loading_audio: bus.publish_transport(state)
+	if not loading_audio: bus.publish_transport(_transport_for(state))
 
 ## Tap unavailable (permission, stall, silence): classic scenes sample a
 ## synthetic beat and the reactivity layer runs its synthetic source, unless the
@@ -698,7 +718,9 @@ func sample(time: float) -> Dictionary:
 func _exit_tree():
 	# Quitting while a Music-app track plays: pause it (synchronously; the
 	# bridge kills its processes as it leaves the tree).
-	if streaming() and music.state == "playing": music_bridge.control_sync(PackedStringArray(["pause"]))
+	if streaming() and music.state in ["playing", "starting"]: music_bridge.control_sync(PackedStringArray(["pause"]))
+	# Never leave Music at volume 0 because of a mute in Oozic.
+	if music != null: music.restore_music_volume(true)
 	if flac_thread != null and flac_thread.is_started(): flac_thread.wait_to_finish()
 	if player:
 		player.stop()

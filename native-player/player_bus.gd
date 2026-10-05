@@ -34,6 +34,9 @@ signal tuning_changed(response: float, brightness: float)
 signal analysis_frame(signals: Dictionary)
 signal status_changed(text: String)
 signal windows_changed()
+## The player's render scale (pixels per base unit) changed; the visualiser
+## frame draws its chrome at the same scale.
+signal player_scale_changed(scale: float)
 ## Per-loaded-scene facts from the visualiser: {presets: PackedStringArray,
 ## preset_index: int, tuning_supported: bool}.
 signal scene_info_changed()
@@ -112,6 +115,8 @@ var controller_visible := true
 var drawer_open := false
 ## Set by the player window: the library browser panel is shown (LIB lit).
 var library_open := false
+## Pixels per base unit of the player windows (PlayerWindow.ui_scale).
+var player_scale := 2.0
 ## Set by the main composer: true when there is no control window.
 var scene_only := false
 ## Set by the visualiser: Callable(event: InputEventKey) -> bool. Plain
@@ -241,6 +246,10 @@ func publish_windows(visualiser_shown: bool, fullscreen: bool, controller_shown:
 	controller_visible = controller_shown
 	drawer_open = drawer
 	windows_changed.emit()
+
+func publish_player_scale(scale: float) -> void:
+	player_scale = scale
+	player_scale_changed.emit(scale)
 
 func scene_title(index: int = -1) -> String:
 	var i := scene_index if index < 0 else index

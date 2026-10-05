@@ -35,6 +35,7 @@ any other local file.
 |---|---|
 | `music_bridge.gd` (`MusicBridge`, child of AudioService) | Finds the helper, runs it with non-blocking pipes, queues `control` commands one at a time (volume and seek drags coalesce), reads and caches the library, maps exit codes to status text, kills its processes on exit. |
 | `apple_music_stream.gd` (`AppleMusicStream`, child of AudioService) | The Music-app player for one `applemusic:` entry: transport mapping, watch parsing, end-of-track detection, tap PCM and tap health. |
+| `music_log.gd` (`MusicLog`, owned by MusicBridge) | The diagnostics log (see Troubleshooting); enabled only in real app runs. |
 | `audio_service.gd` | Routes each entry to Godot playback or AppleMusicStream; owns the playlist and queue (shuffle/repeat). |
 | `analysis/reactivity_service.gd` | Treats `applemusic:` entries as live-only (no pre-analysis job, no cache lookup). |
 | `player_bus.gd` | Library state and `track_meta()`; see the API below. |
@@ -69,18 +70,38 @@ except through bus commands.
 
 | Player action | Music app |
 |---|---|
-| play an `applemusic:` entry | `control play-id ID`, then `volume` (our volume) |
+| play an `applemusic:` entry | `control play-id ID` (plus `volume`, only with the volume link on, never 0) |
 | pause / resume | `control pause` / `control play` |
 | play after Stop, or after Music moved to another track | `control play-id ID` (Music forgets the track on stop) |
 | stop | `control stop` |
 | seek, seek_fraction, seek_relative | `control seek S` |
-| volume, mute | `control volume 0–100` (Music's own volume; mute sends 0) |
+| volume, mute | nothing by default; with the volume link on, `control volume 0–100` (mute sends 0) |
 | next / previous | our playlist (shuffle and repeat from `playback_queue.gd`) |
-| a file entry after an `applemusic:` entry | `control pause`; watch and tap stop |
-| quit while a Music track plays | `control pause` (synchronous) |
+| a file entry after an `applemusic:` entry | `control pause`; watch and tap stop; Music's volume restored if our mute zeroed it |
+| quit while a Music track plays | `control pause` (synchronous), and the volume restore as above |
 
-- After each command a 0.9 s hold keeps the new state and position, so a
-  watch line from before the command does not undo it.
+- **Transport truth.** After `play-id` succeeds the stream is `starting` and
+  the transport shows `loading`. It becomes `playing` only when `watch`
+  reports Music playing that id. Lines about another track are ignored for
+  15 s ("Music didn't start the track" after that). If Music has our track
+  but stays paused for 15 s, the transport goes to paused with "Music has the
+  track but hasn't started playing it". If `watch` is refused or never
+  reports, play-id is trusted after that time.
+- After each pause/resume/seek a 0.9 s hold keeps the new state and position,
+  so a watch line from before the command does not undo it. After the hold
+  `watch` wins: a pause from Music itself, a headset button or another app
+  taking over shows as paused, with "Music paused playback (not from
+  Oozic…)"; a resume from outside shows as playing.
+- **Volume link** (Settings › Playlist › Apple Music › "Oozic volume
+  controls the Music app", `[player] music_volume_link`, default **off**).
+  Off, Oozic's volume and mute only affect files Oozic plays itself. Why off:
+  Music's volume is Music's own persistent setting. Oozic used to send its
+  volume on every start and 0 on mute, so a mute (even one saved from an
+  earlier session) left Music silent, including after Oozic quit, which
+  looks exactly like "it says playing but there's no sound". On, explicit
+  volume/mute changes are sent; a start never sends 0; unmuting, turning the
+  link off, leaving the entry or quitting puts Music's volume back.
+- If Music reports its own volume as 0 while playing, the status line says so.
 - **End of track.** Our track was within 3 s of its end and Music then reports
   another track (its own auto-advance) or `stopped`: we advance our playlist
   and issue `play-id` for the next entry at once. If the playlist is finished,
@@ -102,11 +123,23 @@ except through bus commands.
   is playing. When Music is paused the tap sends zeros, and those are dropped.
 - Streams are never pre-analysed. The reactivity source stays `live` for them.
 - **Fallback.** If the tap exits 3 (permission), delivers no data for 3 s
-  while playing (`stalled`), or delivers digital silence for 8 s while playing
-  and not muted (`silent`), the classic scenes sample a 120 BPM synthetic beat
+  while playing (`stalled`), delivers digital silence for 8 s while playing
+  and Music's own volume is above 0 (`silent`), or exits with an error
+  (`exited`), the classic scenes sample a 120 BPM synthetic beat
   (`AudioService.fallback_feed`) and the reactivity layer switches to its
-  synthetic source. The status line says what to allow. Real sound switches
-  both back. If the user already chose the synthetic input, nothing changes.
+  synthetic source. The status line says what to allow. If the user already
+  chose the synthetic input, nothing changes.
+- **Retry.** Except for a permission refusal, the stream then restarts the tap
+  while Music plays: after 2 s, 5 s, 10 s, then every 30 s
+  (`AppleMusicStream.RETRY_DELAYS_MS`). The first real sound switches both
+  back to live analysis and resets the schedule. The helper also rebuilds
+  its own tap on device changes, sleep/wake, stalls and silence
+  (MUSIC_HELPER.md, "Rebuilds and health"); its `rebuilt`/`device`/`output`
+  events are logged.
+- **Music not producing audio.** If the helper reports that Music's process
+  is not outputting while `watch` says playing, the status line says Music
+  isn't producing audio (still buffering, or playing to AirPlay or another
+  output). That is a Music problem, not a capture problem.
 - The tap captures Music's output after Music's own volume. The analysers
   normalise adaptively, so a low volume mainly lowers the global level.
 
@@ -203,8 +236,8 @@ rebuild. Reset with `tccutil reset MediaLibrary|AppleEvents|AudioCapture local.o
   Music's. Turn off Music's crossfade so end-of-track detection stays clean.
 - Gapless: after Music auto-advances, there can be a fraction of a second of
   its next track before our next `play-id` lands.
-- Volume and mute set Music's own volume, and Music keeps that value after
-  Oozic quits.
+- With the volume link on, volume sets Music's own volume, and Music keeps
+  that value after Oozic quits (a mute is undone on quit).
 - **Editor vs exported app.** Under the Godot editor (or `--script`), the
   responsible process is Godot.app or the terminal, whose Info.plist lacks the
   keys above. The tap is refused without a prompt there, and Automation likely
@@ -220,12 +253,77 @@ rebuild. Reset with `tccutil reset MediaLibrary|AppleEvents|AudioCapture local.o
   `MUSIC_LIBRARY {...counts...}` and quits.
 - `-- --music-permissions-report` prints `MUSIC_PERMISSIONS {...}` (the
   helper's `permissions`, which never prompts) and quits.
-- F3 overlay: `react.source` shows `live` or `mock`.
+- F3 overlay: `react.source` shows `live` or `mock`, and the music line (below).
+- `bin/oozic-music-helper processes` lists Core Audio's processes, which are
+  outputting, and the default/system output devices; `selftest` checks the
+  tap plumbing. Neither needs a permission or plays anything.
+
+## Troubleshooting
+
+**The diagnostics log.** The app writes
+`~/Library/Logs/NeoLavaPlayer/music.log` (rotated to `music.1.log` at 1 MB,
+so at most about 2 MB). Settings › Playlist › Apple Music › **Reveal
+diagnostics log** (bus command `reveal_diagnostics`) shows it in Finder. Each
+line is `date time event {json}`:
+
+| event | what |
+|---|---|
+| `app_start` | OS version, helper path |
+| `permissions` | the helper's `permissions` result |
+| `control` | every command sent to Music: args, exit code, ok, error, message, ms |
+| `play`, `state`, `lost`, `ended`, `deactivate` | Oozic's side: the id it asked for and every state change (`starting` → `playing`, …) |
+| `watch` | each change in what Music reports: running, id, state, position, volume, and whether it is our track |
+| `spawn`, `watch_exit`, `tap_exit` | helper processes started (args, pid) and their exit codes |
+| `tap_header`, `tap_attached`, `tap_rebuilt`, `tap_device`, `tap_output`, `tap_stalled`, `tap_silent`, `tap_recovered`, `tap_level`, `tap_error` | the helper's tap events, including the tapped pids/bundles, output device changes and the other processes outputting when Music isn't |
+| `tap_health`, `tap_retry`, `level` | Oozic's view of the capture (ok/stalled/silent/exited/permission), retries, and the level every 5 s |
+| `volume_link`, `volume_restore`, `status` | volume policy actions and every status line shown |
+
+It is written only by the real app: test and tool runs (`--script`) and
+`--no-persist` runs never touch it (they share `user://` with the app, which
+is why the log lives outside it).
+
+**The F3 overlay line.**
+`music: <state> · tap <backend> pid <n> · level <dB> · <health>`
+
+- state: `starting` (play-id sent, Music not confirmed yet), `playing`,
+  `paused`, `stopped`; `(Music: paused)` when Music reports something else.
+- backend `tap` (process tap) or `sck` (ScreenCaptureKit); pid of the tap
+  helper process (`-` when none is running).
+- level: peak of the last captured block in dBFS (−120 = digital silence).
+- health: `ok`, `stalled`, `silent`, `exited`, `permission`, or
+  `retrying N (reason)`; `Music not outputting` when Music's process makes no
+  sound while it says playing; `N helper rebuilds` after device or health
+  rebuilds.
+
+**What to send with a report.** The `music.log` (and `music.1.log` if
+present) right after the problem, what was playing in Music, the output
+device (speakers, AirPods, AirPlay…), and what the overlay line said. If
+the speakers were silent too, the `watch` lines show whether Music
+reported playing and at what volume, and `tap_output` shows whether Music
+produced any audio.
+
+**Common patterns in the log.**
+
+- `watch` says playing our id, `tap_output running:false`: Music isn't
+  producing sound (buffering, AirPlay, or audio going through another process
+  listed in `others`).
+- `watch` volume 0: Music's own volume is 0.
+- `tap_device` followed by `tap_rebuilt` and sound again: an output change
+  that was handled. `tap_stalled` repeating with `tap_retry`: capture can't
+  run on the current device.
+- `tap_health permission`: System Audio Recording isn't allowed for Oozic.
 
 ## Tests
 
 - `test_music_bridge.gd` drives AudioService against `tools/fake_music_helper.sh`,
-  selected with `OOZIC_MUSIC_HELPER`.
+  selected with `OOZIC_MUSIC_HELPER`. It covers transport truth (loading until
+  watch confirms the id, external pause/resume), the volume policy, tap retry
+  with backoff (silent → 2 s → 5 s → real audio; stalled → retry → recovery,
+  using `FAKE_TAP_COUNTER`/`FAKE_TAP_PCM_<n>`), the helper's
+  `rebuilt`/`device`/`output` events (`FAKE_TAP_EVENTS`), and the diagnostics
+  log (app mode only, rotation, the events written; the real log untouched).
+- `bin/oozic-music-helper selftest` covers the helper's tap plumbing without
+  permissions.
 - `test_audio_formats.gd` covers the local formats (fixtures made with `afconvert`).
 - `test_library_browser.gd` covers the browser on a synthetic library
   (`library_fixture.gd`: made-up artists and titles, 1,430 and 20,000 tracks):

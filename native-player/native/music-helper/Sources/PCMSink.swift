@@ -21,6 +21,22 @@ final class PCMSink {
     private(set) var convertFailures = 0
     var lastInputFormat: String = ""
     var onPipeClosed: () -> Void = {}
+    // Level tracking for the health check (written on the capture queue, read
+    // racily on the main thread; a stale value only delays a decision by 1 s).
+    /// Sample magnitude that counts as sound (the tap delivers exact zeros
+    /// when the tapped app is paused or capture is not permitted).
+    static let soundLevel: Float = 1e-4
+    private var lastSoundTime: CFAbsoluteTime = 0
+    private var peak: Float = 0
+    /// When the last non-silent block arrived (distantPast: never).
+    var lastSound: Date { lastSoundTime == 0 ? .distantPast : Date(timeIntervalSinceReferenceDate: lastSoundTime) }
+
+    /// Peak magnitude since the previous call.
+    func takePeak() -> Float {
+        let p = peak
+        peak = 0
+        return p
+    }
 
     init(rate: Double) {
         outRate = rate
@@ -69,6 +85,11 @@ final class PCMSink {
         let abl = out.audioBufferList.pointee
         guard let p = abl.mBuffers.mData else { return }
         let n = Int(out.frameLength) * 8
+        let floats = p.assumingMemoryBound(to: Float.self)
+        var blockPeak: Float = 0
+        for i in 0..<(Int(out.frameLength) * 2) { blockPeak = max(blockPeak, abs(floats[i])) }
+        if blockPeak > peak { peak = blockPeak }
+        if blockPeak > PCMSink.soundLevel { lastSoundTime = CFAbsoluteTimeGetCurrent() }
         enqueue(Data(bytes: p, count: n))
     }
 

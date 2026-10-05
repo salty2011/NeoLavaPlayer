@@ -5,6 +5,7 @@ extends SceneTree
 ## Writes states-<size>x-{paused,filter,empty,collapsed}.png into out_dir.
 const Main = preload("res://main.gd")
 const Fmt = preload("res://player/player_format.gd")
+const LayoutShot = preload("res://tools/layout_shot.gd")
 
 func _initialize(): call_deferred("run")
 
@@ -13,7 +14,9 @@ func frames(n: int):
 
 func shot(w: Window, path: String):
 	await RenderingServer.frame_post_draw
-	var ok := w.get_texture().get_image().save_png(path) == OK
+	# The player's panels are separate docked windows: one composite image.
+	var image: Image = LayoutShot.player(w.dock) if w.get("dock") != null else w.get_texture().get_image()
+	var ok := image.save_png(path) == OK
 	print("CAPTURE_SAVED " if ok else "CAPTURE_FAILED ", path)
 
 func run():

@@ -1,18 +1,19 @@
 extends Control
-## Playlist panel, attached below the main panel in the same window (275
-## base units wide, resizable height). Numbered entries with durations (once
+## Playlist panel, in its own docked window (player/panel_window.gd; at
+## least 275 base units wide, resizable both ways). Numbered entries with durations (once
 ## known), current track highlighted, failed tracks dimmed; double-click or
 ## Enter plays, drag reorders, Delete removes, Alt+Up/Down moves. Bottom bar:
 ## ADD, DIR, REM, (room for more), LOAD, SAVE; a search filter; total time.
-## The bottom edge and the corner grip resize it (resize_requested).
+## The right edge, bottom edge and corner grip resize it (resize_requested);
+## × on the title strip closes it (toggle_drawer).
 const Style = preload("res://player/player_style.gd")
 const Fmt = preload("res://player/player_format.gd")
 const Widgets = preload("res://player/player_widgets.gd")
 const PlayerBusScript = preload("res://player_bus.gd")
 
-## Drag on the grip / bottom edge: `pixels_y` = mouse travel in screen pixels
-## since the press; `start` true on the press itself.
-signal resize_requested(pixels_y: float, start: bool)
+## Drag on the grip / an edge: `pixels` = mouse travel in screen pixels since
+## the press on the handle's `axes`; `start` true on the press itself.
+signal resize_requested(pixels: Vector2, axes: Vector2, start: bool)
 signal drag_started()
 
 const STRIP_HEIGHT := 12.0
@@ -32,6 +33,7 @@ var filter: LineEdit
 var buttons := {}
 var grip: ResizeHandle
 var edge: ResizeHandle
+var right_edge: ResizeHandle
 ## Track path -> seconds, learnt as tracks play (session cache).
 var durations := {}
 
@@ -80,28 +82,42 @@ func _ready():
 		b.activated.connect(func(button): bus.command(button.command, button.args))
 		add_child(b)
 		buttons[id] = b
-	grip = ResizeHandle.new()
-	grip.name = "Grip"
-	grip.draw_grip = true
-	grip.tooltip_text = "Drag to resize the playlist"
-	grip.resize_drag.connect(func(dy, start): resize_requested.emit(dy, start))
-	add_child(grip)
-	edge = ResizeHandle.new()
-	edge.name = "Edge"
-	edge.resize_drag.connect(func(dy, start): resize_requested.emit(dy, start))
-	add_child(edge)
+	var close := Widgets.PlayerButton.new()
+	close.name = "close"
+	close.id = &"close"
+	close.command = &"toggle_drawer"
+	close.glyph = "close"
+	close.flat = true
+	close.tooltip_text = "Close the playlist (PL, Ctrl+L)"
+	close.activated.connect(func(button): bus.command(button.command, button.args))
+	add_child(close)
+	buttons[&"close"] = close
+	grip = _handle("Grip", Vector2.ONE, Control.CURSOR_FDIAGSIZE, true)
+	edge = _handle("Edge", Vector2(0, 1), Control.CURSOR_VSIZE)
+	right_edge = _handle("RightEdge", Vector2(1, 0), Control.CURSOR_HSIZE)
 	bus.playlist_changed.connect(refresh)
 	bus.track_changed.connect(func(_i, _t): refresh())
 	bus.position_changed.connect(_on_position)
 	_layout()
 	refresh()
 
+func _handle(handle_name: String, axes: Vector2, cursor: CursorShape, draw_grip := false) -> ResizeHandle:
+	var h := ResizeHandle.new()
+	h.name = handle_name
+	h.axes = axes
+	h.draw_grip = draw_grip
+	h.mouse_default_cursor_shape = cursor
+	h.tooltip_text = "Drag to resize the playlist" if draw_grip else ""
+	h.resize_drag.connect(func(pixels, start): resize_requested.emit(pixels, axes, start))
+	add_child(h)
+	return h
+
 func _notification(what):
 	if what == NOTIFICATION_RESIZED and list != null: _layout()
 
-func list_rect() -> Rect2: return Rect2(5, STRIP_HEIGHT + 2, 258, size.y - STRIP_HEIGHT - 33)
-func filter_rect() -> Rect2: return Rect2(5, size.y - 29, 140, 10)
-func total_rect() -> Rect2: return Rect2(150, size.y - 29, 120, 10)
+func list_rect() -> Rect2: return Rect2(5, STRIP_HEIGHT + 2, size.x - 17, size.y - STRIP_HEIGHT - 33)
+func filter_rect() -> Rect2: return Rect2(5, size.y - 29, size.x - 135, 10)
+func total_rect() -> Rect2: return Rect2(size.x - 125, size.y - 29, 120, 10)
 func button_y() -> float: return size.y - 16
 
 func _layout():
@@ -113,12 +129,18 @@ func _layout():
 	filter.position = filter_rect().position
 	filter.size = filter_rect().size
 	for id in BUTTONS:
-		buttons[id].position = Vector2(BUTTONS[id][0], button_y())
+		# LOAD / SAVE keep to the right edge as the panel widens.
+		var x: float = BUTTONS[id][0] if BUTTONS[id][0] < 150.0 else size.x - (Fmt.MAIN_SIZE.x - BUTTONS[id][0])
+		buttons[id].position = Vector2(x, button_y())
 		buttons[id].size = Vector2(BUTTONS[id][1], 10)
-	grip.position = Vector2(259, button_y())
+	buttons[&"close"].position = Vector2(size.x - 14, 1)
+	buttons[&"close"].size = Vector2(12, 10)
+	grip.position = Vector2(size.x - 16, button_y())
 	grip.size = Vector2(12, 12)
 	edge.position = Vector2(0, size.y - 3)
-	edge.size = Vector2(259, 3)
+	edge.size = Vector2(size.x - 16, 3)
+	right_edge.position = Vector2(size.x - 3, STRIP_HEIGHT)
+	right_edge.size = Vector2(3, size.y - STRIP_HEIGHT - 17)
 	_sync_scrollbar()
 	queue_redraw()
 
@@ -172,7 +194,7 @@ func _draw():
 	Style.text(self, font, Rect2(cx, 0, cw + 1, STRIP_HEIGHT), caption, 6, Style.LABEL)
 	for y in [4.75, 7.25]:
 		Style.groove(self, 6, cx - 6, y)
-		Style.groove(self, cx + cw + 6, size.x - 6, y)
+		Style.groove(self, cx + cw + 6, size.x - 18, y)
 	var lr := list_rect()
 	Style.sunken(self, Rect2(lr.position, Vector2(lr.size.x + 7, lr.size.y)))
 	Style.text(self, Style.mono_font(), total_rect(), total_text(), 5, Style.LABEL, HORIZONTAL_ALIGNMENT_RIGHT)
@@ -233,11 +255,12 @@ func _style_filter(edit: LineEdit):
 	edit.add_theme_constant_override("minimum_character_width", 0)
 	edit.custom_minimum_size = Vector2.ZERO
 
-## Drag handle that reports vertical mouse travel in screen pixels.
+## Drag handle that reports mouse travel in screen pixels on its axes.
 class ResizeHandle extends Control:
-	signal resize_drag(pixels_y: float, start: bool)
+	signal resize_drag(pixels: Vector2, start: bool)
+	var axes := Vector2(0, 1)
 	var draw_grip := false
-	var _from := 0.0
+	var _from := Vector2.ZERO
 	var _active := false
 
 	func _init():
@@ -250,17 +273,17 @@ class ResizeHandle extends Control:
 	func _gui_input(event):
 		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 			_active = event.pressed
-			_from = _screen_y(event)
-			if event.pressed: resize_drag.emit(0.0, true)
+			_from = _screen(event)
+			if event.pressed: resize_drag.emit(Vector2.ZERO, true)
 			accept_event()
 		elif event is InputEventMouseMotion and _active:
-			resize_drag.emit(_screen_y(event) - _from, false)
+			resize_drag.emit((_screen(event) - _from) * axes, false)
 			accept_event()
 
-	## Screen-space y, so the window growing under the cursor does not feed back.
-	func _screen_y(event: InputEvent) -> float:
-		if DisplayServer.get_name() == "headless": return event.global_position.y
-		return float(DisplayServer.mouse_get_position().y)
+	## Screen-space position, so the window growing under the cursor does not feed back.
+	func _screen(event: InputEvent) -> Vector2:
+		if DisplayServer.get_name() == "headless": return event.global_position
+		return Vector2(DisplayServer.mouse_get_position())
 
 ## The track list: custom drawn rows (number, title, duration).
 class PlaylistList extends Control:

@@ -10,6 +10,7 @@ extends SceneTree
 ## settings-<size>x.png (the Settings window at that player size).
 const Main = preload("res://main.gd")
 const Fmt = preload("res://player/player_format.gd")
+const LayoutShot = preload("res://tools/layout_shot.gd")
 const LibraryFixture = preload("res://library_fixture.gd")
 const MusicBridge = preload("res://music_bridge.gd")
 
@@ -20,7 +21,9 @@ func frames(n: int):
 
 func shot(w: Window, path: String):
 	await RenderingServer.frame_post_draw
-	var ok := w.get_texture().get_image().save_png(path) == OK
+	# The player's panels are separate docked windows: one composite image.
+	var image: Image = LayoutShot.player(w.dock) if w.get("dock") != null else w.get_texture().get_image()
+	var ok := image.save_png(path) == OK
 	print("CAPTURE_SAVED " if ok else "CAPTURE_FAILED ", path, " ", w.size)
 
 func run():

@@ -170,7 +170,7 @@ func run():
 	var w = app.controller
 	var lib = w.library_panel
 	var list = lib.list
-	assert(not w.library_open and not lib.visible)
+	assert(not w.library_open and not w.library_window.visible and lib.get_window() == w.library_window)
 	# Empty first run: the browser offers to load the library (library_refresh).
 	bus.publish_library({}, "empty")
 	bus.command(&"close_library")
@@ -182,7 +182,7 @@ func run():
 	w.main_panel.buttons.library.click()
 	var names := log.map(func(entry): return entry[0])
 	assert(names.size() == 2 and names.has(&"toggle_library") and names.has(&"open_library"), str(log))
-	assert(w.library_open and lib.visible and bus.library_open and w.main_panel.buttons.library.active)
+	assert(w.library_open and w.library_window.visible and bus.library_open and w.main_panel.buttons.library.active)
 	await process_frame
 	assert(lib.load_button.visible and lib.load_button.label == "LOAD MUSIC LIBRARY" and lib.state_info().word == "NOT LOADED" and not lib.header.visible)
 	for c in saved_connections: bus.command_requested.disconnect(c.callable)
@@ -271,9 +271,10 @@ func run():
 	# Player hotkeys stay out of the focused list (Enter, arrows, Cmd+A).
 	list.grab_focus()
 	log.clear()
-	w._input(key(KEY_DOWN))
-	w._input(key(KEY_A, false, true))
-	w._input(key(KEY_SPACE))
+	# (Keys arrive in the library's own window; it routes them through the player.)
+	w.library_window._input(key(KEY_DOWN))
+	w.library_window._input(key(KEY_A, false, true))
+	w.library_window._input(key(KEY_SPACE))
 	assert(log.size() == 1 and log[0][0] == &"play_pause", str(log))
 	# Context menu on a track: play/add, its album and artist.
 	click(list, 3, false, false, false, MOUSE_BUTTON_RIGHT)
@@ -343,13 +344,16 @@ func run():
 	# Narrow: the album column goes; nothing overlaps.
 	assert(lib.column_layout(lib.list.size.x).filter(func(c): return c.id == "album").is_empty())
 	for c in lib.column_layout(lib.list.size.x): assert(c.x + c.w <= lib.list.size.x + 0.01)
-	# Playlist closed: the library keeps its own height, a filler fills the column.
+	# Its own window: sized in base units at the player's scale, docked right
+	# of main whatever the playlist does.
 	w.set_playlist_open(false)
 	w.set_library_size(380, 290)
-	assert(w.filler.visible and w.size == Fmt.window_pixels(Vector2(275 + 380, 290), w.ui_scale) and w.filler.size.y == 290 - 116)
+	var lw: Window = w.library_window
+	assert(lw.size == Fmt.window_pixels(Vector2(380, 290), w.ui_scale) and lw.content_scale_factor == w.ui_scale and lib.size == Vector2(380, 290))
+	assert(lw.position == w.position + Vector2i(w.size.x, 0) and w.size == Fmt.window_pixels(Fmt.MAIN_SIZE, w.ui_scale))
 	w.set_playlist_open(true)
 	w.set_playlist_height(300)
-	assert(not w.filler.visible and lib.size.y == 416.0)
+	assert(lib.size.y == 290.0 and lw.position == w.position + Vector2i(w.size.x, 0))
 	# Persistence: open state, size and view in [windows].
 	lib.set_source("albums")
 	lib.open_group(lib.model.rows[3])
@@ -359,7 +363,7 @@ func run():
 	lib.set_source("songs")
 	w.set_library_open(false)
 	w.apply_layout_state(layout)
-	assert(w.library_open and lib.visible and lib.model.source == "albums" and lib.model.group == group_key)
+	assert(w.library_open and lw.visible and lib.model.source == "albums" and lib.model.group == group_key)
 	# Through the real AudioService (handlers back): ADD appends applemusic: entries.
 	bus.command_requested.disconnect(recorder)
 	for c in saved_connections: bus.command_requested.connect(c.callable)
@@ -385,7 +389,7 @@ func run():
 
 	app.queue_free()
 	await create_timer(0.3).timeout
-	print("PASS: library browser model (fold, counts, search case/diacritics, sort asc/desc/natural, artists/albums/playlists drill-in + back, commands play/add/enqueue, playlist commands, view state, state box), 20k tracks (search %.1f ms, cached re-sort+search %.1f ms), panel: LIB toggle + open_library, empty/refreshing/error states + LOAD/TRY AGAIN, 1,430-track fixture counts, hit areas, virtualised rows (%d of 1430 drawn), header sort, multi-select click/Cmd/Shift/Shift+Down/Cmd+A/Esc, PLAY/ADD/Enter/double-click/PLAY ALL/ADD ALL/context menu commands + ids, hotkeys kept out of the list, sources + Enter + Left, search + Esc, streaming/local badges, grip resize + clamp, narrow columns, filler, persistence, real AudioService add, Settings scale 0.75/1/1.25 fits (%d ms)" % [search_ms, resort_ms, drawn.y - drawn.x + 1, Time.get_ticks_msec() - t0])
+	print("PASS: library browser model (fold, counts, search case/diacritics, sort asc/desc/natural, artists/albums/playlists drill-in + back, commands play/add/enqueue, playlist commands, view state, state box), 20k tracks (search %.1f ms, cached re-sort+search %.1f ms), panel: LIB toggle + open_library, empty/refreshing/error states + LOAD/TRY AGAIN, 1,430-track fixture counts, hit areas, virtualised rows (%d of 1430 drawn), header sort, multi-select click/Cmd/Shift/Shift+Down/Cmd+A/Esc, PLAY/ADD/Enter/double-click/PLAY ALL/ADD ALL/context menu commands + ids, hotkeys kept out of the list, sources + Enter + Left, search + Esc, streaming/local badges, grip resize + clamp, narrow columns, own docked window, persistence, real AudioService add, Settings scale 0.75/1/1.25 fits (%d ms)" % [search_ms, resort_ms, drawn.y - drawn.x + 1, Time.get_ticks_msec() - t0])
 	quit()
 
 func _press(position: Vector2) -> InputEventMouseButton:

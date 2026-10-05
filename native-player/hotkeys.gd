@@ -29,7 +29,12 @@ static func action_for(event: InputEventKey) -> Dictionary:
 	var key := event.keycode
 	var none := {"name": &"", "args": {}}
 	if command_modifier(event) and not event.alt_pressed:
-		if event.shift_pressed: return _a(&"toggle_library") if key == KEY_L else none
+		if event.shift_pressed:
+			match key:
+				KEY_L: return _a(&"toggle_library")
+				KEY_V: return _a(&"toggle_visualiser")
+				KEY_R: return _a(&"reset_layout")
+			return none
 		match key:
 			KEY_P: return _a(&"play_pause")
 			KEY_U: return _a(&"pause")

@@ -217,6 +217,13 @@ static func glyph(ci: CanvasItem, name: String, c: Vector2, u: float, color: Col
 			ci.draw_colored_polygon(PackedVector2Array([c + Vector2(1.6, 0.6) * u, c + Vector2(4.0, 2.0) * u, c + Vector2(1.6, 3.4) * u]), color)
 		"back":
 			ci.draw_polyline(PackedVector2Array([c + Vector2(1.4, -3) * u, c + Vector2(-1.6, 0) * u, c + Vector2(1.4, 3) * u]), color, 1.0 * u)
+		"forward":
+			ci.draw_polyline(PackedVector2Array([c + Vector2(-1.4, -3) * u, c + Vector2(1.6, 0) * u, c + Vector2(-1.4, 3) * u]), color, 1.0 * u)
+		"fullscreen":
+			# Four corner brackets.
+			for corner in [Vector2(-1, -1), Vector2(1, -1), Vector2(1, 1), Vector2(-1, 1)]:
+				var tip: Vector2 = c + corner * 3.2 * u
+				ci.draw_polyline(PackedVector2Array([tip - Vector2(corner.x * 1.8, 0) * u, tip, tip - Vector2(0, corner.y * 1.8) * u]), color, 0.8 * u)
 		"refresh":
 			ci.draw_arc(c, 3.0 * u, -2.6, 2.2, 16, color, 0.8 * u)
 			var tip := c + Vector2(cos(-2.6), sin(-2.6)) * 3.0 * u

@@ -101,13 +101,23 @@ call `library` once in the background and cache the result.
   of frames (8 bytes per frame).
 - **stderr**: the first line is the header
   `{"rate":48000,"channels":2,"format":"f32le","source":"app|system","backend":"tap|sck"}`.
-  After that come JSON event lines:
-  `{"event":"waiting","app":"com.apple.Music"}`,
-  `{"event":"attached","backend":"tap","source":"app","pids":[123]}`,
-  `{"event":"detached","reason":"app_exited"}`,
-  `{"event":"stalled",…}`, `{"event":"fallback","from":"tap","to":"sck",…}`,
-  `{"event":"error",…}`, and on denial
-  `{"event":"error","error":"permission_denied","message":"…"}` (exit 3).
+  After that come JSON event lines (fields beyond `event` are additive):
+
+  | event | when | fields |
+  |---|---|---|
+  | `waiting` | the app is not running | `app` |
+  | `attached` | a tap (or SCK stream) is running | `backend`, `source`, `pids`; process tap also `processes` [{pid, bundle, output}], `device`, `device_uid` (the aggregate's clock device) |
+  | `rebuilt` | the process tap was rebuilt (after its `attached`) | `reason`: `default_output_changed`, `system_output_changed`, `device_list_changed`, `device_gone`, `device_rate_changed`, `tap_format_changed`, `wake`, `processes_changed`, `device_changed`, `stalled`, `silent`, `retry` (comma-joined when several fired together); `pids`, `device`, `device_uid` |
+  | `device` | the default or system output device changed | `reason`, `output`, `output_uid`, `system_output` |
+  | `output` | the tapped processes started or stopped producing output (Core Audio `IsRunningOutput`) | `running`, `pids`, `others`: other processes producing output at that moment [{pid, bundle, output}]. Diagnostic only: they are never captured. |
+  | `stalled` | no IO callbacks from the tap for 2 s | `message`, `device`, `io` |
+  | `silent` | a tapped process is outputting but the tap delivered only zeros for 4 s | `message`, `pids` |
+  | `recovered` | real sound again after a stall/silence | `rebuilds` |
+  | `level` | every 5 s (process tap) | `peak_db` (since the last report, −120 = digital silence), `io`, `bytes`, `output`, `others`, `device` |
+  | `detached` | the app quit (`reason: app_exited`) or the SCK stream stopped | `reason` |
+  | `fallback` | process tap → ScreenCaptureKit | `from`, `to`, `message` |
+  | `error` | non-fatal problems; on denial `{"event":"error","error":"permission_denied",…}` and exit 3 | `message`, `error` |
+
   The header is written once the backend is chosen. If a permission prompt
   is showing, that waits until the user answers it.
 - `--app` (default `com.apple.Music`) taps only that app's processes, matched
@@ -124,7 +134,8 @@ call `library` once in the background and cache the result.
   - `tap`: process tap only, with exit 3 on denial. Use this to avoid the
     Screen Recording prompt that the fallback would cause.
   - `sck`: ScreenCaptureKit only.
-- Output-device changes (for example headphones unplugged) cause a re-attach.
+- Output-device changes, sleep/wake and capture stalls cause a rebuild; see
+  "Rebuilds and health" below.
 - If the reader cannot keep up, blocks beyond about 2 s of backlog are
   dropped. Memory does not grow.
 - Exits 0 on SIGTERM/SIGINT/SIGHUP, on EPIPE (reader closed the pipe), and
@@ -140,17 +151,64 @@ call `library` once in the background and cache the result.
 The helper finds the target's Core Audio process objects
 (`kAudioHardwarePropertyProcessObjectList`, then
 `kAudioProcessPropertyBundleID`). It builds a stereo-mixdown
-`CATapDescription` (private, unmuted) and calls
+`CATapDescription` (private, `muteBehavior = .unmuted`) and calls
 `AudioHardwareCreateProcessTap`. It then creates a private aggregate device
-with the default output device as its clock and the tap in
-`kAudioAggregateDeviceTapListKey`. An IOProc reads the tap stream, and
-`AVAudioConverter` converts it to interleaved f32 at `--rate`.
+with an output device as its clock and the tap in
+`kAudioAggregateDeviceTapListKey`. The clock is the system output device
+(`kAudioHardwarePropertyDefaultSystemOutputDevice`); if an aggregate can't be
+built on it (some AirPlay routes), the default output device. An IOProc
+reads the tap stream, and `AVAudioConverter` converts it to interleaved f32
+at `--rate`.
+
+The tap never mutes or reroutes Music: it is unmuted, private (invisible to
+other apps), and the aggregate only reads. Creating or destroying it does
+not change any app's output device.
 
 One quirk, observed on macOS 27: a fresh process whose first HAL IO is a tap
 aggregate may receive no IO callbacks. The helper therefore runs one silent
 0.25 s IO cycle on a plain aggregate of the output device first
-(`primeOutputDevice`). A 2 s watchdog repeats the prime and re-attaches once
-if the tap still produces nothing (`{"event":"stalled"}`).
+(`primeOutputDevice`), and again before each stall rebuild.
+
+#### Rebuilds and health (helper 1.1.0)
+
+- **Listeners** (`AudioChangeWatcher`, main queue, debounced 0.25 s): on the
+  system object `DefaultOutputDevice`, `DefaultSystemOutputDevice`, `Devices`
+  and `ProcessObjectList`; on the clock device `DeviceIsAlive` and
+  `NominalSampleRate`; on the tap `kAudioTapPropertyFormat`; on each tapped
+  process `IsRunningOutput`; plus `NSWorkspace.didWakeNotification`.
+  Device, rate, format and wake changes rebuild the tap (`device` and
+  `rebuilt` events). A process-list change rebuilds only when the set of
+  matching processes changes (`processes_changed`). A 1 s poll repeats the
+  same comparisons as a safety net. (Before 1.1.0 only a change of the
+  system output UID was noticed, so a change of the default output alone,
+  or a same-UID device restart such as a Bluetooth profile switch, could
+  leave the aggregate on a dead clock.)
+- **Stalled**: no IO callbacks for 2 s → `stalled`, prime, rebuild. Repeats
+  with backoff 2 s, 5 s, 10 s, then every 30 s, until IO resumes (it used to
+  try once per app instance).
+- **Silent**: a tapped process reports `IsRunningOutput` but the tap has
+  delivered only zeros (|x| ≤ 1e-4) for 4 s → `silent` and a rebuild on the
+  same backoff, at most 4 times per output episode (Music may keep its IO
+  running while paused).
+- Real sound after a rebuild resets the backoff (`recovered`).
+- **Process matching**: Core Audio process objects whose bundle ID is
+  `--app` or starts with `--app` + `.`. Music's process object exists as soon
+  as Music runs, even before it plays (checked with `processes` on macOS 27).
+  If Music plays but its process outputs nothing, the `output` event lists
+  the processes that are outputting, so a log shows where the audio went.
+
+### `processes [--app BUNDLE_ID]` (additive diagnostic)
+
+One line on stdout: `{"app","tapped":[…],"others_output":[…],"default_output":{uid,name},"system_output":{uid,name},"processes":[{pid,bundle,output}]}`.
+Reads Core Audio only (no permission, no capture).
+
+### `selftest` (additive)
+
+Runs checks that need no permission and play no sound: process matching,
+other-output candidates, the backoff schedule, the JSON helpers, listener
+registration on the system object, debouncing of fired reasons and listener
+removal. Prints `{"ok":true,"checks":[{name,ok,detail}]}` and exits 0, or 1
+if a check failed.
 
 ### `now`
 
@@ -192,7 +250,9 @@ death.
   `play (first track of library playlist 1 whose persistent ID is "<ID>")`.
   This works for streaming and cloud tracks in the library, since Music
   handles the DRM.
-- `volume` sets Music's own volume, not the system volume.
+- `volume` sets Music's own volume, not the system volume. Music keeps it
+  after Oozic quits, so Oozic sends it only with its "Oozic volume controls
+  the Music app" setting on (APPLE_MUSIC.md).
 
 ### `permissions` (additive diagnostic)
 
@@ -205,7 +265,7 @@ setup screen:
 
 ### `version`
 
-Prints `{"version":"1.0.0"}`.
+Prints `{"version":"1.1.0"}`.
 
 ## Permissions (TCC) and attribution
 

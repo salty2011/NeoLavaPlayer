@@ -46,6 +46,27 @@ func record(delta: float, values: Dictionary) -> void:
 
 func lines() -> PackedStringArray:
 	var bands: Array = Array(info.get("band_a", []))
+	var out := _base_lines(bands)
+	var music := music_line()
+	if not music.is_empty(): out.insert(out.size() - 1, music)
+	return out
+
+## Apple Music line ("music: <state> · tap <backend> pid <n> · level <dB> ·
+## <health>"): info.music if the owner supplies it, else asked from the
+## AudioService node (found once by name; the overlay owner stays unchanged).
+func music_line() -> String:
+	if info.has("music"): return str(info.music)
+	var audio = _audio_ref.get_ref() if _audio_ref != null else null
+	if audio == null and is_inside_tree() and Engine.get_process_frames() >= _next_lookup:
+		_next_lookup = Engine.get_process_frames() + 60
+		audio = get_tree().root.find_child("AudioService", true, false)
+		if audio != null: _audio_ref = weakref(audio)
+	return str(audio.music_debug_line()) if audio != null and audio.has_method("music_debug_line") else ""
+
+var _audio_ref: WeakRef
+var _next_lookup := 0
+
+func _base_lines(bands: Array) -> PackedStringArray:
 	return PackedStringArray([
 		"FPS %d   frame %.2f ms" % [Engine.get_frames_per_second(), _frame_ms],
 		"last 1 s: min %.2f  max %.2f ms" % [_min_ms if _min_ms != INF else 0.0, _max_ms],

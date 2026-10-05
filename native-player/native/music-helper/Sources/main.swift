@@ -2,7 +2,7 @@
 // for OozicPlayer. Contract: native-player/docs/MUSIC_HELPER.md
 import Foundation
 
-let helperVersion = "1.0.0"
+let helperVersion = "1.1.0"
 
 let usage = """
 oozic-music-helper \(helperVersion)
@@ -13,6 +13,8 @@ usage:
   oozic-music-helper watch [--interval 0.5]
   oozic-music-helper control <play|pause|playpause|stop|next|previous|seek SECONDS|volume 0-100|play-id PERSISTENT_ID>
   oozic-music-helper permissions
+  oozic-music-helper processes [--app BUNDLE_ID]
+  oozic-music-helper selftest
   oozic-music-helper version
 """
 
@@ -32,6 +34,8 @@ case "now": code = runNow()
 case "permissions": code = runPermissions()
 case "watch": code = runWatch(args: rest)
 case "control": code = runControl(args: rest)
+case "processes": code = runProcesses(args: rest)
+case "selftest", "--selftest": code = runSelftest()
 case "version", "--version":
     IO.stdoutLine("{\"version\":\"\(helperVersion)\"}")
     code = ExitCode.ok

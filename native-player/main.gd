@@ -1,9 +1,11 @@
 extends Node3D
-## App composer. The root (main OS) window is the visualiser; the player
-## window (player/player_window.gd) is a separate OS window (display/window/subwindows/
-## embed_subwindows=false). Non-visual services (AudioService, SceneDirector)
-## sit under this node; every window talks to them through PlayerBus.
-## See docs/WINDOWS_AND_BUS.md.
+## App composer. The root (main OS) window is the visualiser; the player's
+## main, playlist and library panels are separate OS windows
+## (player/player_window.gd, player/panel_window.gd; display/window/subwindows/
+## embed_subwindows=false). With the player present the visualiser is a
+## borderless, framed panel that docks with them (player/dock_controller.gd).
+## Non-visual services (AudioService, SceneDirector) sit under this node;
+## every window talks to them through PlayerBus. See docs/WINDOWS_AND_BUS.md.
 ##
 ## Window policy (decided; the original LavaPlay.exe launched LAVA.exe and was
 ## the app the user ran, so the player is the "app" window):
@@ -11,7 +13,7 @@ extends Node3D
 ## - Closing the visualiser minimises it to the Dock (Godot cannot hide its
 ##   main window); the player's visualiser button, the system menu, Settings
 ##   or F11 bring it back. With no controller, closing the visualiser quits.
-## - Both windows minimise independently.
+## - The player and the visualiser minimise independently.
 const AppSettings = preload("res://app_settings.gd")
 const FlacDecoder = preload("res://flac_decoder.gd")
 const AudioService = preload("res://audio_service.gd")
@@ -46,6 +48,13 @@ var size_arg := -1.0
 ## Off in automated test modes so they never touch the user's saved state.
 var persistent := true
 var quitting := false
+## The visualiser is a docked, framed panel (player present, not a test mode).
+var framed := false
+## Minimising the borderless visualiser: 1 = waiting, 2 = minimised (macOS
+## refuses to minimise a borderless window; it gets its title bar back for
+## the trip to the Dock).
+var _root_minimize_phase := 0
+var _root_minimize_deadline := 0
 ## Tests set this false before adding the node (no args can be passed there).
 var persist_override = null
 
@@ -104,7 +113,7 @@ func _ready():
 	if "--debug-overlay" in OS.get_cmdline_user_args(): visualiser.overlay.visible = true
 	get_tree().root.files_dropped.connect(func(paths): bus.command(&"add_paths", {"paths": paths}))
 	get_window().title = "Oozic Visualiser"
-	if not scene_only and (not test_mode or not reference_path.is_empty()): _create_controller()
+	if not scene_only and (not test_mode or not reference_path.is_empty()): _create_controller(not test_mode)
 	bus.controller_present = controller != null
 	_restore_windows()
 	if not play_paths.is_empty(): audio.add_tracks(play_paths, true)
@@ -115,7 +124,7 @@ func _ready():
 	elif not sweep_path.is_empty(): run_sweep()
 	elif not reference_path.is_empty(): run_reference()
 
-func _create_controller():
+func _create_controller(dock_visualiser: bool):
 	controller = PlayerWindow.new()
 	controller.persist = persistent
 	var saved := WindowLayout.load_state() if persistent else {}
@@ -124,11 +133,16 @@ func _create_controller():
 	var saved_size := AppSettings.load_player_size() if persistent else PlayerFormat.DEFAULT_USER_SIZE
 	controller.user_size = PlayerFormat.nearest_user_size(size_arg if size_arg > 0.0 else saved_size)
 	add_child(controller)
-	# Default: player below-left of the visualiser on the same screen.
-	var root := get_window()
-	controller.position = root.position + Vector2i(24, maxi(root.size.y - controller.size.y - 24, 0))
+	if dock_visualiser:
+		framed = true
+		var root := get_window()
+		root.borderless = true
+		root.min_size = Vector2i.ZERO
+		visualiser.set_framed(true)
+		controller.dock.register("visualiser", root)
+	# Default layout until _restore_windows applies the saved one.
+	controller.dock.reset_layout(PlayerFormat.MAIN_SIZE.y + controller.playlist_height)
 	controller.show()
-	controller.keep_on_screen()
 
 func _enter_screensaver():
 	if DisplayServer.get_name() == "headless": return
@@ -155,7 +169,7 @@ func _on_command(command: StringName, args: Dictionary):
 		&"hide_controller": set_controller_visible(false)
 		&"toggle_fullscreen", &"set_fullscreen": call_deferred("_save_windows")
 		&"minimize":
-			if args.get("source", "") == "visualiser": get_window().mode = Window.MODE_MINIMIZED
+			if args.get("source", "") == "visualiser": _minimize_root()
 
 ## Godot cannot hide its main window ("Can't change visibility of main
 ## window"), so "closing" the visualiser minimises it to the Dock; the player
@@ -172,12 +186,33 @@ func set_visualiser_visible(on: bool):
 		if visualiser.is_fullscreen():
 			root.mode = Window.MODE_WINDOWED
 			await get_tree().create_timer(0.8).timeout
-		root.mode = Window.MODE_MINIMIZED
+		_minimize_root()
 	_publish_windows()
 	# macOS minimises and restores asynchronously (the mode reads the old value
 	# until the animation ends): publish again once the mode has changed.
 	await _mode_settled(root, on)
 	_publish_windows()
+
+## Minimise the visualiser. A borderless (framed) one takes its title bar
+## back first: macOS will not miniaturise a borderless window.
+func _minimize_root():
+	var root := get_window()
+	if root.borderless and DisplayServer.get_name() != "headless":
+		root.borderless = false
+		_root_minimize_phase = 1
+		_root_minimize_deadline = Time.get_ticks_msec() + 3000
+	root.mode = Window.MODE_MINIMIZED
+
+## Back from the Dock (or the minimise never happened): borderless again, in
+## its docked place.
+func _track_root_minimize():
+	var root := get_window()
+	if _root_minimize_phase == 1 and root.mode == Window.MODE_MINIMIZED: _root_minimize_phase = 2
+	elif (_root_minimize_phase == 2 and root.mode != Window.MODE_MINIMIZED) or (_root_minimize_phase == 1 and Time.get_ticks_msec() > _root_minimize_deadline):
+		_root_minimize_phase = 0
+		if framed and not visualiser.is_fullscreen():
+			root.borderless = true
+			if controller != null: controller.dock.relayout(false)
 
 ## Wait (at most `timeout` s) until w is shown (not minimised) == shown.
 func _mode_settled(w: Window, shown: bool, timeout := 2.0) -> void:
@@ -191,11 +226,9 @@ func visualiser_shown() -> bool:
 func set_controller_visible(on: bool):
 	if controller == null: return
 	if on:
-		if controller.mode == Window.MODE_MINIMIZED: controller.mode = Window.MODE_WINDOWED
-		controller.show()
-		controller.grab_focus()
+		controller.set_player_shown(true)
 	else:
-		controller.hide()
+		controller.set_player_shown(false)
 		if not visualiser_shown(): set_visualiser_visible(true)
 	_publish_windows()
 
@@ -228,16 +261,20 @@ func _save_windows():
 func _restore_windows():
 	if not persistent or DisplayServer.get_name() == "headless": return
 	var saved := WindowLayout.load_state()
-	if saved.has("visualiser_rect"): WindowLayout.restore(get_window(), saved.visualiser_rect, saved.get("visualiser_screen", 0))
-	if controller != null and saved.has("controller_rect"):
-		WindowLayout.restore(controller, saved.controller_rect, saved.get("controller_screen", 0), false)
-		# The saved screen may have another scale: re-scale there.
-		controller.apply_scale()
+	# Docked: the dock layout places the visualiser; alone it keeps its own rect.
+	if saved.has("visualiser_rect") and not framed: WindowLayout.restore(get_window(), saved.visualiser_rect, saved.get("visualiser_screen", 0))
+	if controller != null:
+		if saved.has("controller_rect"):
+			WindowLayout.restore(controller, saved.controller_rect, saved.get("controller_screen", 0), false)
+			# The saved screen may have another scale: re-scale there.
+			controller.apply_scale()
+		controller.restore_dock(saved)
 	if bool(saved.get("visualiser_fullscreen", false)) and not scene_only: visualiser.set_fullscreen(true)
 
 # --- Frame -----------------------------------------------------------------
 
 func _process(delta):
+	if _root_minimize_phase > 0: _track_root_minimize()
 	if quit_after >= 0:
 		run_clock += delta
 		if run_clock >= quit_after:
